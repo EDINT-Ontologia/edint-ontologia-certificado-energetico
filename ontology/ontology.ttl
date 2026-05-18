@@ -733,30 +733,6 @@ edintcee:comfortConditions a owl:DatatypeProperty ;
     rdfs:comment "Condiciones de confort consideradas en la evaluación energética (Art. 8.2.d)."@es ;
     rdfs:comment "Comfort conditions considered in the energy evaluation (Art. 8.2.d)."@en .
 
-edintcee:isLowEnergyDemandBuilding a owl:DatatypeProperty ;
-    rdfs:label "edificio de baja demanda energética"@es ;
-    rdfs:label "low energy demand building"@en ;
-    rdfs:domain edintcee:EnergyCertificate ;
-    rdfs:range xsd:boolean ;
-    rdfs:comment "Indica si el edificio es de baja demanda energética (Art. 3.2.c)."@es ;
-    rdfs:comment "Indicates whether the building is a low energy demand building (Art. 3.2.c)."@en .
-
-edintcee:isSubjectToITO a owl:DatatypeProperty ;
-    rdfs:label "sujeto a ITO"@es ;
-    rdfs:label "subject to Technical Building Inspection"@en ;
-    rdfs:domain edintcee:EnergyCertificate ;
-    rdfs:range xsd:boolean ;
-    rdfs:comment "El edificio está sujeto a la Inspección Técnica del Edificio obligatoria (Art. 3.1.f)."@es ;
-    rdfs:comment "The building is subject to mandatory Technical Building Inspection (Art. 3.1.f)."@en .
-
-edintcee:isNearlyZeroEnergyBuilding a owl:DatatypeProperty ;
-    rdfs:label "edificio de consumo de energía casi nulo (nZEB)"@es ;
-    rdfs:label "nearly zero-energy building (nZEB)"@en ;
-    rdfs:domain edintcee:EnergyCertificate ;
-    rdfs:range xsd:boolean ;
-    rdfs:comment "El edificio cumple con los requisitos de consumo de energía casi nulo (Disposición Adicional 2)."@es ;
-    rdfs:comment "The building meets nearly zero-energy building requirements (Additional Provision 2)."@en .
-
 edintcee:linkedToBuildingBook a owl:DatatypeProperty ;
     rdfs:label "vinculado al Libro del Edificio"@es ;
     rdfs:label "linked to Building Book"@en ;
