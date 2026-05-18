@@ -3,6 +3,7 @@
 @prefix edintceekos-bu: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/building-use/> .
 @prefix edintceekos-es: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/energy-source/> .
 @prefix edintceekos-cz: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/climatic-zone/> .
+@prefix edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/> .
 @prefix ex: <http://ejemplo.org/cee/> .
 
 # ---------------------------------------------------------------------------
@@ -38,12 +39,13 @@ ex:userrec_2024_M12345 a edintcee:UserRecommendations ;
 
 # --- Energy Certificate ---
 
-ex:cert_2024_M12345 a edintcee:ExistingBuildingCertificate ;
+ex:cert_2024_M12345 a edintcee:EnergyCertificate ;
     edintcee:hasRating              ex:rating_2024_M12345 ;
     edintcee:issuedBy               ex:tech_mlopez ;
     edintcee:hasLabel               ex:label_2024_M12345 ;
     edintcee:usesProcedure          ex:proc_CEP ;
     edintcee:hasUserRecommendations ex:userrec_2024_M12345 ;
+    edintcee:certificateType       edintceekos-ct:ExistingBuilding ;
     edintcee:predecessorCertificate ex:cert_2016_M12345 ;
 
     # Certificate metadata
@@ -66,7 +68,6 @@ ex:cert_2024_M12345 a edintcee:ExistingBuildingCertificate ;
     edintcee:observedBuildingUse        edintceekos-bu:Residential ;
     edintcee:observedClimaticZone       edintceekos-cz:D3 ;
     edintcee:observedHeritageProtection "false"^^xsd:boolean ;
-    edintcee:observedBuildingType       "existing" ;
     edintcee:observedIsBuildingPart     "false"^^xsd:boolean ;
 
     # Envelope
@@ -113,8 +114,7 @@ ex:rating_2024_M12345 a edintcee:EnergyRating ;
 # --- Energy Label ---
 
 ex:label_2024_M12345 a edintcee:EnergyLabel ;
-    edintcee:labelRatingLetter "D" ;
-    edintcee:labelScope        "existingBuilding" .
+    edintcee:labelRatingLetter "D" .
 
 # --- Improvement Recommendations ---
 
@@ -151,7 +151,7 @@ ex:rec_2024_M12345_3 a edintcee:ImprovementRecommendation ;
 
 # --- Predecessor Certificate ---
 
-ex:cert_2016_M12345 a edintcee:ExistingBuildingCertificate ;
+ex:cert_2016_M12345 a edintcee:EnergyCertificate ;
     edintcee:hasRating        ex:rating_2016_M12345 ;
     edintcee:issuedBy         ex:tech_jperez ;
     edintcee:usesProcedure    ex:proc_CEP_old ;
@@ -160,7 +160,7 @@ ex:cert_2016_M12345 a edintcee:ExistingBuildingCertificate ;
     edintcee:issueDate        "2016-09-12"^^xsd:date ;
     edintcee:validUntil       "2026-09-12"^^xsd:date ;
     edintcee:observedCadastralRef "2807901VK4717F0001WX" ;
-    edintcee:observedBuildingType "existing" .
+    edintcee:certificateType edintceekos-ct:ExistingBuilding .
 
 ex:rating_2016_M12345 a edintcee:EnergyRating ;
     edintcee:ratingLetter              "E" ;
