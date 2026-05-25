@@ -1,0 +1,198 @@
+<mxfile host="app.diagrams.net" agent="owl-to-drawio">
+  <diagram name="Ontología CEE" id="cee-diagram">
+    <mxGraphModel dx="2200" dy="1600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="meta" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;labelBackgroundColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;size=0.1875;" value="&lt;div&gt;&lt;b&gt;owl:Ontology&lt;/b&gt;: &amp;lt;http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/&amp;gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;dcterms&lt;/b&gt;:title: &quot;Ontología de Certificados de Eficiencia Energética de Edificios&quot;@es&lt;br&gt;&lt;b&gt;dcterms&lt;/b&gt;:created: &quot;2026-05-14&quot;^^xsd:date&lt;br&gt;&lt;b&gt;dcterms&lt;/b&gt;:license: &amp;lt;https://creativecommons.org/licenses/by/4.0/&amp;gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;vann:preferredNamespacePrefix&lt;/b&gt;: &quot;edintcee&quot;&lt;br&gt;&lt;b&gt;owl:versionIRI&lt;/b&gt;: &amp;lt;.../0.1.0&amp;gt;&lt;br&gt;&lt;b&gt;owl:versionInfo&lt;/b&gt;: &quot;0.1.0&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry x="20" y="10" width="370" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ns" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" value="&lt;div&gt;&lt;b&gt;edintcee&lt;/b&gt;: http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/&lt;/div&gt;&lt;div&gt;&lt;b&gt;edintceekos-bu&lt;/b&gt;: .../kos/edintcee/building-use/&lt;/div&gt;&lt;div&gt;&lt;b&gt;edintceekos-es&lt;/b&gt;: .../kos/edintcee/energy-source/&lt;/div&gt;&lt;div&gt;&lt;b&gt;edintceekos-cz&lt;/b&gt;: .../kos/edintcee/climatic-zone/&lt;/div&gt;&lt;div&gt;&lt;b&gt;edintceekos-ct&lt;/b&gt;: .../kos/edintcee/certificate-type/&lt;/div&gt;&lt;div&gt;&lt;b&gt;edintceekos-rsv&lt;/b&gt;: .../kos/edintcee/rating-scale-version/&lt;/div&gt;" vertex="1">
+          <mxGeometry x="440" y="20" width="310" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="cert" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;" value="&lt;div&gt;&lt;b&gt;edintcee:EnergyCertificate&lt;/b&gt;&lt;/div&gt;&lt;div&gt;(Certificado de eficiencia energética)&lt;/div&gt;&lt;div&gt;&lt;hr size='1'/&gt;&lt;/div&gt;&lt;div&gt;+ certificateNumber : string&lt;br&gt;+ issueDate : date [1]&lt;br&gt;+ validUntil : date [1]&lt;br&gt;+ registrationCCAA : string&lt;br&gt;+ observedCadastralRef : string&lt;br&gt;+ observedUsefulSurface : decimal&lt;br&gt;+ globalHeatTransferCoeff : decimal&lt;/div&gt;" vertex="1">
+          <mxGeometry x="280" y="350" width="280" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="rating" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;" value="&lt;div&gt;&lt;b&gt;edintcee:EnergyRating&lt;/b&gt;&lt;/div&gt;&lt;div&gt;(Calificación energética)&lt;/div&gt;&lt;div&gt;&lt;hr size='1'/&gt;&lt;/div&gt;&lt;div&gt;+ ratingLetter : RatingLetterValue [1]&lt;br&gt;+ primaryEnergyNonRenewable : decimal [1]&lt;br&gt;+ co2Emissions : decimal [1]&lt;br&gt;+ heatingConsumption : decimal&lt;br&gt;+ coolingConsumption : decimal&lt;br&gt;+ dataBasis : string&lt;/div&gt;" vertex="1">
+          <mxGeometry x="720" y="200" width="280" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="label" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;" value="&lt;div&gt;&lt;b&gt;edintcee:EnergyLabel&lt;/b&gt;&lt;/div&gt;&lt;div&gt;(Etiqueta de eficiencia energética)&lt;/div&gt;&lt;div&gt;&lt;hr size='1'/&gt;&lt;/div&gt;&lt;div&gt;+ labelRatingLetter : string&lt;/div&gt;" vertex="1">
+          <mxGeometry x="720" y="400" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tech" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;" value="&lt;div&gt;&lt;b&gt;edintcee:CompetentTechnician&lt;/b&gt;&lt;/div&gt;&lt;div&gt;(Técnico competente)&lt;/div&gt;&lt;div&gt;&lt;hr size='1'/&gt;&lt;/div&gt;&lt;div&gt;+ technicianName : string&lt;br&gt;+ technicianNIF : string&lt;br&gt;+ technicianQualification : string&lt;br&gt;+ technicianRegistrationCCAA : string&lt;/div&gt;" vertex="1">
+          <mxGeometry x="-160" y="200" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="rec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;" value="&lt;div&gt;&lt;b&gt;edintcee:ImprovementRecommendation&lt;/b&gt;&lt;/div&gt;&lt;div&gt;(Recomendación de mejora)&lt;/div&gt;&lt;div&gt;&lt;hr size='1'/&gt;&lt;/div&gt;&lt;div&gt;+ recommendationType : RecommendationTypeValue&lt;br&gt;+ estimatedSavingPct : decimal&lt;br&gt;+ paybackPeriod : decimal&lt;br&gt;+ estimatedCost : decimal&lt;br&gt;+ priority : integer&lt;br&gt;+ improvedRatingLetter : string&lt;/div&gt;" vertex="1">
+          <mxGeometry x="-160" y="400" width="280" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="proc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;" value="&lt;div&gt;&lt;b&gt;edintcee:CalculationProcedure&lt;/b&gt;&lt;/div&gt;&lt;div&gt;(Procedimiento de cálculo)&lt;/div&gt;&lt;div&gt;&lt;hr size='1'/&gt;&lt;/div&gt;&lt;div&gt;+ procedureName : string&lt;br&gt;+ procedureVersion : string&lt;br&gt;+ procedureType : ProcedureTypeValue&lt;/div&gt;" vertex="1">
+          <mxGeometry x="-160" y="590" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="userrec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fontSize=12;" value="&lt;div&gt;&lt;b&gt;edintcee:UserRecommendations&lt;/b&gt;&lt;/div&gt;&lt;div&gt;(Recomendaciones de uso)&lt;/div&gt;&lt;div&gt;&lt;hr size='1'/&gt;&lt;/div&gt;&lt;div&gt;+ userRecommendationsDelivered : boolean&lt;br&gt;+ userRecommendationsRecipient : string&lt;br&gt;+ userRecommendationsDeliveryDate : date&lt;/div&gt;" vertex="1">
+          <mxGeometry x="280" y="590" width="280" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="skos-ct" parent="1" style="verticalAlign=middle;align=center;shape=stencil(nZBLDoAgDERP0z3SIyjew0URgSD+Lu9kMZoXLhwN9O+tukAlrNpJg1SzDH4QW/URgNYgZTkjA4UkwJUgGXng+6DX1zLfmoymdXo17xh5zmRJ6Q42BWCfc2oJfdAr+Yv+AP9Cb7OJ3H/2JG1HNGz/84klThPVCc=);labelBackgroundColor=none;rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="&lt;div&gt;skos:Concept&lt;/div&gt;&lt;div&gt;&amp;lt;&amp;lt;skos:inScheme CertificateTypes&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;(Tipo de certificado)&lt;/div&gt;" vertex="1">
+          <mxGeometry x="720" y="560" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="skos-bu" parent="1" style="verticalAlign=middle;align=center;shape=stencil(nZBLDoAgDERP0z3SIyjew0URgSD+Lu9kMZoXLhwN9O+tukAlrNpJg1SzDH4QW/URgNYgZTkjA4UkwJUgGXng+6DX1zLfmoymdXo17xh5zmRJ6Q42BWCfc2oJfdAr+Yv+AP9Cb7OJ3H/2JG1HNGz/84klThPVCc=);labelBackgroundColor=none;rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="&lt;div&gt;skos:Concept&lt;/div&gt;&lt;div&gt;&amp;lt;&amp;lt;skos:inScheme BuildingUses&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;(Uso del edificio)&lt;/div&gt;" vertex="1">
+          <mxGeometry x="-560" y="340" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="skos-cz" parent="1" style="verticalAlign=middle;align=center;shape=stencil(nZBLDoAgDERP0z3SIyjew0URgSD+Lu9kMZoXLhwN9O+tukAlrNpJg1SzDH4QW/URgNYgZTkjA4UkwJUgGXng+6DX1zLfmoymdXo17xh5zmRJ6Q42BWCfc2oJfdAr+Yv+AP9Cb7OJ3H/2JG1HNGz/84klThPVCc=);labelBackgroundColor=none;rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="&lt;div&gt;skos:Concept&lt;/div&gt;&lt;div&gt;&amp;lt;&amp;lt;skos:inScheme ClimaticZones&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;(Zona climática)&lt;/div&gt;" vertex="1">
+          <mxGeometry x="-560" y="420" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="skos-es" parent="1" style="verticalAlign=middle;align=center;shape=stencil(nZBLDoAgDERP0z3SIyjew0URgSD+Lu9kMZoXLhwN9O+tukAlrNpJg1SzDH4QW/URgNYgZTkjA4UkwJUgGXng+6DX1zLfmoymdXo17xh5zmRJ6Q42BWCfc2oJfdAr+Yv+AP9Cb7OJ3H/2JG1HNGz/84klThPVCc=);labelBackgroundColor=none;rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="&lt;div&gt;skos:Concept&lt;/div&gt;&lt;div&gt;&amp;lt;&amp;lt;skos:inScheme EnergySources&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;(Fuente de energía)&lt;/div&gt;" vertex="1">
+          <mxGeometry x="-560" y="500" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="skos-rsv" parent="1" style="verticalAlign=middle;align=center;shape=stencil(nZBLDoAgDERP0z3SIyjew0URgSD+Lu9kMZoXLhwN9O+tukAlrNpJg1SzDH4QW/URgNYgZTkjA4UkwJUgGXng+6DX1zLfmoymdXo17xh5zmRJ6Q42BWCfc2oJfdAr+Yv+AP9Cb7OJ3H/2JG1HNGz/84klThPVCc=);labelBackgroundColor=none;rounded=0;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="&lt;div&gt;skos:Concept&lt;/div&gt;&lt;div&gt;&amp;lt;&amp;lt;skos:inScheme RatingScaleVersions&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;(Versión de escala)&lt;/div&gt;" vertex="1">
+          <mxGeometry x="720" y="80" width="250" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e-hasRating" edge="1" parent="1" source="cert" target="rating" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="404" />
+              <mxPoint x="660" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-hasRating-lbl" connectable="0" parent="e-hasRating" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;labelBackgroundColor=#ffffff;" value="hasRating [1]" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-hasLabel" edge="1" parent="1" source="cert" target="label" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;exitX=1;exitY=0.6;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-hasLabel-lbl" connectable="0" parent="e-hasLabel" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;labelBackgroundColor=#ffffff;" value="hasLabel" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-issuedBy" edge="1" parent="1" source="cert" target="tech" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="395" />
+              <mxPoint x="200" y="255" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-issuedBy-lbl" connectable="0" parent="e-issuedBy" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;labelBackgroundColor=#ffffff;" value="issuedBy [1]" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-hasRec" edge="1" parent="1" source="cert" target="rec" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;exitX=0;exitY=0.55;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="449" />
+              <mxPoint x="200" y="442" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-hasRec-lbl" connectable="0" parent="e-hasRec" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;labelBackgroundColor=#ffffff;" value="hasRecommendation" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-usesProc" edge="1" parent="1" source="cert" target="proc" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="350" y="560" />
+              <mxPoint x="60" y="560" />
+              <mxPoint x="60" y="635" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-usesProc-lbl" connectable="0" parent="e-usesProc" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;labelBackgroundColor=#ffffff;" value="usesProcedure [1]" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-hasUserRec" edge="1" parent="1" source="cert" target="userrec" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-hasUserRec-lbl" connectable="0" parent="e-hasUserRec" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;labelBackgroundColor=#ffffff;" value="hasUserRecommendations [1..*]" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-pred" edge="1" parent="1" source="cert" target="cert" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="570" />
+              <mxPoint x="620" y="570" />
+              <mxPoint x="620" y="310" />
+              <mxPoint x="490" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-pred-lbl" connectable="0" parent="e-pred" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;labelBackgroundColor=#ffffff;" value="predecessorCertificate" vertex="1">
+          <mxGeometry relative="1" x="-0.15" as="geometry">
+            <mxPoint x="5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-certType" edge="1" parent="1" source="cert" target="skos-ct" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;exitX=1;exitY=0.85;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="503" />
+              <mxPoint x="660" y="590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-certType-lbl" connectable="0" parent="e-certType" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;labelBackgroundColor=#ffffff;" value="certificateType [1]" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-bu" edge="1" parent="1" source="cert" target="skos-bu" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="440" />
+              <mxPoint x="180" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-bu-lbl" connectable="0" parent="e-bu" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;labelBackgroundColor=#ffffff;" value="observedBuildingUse" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-cz" edge="1" parent="1" source="cert" target="skos-cz" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;exitX=0;exitY=0.6;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="458" />
+              <mxPoint x="180" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-cz-lbl" connectable="0" parent="e-cz" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;labelBackgroundColor=#ffffff;" value="observedClimaticZone" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint x="20" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-es" edge="1" parent="1" source="cert" target="skos-es" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="485" />
+              <mxPoint x="180" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-es-lbl" connectable="0" parent="e-es" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;labelBackgroundColor=#ffffff;" value="heatingEnergySource / coolingEnergySource / dhwEnergySource" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-rsv" edge="1" parent="1" source="rating" target="skos-rsv" style="endArrow=classic;html=1;endSize=8;arcSize=0;rounded=0;edgeStyle=orthogonalEdgeStyle;fontSize=11;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-rsv-lbl" connectable="0" parent="e-rsv" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;labelBackgroundColor=#ffffff;" value="ratingScaleVersion [1]" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
