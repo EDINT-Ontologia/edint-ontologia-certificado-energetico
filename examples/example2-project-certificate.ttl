@@ -1,10 +1,14 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/> .
-@prefix edintceekos-bu: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/building-use/> .
-@prefix edintceekos-es: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/energy-source/> .
-@prefix edintceekos-cz: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/climatic-zone/> .
-@prefix edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/> .
-@prefix edintceekos-rsv: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/rating-scale-version/> .
+@prefix edintceekos-bu: <http://vocab.linkeddata.es/datosabiertos/kos/edint/BuildingUse/> .
+@prefix edintceekos-es: <http://vocab.linkeddata.es/datosabiertos/kos/edint/EnergySource/> .
+@prefix edintceekos-cz: <http://vocab.linkeddata.es/datosabiertos/kos/edint/ClimaticZone/> .
+@prefix edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edint/CertificateType/> .
+@prefix edintceekos-rl: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingLetter/> .
+@prefix edintceekos-pt: <http://vocab.linkeddata.es/datosabiertos/kos/edint/ProcedureType/> .
+@prefix edintceekos-db: <http://vocab.linkeddata.es/datosabiertos/kos/edint/DataBasis/> .
+@prefix edintceekos-rcp: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RecipientType/> .
+@prefix edintceekos-rsv: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingScaleVersion/> .
 @prefix ex: <http://ejemplo.org/cee/> .
 
 # ---------------------------------------------------------------------------
@@ -12,9 +16,6 @@
 # Residential building in Sevilla, zona climática B4, rating A
 # Art. 2.b, Art. 9 RD 390/2021 — first phase: certification from the
 # execution project before construction begins.
-# The building points to the certificate from outside this ontology:
-#   <http://ejemplo.org/edificios/bloque_sevilla_avda>
-#       ex:hasEnergyCertificate ex:cert_PROY_2025_S001 .
 # ---------------------------------------------------------------------------
 
 # --- Calculation Procedure ---
@@ -22,7 +23,7 @@
 ex:proc_CEH a edintcee:CalculationProcedure ;
     edintcee:procedureName "CEH" ;
     edintcee:procedureVersion "2024.1" ;
-    edintcee:procedureType "general" .
+    edintcee:procedureType edintceekos-pt:General .
 
 # --- Competent Technician ---
 
@@ -37,7 +38,7 @@ ex:tech_mromero a edintcee:CompetentTechnician ;
 
 ex:userrec_PROY_2025_S001 a edintcee:UserRecommendations ;
     edintcee:userRecommendationsDelivered "false"^^xsd:boolean ;
-    edintcee:userRecommendationsRecipient "Developer" ;
+    edintcee:userRecommendationsRecipient edintceekos-rcp:Owner ;
     edintcee:userRecommendationsDeliveryDate "2025-03-10"^^xsd:date .
 
 # --- Energy Certificate ---
@@ -98,7 +99,7 @@ ex:cert_PROY_2025_S001 a edintcee:EnergyCertificate ;
 # --- Energy Rating ---
 
 ex:rating_PROY_2025_S001 a edintcee:EnergyRating ;
-    edintcee:ratingLetter              "A" ;
+    edintcee:ratingLetter              edintceekos-rl:A ;
     edintcee:ratingScaleVersion        edintceekos-rsv:RD390_2021 ;
     edintcee:primaryEnergyTotal        "28.5"^^xsd:decimal ;
     edintcee:primaryEnergyNonRenewable "12.3"^^xsd:decimal ;
@@ -111,9 +112,9 @@ ex:rating_PROY_2025_S001 a edintcee:EnergyRating ;
     edintcee:coolingConsumption         "4.1"^^xsd:decimal ;
     edintcee:dhwConsumption             "3.2"^^xsd:decimal ;
     edintcee:lightingConsumption        "1.6"^^xsd:decimal ;
-    edintcee:dataBasis                  "calculated" .
+    edintcee:dataBasis                 edintceekos-db:Calculated .
 
 # --- Energy Label ---
 
 ex:label_PROY_2025_S001 a edintcee:EnergyLabel ;
-    edintcee:labelRatingLetter "A" .
+    edintcee:labelRatingLetter edintceekos-rl:A .

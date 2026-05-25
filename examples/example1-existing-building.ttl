@@ -1,9 +1,15 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/> .
-@prefix edintceekos-bu: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/building-use/> .
-@prefix edintceekos-es: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/energy-source/> .
-@prefix edintceekos-cz: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/climatic-zone/> .
-@prefix edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/> .
+@prefix edintceekos-bu: <http://vocab.linkeddata.es/datosabiertos/kos/edint/BuildingUse/> .
+@prefix edintceekos-es: <http://vocab.linkeddata.es/datosabiertos/kos/edint/EnergySource/> .
+@prefix edintceekos-cz: <http://vocab.linkeddata.es/datosabiertos/kos/edint/ClimaticZone/> .
+@prefix edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edint/CertificateType/> .
+@prefix edintceekos-rl: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingLetter/> .
+@prefix edintceekos-pt: <http://vocab.linkeddata.es/datosabiertos/kos/edint/ProcedureType/> .
+@prefix edintceekos-rt: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RecommendationType/> .
+@prefix edintceekos-db: <http://vocab.linkeddata.es/datosabiertos/kos/edint/DataBasis/> .
+@prefix edintceekos-rcp: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RecipientType/> .
+@prefix edintceekos-rsv: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingScaleVersion/> .
 @prefix ex: <http://ejemplo.org/cee/> .
 
 # ---------------------------------------------------------------------------
@@ -19,7 +25,7 @@
 ex:proc_CEP a edintcee:CalculationProcedure ;
     edintcee:procedureName "CEP" ;
     edintcee:procedureVersion "7.0" ;
-    edintcee:procedureType "general" .
+    edintcee:procedureType edintceekos-pt:General .
 
 # --- Competent Technician ---
 
@@ -35,7 +41,7 @@ ex:tech_mlopez a edintcee:CompetentTechnician ;
 ex:userrec_2024_M12345 a edintcee:UserRecommendations ;
     edintcee:userRecommendationsDelivered "true"^^xsd:boolean ;
     edintcee:userRecommendationsDeliveryDate "2024-05-20"^^xsd:date ;
-    edintcee:userRecommendationsRecipient "Owner" .
+    edintcee:userRecommendationsRecipient edintceekos-rcp:Owner .
 
 # --- Energy Certificate ---
 
@@ -45,7 +51,7 @@ ex:cert_2024_M12345 a edintcee:EnergyCertificate ;
     edintcee:hasLabel               ex:label_2024_M12345 ;
     edintcee:usesProcedure          ex:proc_CEP ;
     edintcee:hasUserRecommendations ex:userrec_2024_M12345 ;
-    edintcee:certificateType       edintceekos-ct:ExistingBuilding ;
+    edintcee:certificateType        edintceekos-ct:ExistingBuilding ;
     edintcee:predecessorCertificate ex:cert_2016_M12345 ;
 
     # Certificate metadata
@@ -97,7 +103,8 @@ ex:cert_2024_M12345 a edintcee:EnergyCertificate ;
 # --- Energy Rating ---
 
 ex:rating_2024_M12345 a edintcee:EnergyRating ;
-    edintcee:ratingLetter              "D" ;
+    edintcee:ratingLetter              edintceekos-rl:D ;
+    edintcee:ratingScaleVersion        edintceekos-rsv:RD390_2021 ;
     edintcee:primaryEnergyTotal        "152.4"^^xsd:decimal ;
     edintcee:primaryEnergyNonRenewable "112.8"^^xsd:decimal ;
     edintcee:primaryEnergyRenewable    "39.6"^^xsd:decimal ;
@@ -109,45 +116,45 @@ ex:rating_2024_M12345 a edintcee:EnergyRating ;
     edintcee:coolingConsumption        "19.4"^^xsd:decimal ;
     edintcee:dhwConsumption            "23.1"^^xsd:decimal ;
     edintcee:lightingConsumption       "5.2"^^xsd:decimal ;
-    edintcee:dataBasis                 "calculated" .
+    edintcee:dataBasis                 edintceekos-db:Calculated .
 
 # --- Energy Label ---
 
 ex:label_2024_M12345 a edintcee:EnergyLabel ;
-    edintcee:labelRatingLetter "D" .
+    edintcee:labelRatingLetter edintceekos-rl:D .
 
 # --- Improvement Recommendations ---
 
 ex:rec_2024_M12345_1 a edintcee:ImprovementRecommendation ;
-    edintcee:recommendationType       "installation" ;
+    edintcee:recommendationType        edintceekos-rt:Installation ;
     edintcee:recommendationDescription "Sustituir calderas individuales por sistema centralizado de aerotermia con bomba de calor aire-agua." ;
     edintcee:estimatedSavingPct       "38.0"^^xsd:decimal ;
     edintcee:estimatedSavingKwh       "43200"^^xsd:decimal ;
     edintcee:paybackPeriod            "9.5"^^xsd:decimal ;
     edintcee:estimatedCost            "185000"^^xsd:decimal ;
     edintcee:priority                 1 ;
-    edintcee:improvedRatingLetter     "B" ;
+    edintcee:improvedRatingLetter     edintceekos-rl:B ;
     edintcee:comfortHealthBenefit     "Mayor confort térmico en invierno y posibilidad de refrigeración en verano." .
 
 ex:rec_2024_M12345_2 a edintcee:ImprovementRecommendation ;
-    edintcee:recommendationType       "envelope" ;
+    edintcee:recommendationType        edintceekos-rt:Envelope ;
     edintcee:recommendationDescription "Aislamiento exterior SATE 8 cm lana de roca. Cubierta 10 cm poliuretano proyectado." ;
     edintcee:estimatedSavingPct       "25.0"^^xsd:decimal ;
     edintcee:estimatedSavingKwh       "28400"^^xsd:decimal ;
     edintcee:paybackPeriod            "14.0"^^xsd:decimal ;
     edintcee:estimatedCost            "210000"^^xsd:decimal ;
     edintcee:priority                 2 ;
-    edintcee:improvedRatingLetter     "B" .
+    edintcee:improvedRatingLetter     edintceekos-rl:B .
 
 ex:rec_2024_M12345_3 a edintcee:ImprovementRecommendation ;
-    edintcee:recommendationType       "automation" ;
+    edintcee:recommendationType        edintceekos-rt:Automation ;
     edintcee:recommendationDescription "Sistema de control centralizado con termostatos programables y válvulas termostáticas." ;
     edintcee:estimatedSavingPct       "8.0"^^xsd:decimal ;
     edintcee:estimatedSavingKwh       "9100"^^xsd:decimal ;
     edintcee:paybackPeriod            "3.5"^^xsd:decimal ;
     edintcee:estimatedCost            "18000"^^xsd:decimal ;
     edintcee:priority                 3 ;
-    edintcee:improvedRatingLetter     "C" .
+    edintcee:improvedRatingLetter     edintceekos-rl:C .
 
 # --- Predecessor Certificate ---
 
@@ -160,10 +167,11 @@ ex:cert_2016_M12345 a edintcee:EnergyCertificate ;
     edintcee:issueDate        "2016-09-12"^^xsd:date ;
     edintcee:validUntil       "2026-09-12"^^xsd:date ;
     edintcee:observedCadastralRef "2807901VK4717F0001WX" ;
-    edintcee:certificateType edintceekos-ct:ExistingBuilding .
+    edintcee:certificateType  edintceekos-ct:ExistingBuilding .
 
 ex:rating_2016_M12345 a edintcee:EnergyRating ;
-    edintcee:ratingLetter              "E" ;
+    edintcee:ratingLetter              edintceekos-rl:E ;
+    edintcee:ratingScaleVersion        edintceekos-rsv:RD390_2021 ;
     edintcee:primaryEnergyNonRenewable "148.5"^^xsd:decimal ;
     edintcee:co2Emissions              "45.1"^^xsd:decimal .
 
@@ -176,7 +184,7 @@ ex:tech_jperez a edintcee:CompetentTechnician ;
 ex:proc_CEP_old a edintcee:CalculationProcedure ;
     edintcee:procedureName "CEP" ;
     edintcee:procedureVersion "5.2" ;
-    edintcee:procedureType "general" .
+    edintcee:procedureType edintceekos-pt:General .
 
 ex:userrec_2016_M12345 a edintcee:UserRecommendations ;
     edintcee:userRecommendationsDelivered "true"^^xsd:boolean .

@@ -1,20 +1,21 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/> .
-@prefix edintceekos-bu: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/building-use/> .
-@prefix edintceekos-es: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/energy-source/> .
-@prefix edintceekos-cz: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/climatic-zone/> .
-@prefix edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/> .
-@prefix edintceekos-rsv: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/rating-scale-version/> .
+@prefix edintceekos-bu: <http://vocab.linkeddata.es/datosabiertos/kos/edint/BuildingUse/> .
+@prefix edintceekos-es: <http://vocab.linkeddata.es/datosabiertos/kos/edint/EnergySource/> .
+@prefix edintceekos-cz: <http://vocab.linkeddata.es/datosabiertos/kos/edint/ClimaticZone/> .
+@prefix edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edint/CertificateType/> .
+@prefix edintceekos-rl: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingLetter/> .
+@prefix edintceekos-pt: <http://vocab.linkeddata.es/datosabiertos/kos/edint/ProcedureType/> .
+@prefix edintceekos-rt: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RecommendationType/> .
+@prefix edintceekos-db: <http://vocab.linkeddata.es/datosabiertos/kos/edint/DataBasis/> .
+@prefix edintceekos-rcp: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RecipientType/> .
+@prefix edintceekos-rsv: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingScaleVersion/> .
 @prefix ex: <http://ejemplo.org/cee/> .
 
 # ---------------------------------------------------------------------------
 # EXAMPLE 3: Completed work certificate linked to project predecessor
 # Same residential building in Sevilla as example2, after construction.
-# Art. 2.c, Art. 9 RD 390/2021 — second phase: certification from the
-# effective characteristics of the completed building.
-# The building points to the certificate from outside this ontology:
-#   <http://ejemplo.org/edificios/bloque_sevilla_avda>
-#       ex:hasEnergyCertificate ex:cert_OT_2026_S001 .
+# Art. 2.c, Art. 9 RD 390/2021 — second phase.
 # ---------------------------------------------------------------------------
 
 # --- Calculation Procedure (same version as project per Art. 9.4) ---
@@ -22,7 +23,7 @@
 ex:proc_CEH_2024 a edintcee:CalculationProcedure ;
     edintcee:procedureName "CEH" ;
     edintcee:procedureVersion "2024.1" ;
-    edintcee:procedureType "general" .
+    edintcee:procedureType edintceekos-pt:General .
 
 # --- Competent Technician ---
 
@@ -38,7 +39,7 @@ ex:tech_lnavarro a edintcee:CompetentTechnician ;
 ex:userrec_OT_2026_S001 a edintcee:UserRecommendations ;
     edintcee:userRecommendationsDelivered "true"^^xsd:boolean ;
     edintcee:userRecommendationsDeliveryDate "2026-02-28"^^xsd:date ;
-    edintcee:userRecommendationsRecipient "Owner" .
+    edintcee:userRecommendationsRecipient edintceekos-rcp:Owner .
 
 # --- Energy Certificate ---
 
@@ -105,7 +106,7 @@ ex:cert_OT_2026_S001 a edintcee:EnergyCertificate ;
 # --- Energy Rating ---
 
 ex:rating_OT_2026_S001 a edintcee:EnergyRating ;
-    edintcee:ratingLetter              "A" ;
+    edintcee:ratingLetter              edintceekos-rl:A ;
     edintcee:ratingScaleVersion        edintceekos-rsv:RD390_2021 ;
     edintcee:primaryEnergyTotal        "30.1"^^xsd:decimal ;
     edintcee:primaryEnergyNonRenewable "13.5"^^xsd:decimal ;
@@ -118,21 +119,21 @@ ex:rating_OT_2026_S001 a edintcee:EnergyRating ;
     edintcee:coolingConsumption         "4.3"^^xsd:decimal ;
     edintcee:dhwConsumption             "3.2"^^xsd:decimal ;
     edintcee:lightingConsumption        "1.6"^^xsd:decimal ;
-    edintcee:dataBasis                  "calculated" .
+    edintcee:dataBasis                 edintceekos-db:Calculated .
 
 # --- Energy Label ---
 
 ex:label_OT_2026_S001 a edintcee:EnergyLabel ;
-    edintcee:labelRatingLetter "A" .
+    edintcee:labelRatingLetter edintceekos-rl:A .
 
 # --- Improvement Recommendation ---
 
 ex:rec_OT_2026_S001_1 a edintcee:ImprovementRecommendation ;
-    edintcee:recommendationType        "automation" ;
+    edintcee:recommendationType        edintceekos-rt:Automation ;
     edintcee:recommendationDescription "Ampliación del sistema de monitorización energética con contadores individuales por vivienda para optimización del consumo." ;
     edintcee:estimatedSavingPct        "3.0"^^xsd:decimal ;
     edintcee:estimatedSavingKwh        "4500"^^xsd:decimal ;
     edintcee:paybackPeriod             "2.0"^^xsd:decimal ;
     edintcee:estimatedCost             "8000"^^xsd:decimal ;
     edintcee:priority                  1 ;
-    edintcee:improvedRatingLetter      "A" .
+    edintcee:improvedRatingLetter      edintceekos-rl:A .

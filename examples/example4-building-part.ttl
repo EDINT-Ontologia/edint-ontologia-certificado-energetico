@@ -1,19 +1,23 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/> .
-@prefix edintceekos-bu: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/building-use/> .
-@prefix edintceekos-es: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/energy-source/> .
-@prefix edintceekos-cz: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/climatic-zone/> .
-@prefix edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/> .
-@prefix edintceekos-rsv: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/rating-scale-version/> .
+@prefix edintceekos-bu: <http://vocab.linkeddata.es/datosabiertos/kos/edint/BuildingUse/> .
+@prefix edintceekos-es: <http://vocab.linkeddata.es/datosabiertos/kos/edint/EnergySource/> .
+@prefix edintceekos-cz: <http://vocab.linkeddata.es/datosabiertos/kos/edint/ClimaticZone/> .
+@prefix edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edint/CertificateType/> .
+@prefix edintceekos-rl: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingLetter/> .
+@prefix edintceekos-pt: <http://vocab.linkeddata.es/datosabiertos/kos/edint/ProcedureType/> .
+@prefix edintceekos-rt: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RecommendationType/> .
+@prefix edintceekos-db: <http://vocab.linkeddata.es/datosabiertos/kos/edint/DataBasis/> .
+@prefix edintceekos-rcp: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RecipientType/> .
+@prefix edintceekos-rsv: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingScaleVersion/> .
+@prefix edintceekos-ap: <http://vocab.linkeddata.es/datosabiertos/kos/edint/AccessPath/> .
+@prefix edintceekos-cm: <http://vocab.linkeddata.es/datosabiertos/kos/edint/CourseModule/> .
 @prefix ex: <http://ejemplo.org/cee/> .
 
 # ---------------------------------------------------------------------------
 # EXAMPLE 4: Part of a building — a commercial premises on ground floor
 # Local comercial en Barcelona, zona climática C2, rating F
 # Art. 2.d, Art. 10 RD 390/2021 — existing building part certification.
-# The building part points to the certificate from outside this ontology:
-#   <http://ejemplo.org/edificios/local_diagonal>
-#       ex:hasEnergyCertificate ex:cert_2025_B042 .
 # ---------------------------------------------------------------------------
 
 # --- Calculation Procedure ---
@@ -21,7 +25,7 @@
 ex:proc_CEP_s a edintcee:CalculationProcedure ;
     edintcee:procedureName "CEP" ;
     edintcee:procedureVersion "7.0" ;
-    edintcee:procedureType "simplified" .
+    edintcee:procedureType edintceekos-pt:Simplified .
 
 # --- Competent Technician ---
 
@@ -30,8 +34,8 @@ ex:tech_cdominguez a edintcee:CompetentTechnician ;
     edintcee:technicianNIF "45678901F" ;
     edintcee:technicianQualification "Ingeniero industrial" ;
     edintcee:technicianRegistrationCCAA "Cataluña" ;
-    edintcee:technicianAccessPath "universityTitle_c" ;
-    edintcee:technicianCourseModules "module1And2" ;
+    edintcee:technicianAccessPath       edintceekos-ap:UniversityTitleC ;
+    edintcee:technicianCourseModules     edintceekos-cm:Module1And2 ;
     edintcee:technicianPublicAuthorization "true"^^xsd:boolean .
 
 # --- User Recommendations ---
@@ -39,7 +43,7 @@ ex:tech_cdominguez a edintcee:CompetentTechnician ;
 ex:userrec_2025_B042 a edintcee:UserRecommendations ;
     edintcee:userRecommendationsDelivered "true"^^xsd:boolean ;
     edintcee:userRecommendationsDeliveryDate "2025-01-22"^^xsd:date ;
-    edintcee:userRecommendationsRecipient "Tenant" .
+    edintcee:userRecommendationsRecipient edintceekos-rcp:Tenant .
 
 # --- Energy Certificate ---
 
@@ -103,7 +107,7 @@ ex:cert_2025_B042 a edintcee:EnergyCertificate ;
 # --- Energy Rating ---
 
 ex:rating_2025_B042 a edintcee:EnergyRating ;
-    edintcee:ratingLetter              "F" ;
+    edintcee:ratingLetter              edintceekos-rl:F ;
     edintcee:ratingScaleVersion        edintceekos-rsv:RD390_2021 ;
     edintcee:primaryEnergyTotal        "485.0"^^xsd:decimal ;
     edintcee:primaryEnergyNonRenewable "410.2"^^xsd:decimal ;
@@ -116,32 +120,32 @@ ex:rating_2025_B042 a edintcee:EnergyRating ;
     edintcee:coolingConsumption        "68.1"^^xsd:decimal ;
     edintcee:dhwConsumption            "0.0"^^xsd:decimal ;
     edintcee:lightingConsumption       "24.8"^^xsd:decimal ;
-    edintcee:dataBasis                 "calculated" .
+    edintcee:dataBasis                 edintceekos-db:Calculated .
 
 # --- Energy Label ---
 
 ex:label_2025_B042 a edintcee:EnergyLabel ;
-    edintcee:labelRatingLetter "F" .
+    edintcee:labelRatingLetter edintceekos-rl:F .
 
 # --- Improvement Recommendations ---
 
 ex:rec_2025_B042_1 a edintcee:ImprovementRecommendation ;
-    edintcee:recommendationType        "combined" ;
+    edintcee:recommendationType        edintceekos-rt:Combined ;
     edintcee:recommendationDescription "Sustituir splits por sistema VRF de alta eficiencia y renovar alumbrado a LED." ;
     edintcee:estimatedSavingPct        "42.0"^^xsd:decimal ;
     edintcee:estimatedSavingKwh        "15200"^^xsd:decimal ;
     edintcee:paybackPeriod             "5.0"^^xsd:decimal ;
     edintcee:estimatedCost             "28000"^^xsd:decimal ;
     edintcee:priority                  1 ;
-    edintcee:improvedRatingLetter      "D" ;
+    edintcee:improvedRatingLetter      edintceekos-rl:D ;
     edintcee:comfortHealthBenefit       "Mejora del confort térmico y calidad de iluminación." .
 
 ex:rec_2025_B042_2 a edintcee:ImprovementRecommendation ;
-    edintcee:recommendationType        "envelope" ;
+    edintcee:recommendationType        edintceekos-rt:Envelope ;
     edintcee:recommendationDescription "Aislamiento interior de fachada con panel sándwich 4 cm y sustitución de carpintería por PVC con doble acristalamiento." ;
     edintcee:estimatedSavingPct        "30.0"^^xsd:decimal ;
     edintcee:estimatedSavingKwh        "10800"^^xsd:decimal ;
     edintcee:paybackPeriod             "8.0"^^xsd:decimal ;
     edintcee:estimatedCost             "35000"^^xsd:decimal ;
     edintcee:priority                  2 ;
-    edintcee:improvedRatingLetter      "D" .
+    edintcee:improvedRatingLetter      edintceekos-rl:D .

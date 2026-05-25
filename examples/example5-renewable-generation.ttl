@@ -1,10 +1,16 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/> .
-@prefix edintceekos-bu: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/building-use/> .
-@prefix edintceekos-es: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/energy-source/> .
-@prefix edintceekos-cz: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/climatic-zone/> .
-@prefix edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/> .
-@prefix edintceekos-rsv: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/rating-scale-version/> .
+@prefix edintceekos-bu: <http://vocab.linkeddata.es/datosabiertos/kos/edint/BuildingUse/> .
+@prefix edintceekos-es: <http://vocab.linkeddata.es/datosabiertos/kos/edint/EnergySource/> .
+@prefix edintceekos-cz: <http://vocab.linkeddata.es/datosabiertos/kos/edint/ClimaticZone/> .
+@prefix edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edint/CertificateType/> .
+@prefix edintceekos-rl: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingLetter/> .
+@prefix edintceekos-pt: <http://vocab.linkeddata.es/datosabiertos/kos/edint/ProcedureType/> .
+@prefix edintceekos-rt: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RecommendationType/> .
+@prefix edintceekos-db: <http://vocab.linkeddata.es/datosabiertos/kos/edint/DataBasis/> .
+@prefix edintceekos-rcp: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RecipientType/> .
+@prefix edintceekos-rsv: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingScaleVersion/> .
+@prefix edintceekos-ap: <http://vocab.linkeddata.es/datosabiertos/kos/edint/AccessPath/> .
 @prefix ex: <http://ejemplo.org/cee/> .
 
 # ---------------------------------------------------------------------------
@@ -12,9 +18,6 @@
 # Single-family house in Vitoria-Gasteiz, zona climática D1, rating B
 # Features: aerothermal + PV + solar thermal + battery
 # Art. 2.d, Art. 10 RD 390/2021 — existing building certificate.
-# The building points to the certificate from outside this ontology:
-#   <http://ejemplo.org/edificios/chalet_vitoria>
-#       ex:hasEnergyCertificate ex:cert_2025_VI001 .
 # ---------------------------------------------------------------------------
 
 # --- Calculation Procedure ---
@@ -22,7 +25,7 @@
 ex:proc_CEP_v a edintcee:CalculationProcedure ;
     edintcee:procedureName "CEP" ;
     edintcee:procedureVersion "7.0" ;
-    edintcee:procedureType "general" .
+    edintcee:procedureType edintceekos-pt:General .
 
 # --- Competent Technician ---
 
@@ -31,7 +34,7 @@ ex:tech_asaez a edintcee:CompetentTechnician ;
     edintcee:technicianNIF "12345678G" ;
     edintcee:technicianQualification "Arquitecta técnica" ;
     edintcee:technicianRegistrationCCAA "País Vasco" ;
-    edintcee:technicianAccessPath "competenceStandard" ;
+    edintcee:technicianAccessPath       edintceekos-ap:CompetenceStandard ;
     edintcee:technicianPublicAuthorization "true"^^xsd:boolean .
 
 # --- User Recommendations ---
@@ -39,7 +42,7 @@ ex:tech_asaez a edintcee:CompetentTechnician ;
 ex:userrec_2025_VI001 a edintcee:UserRecommendations ;
     edintcee:userRecommendationsDelivered "true"^^xsd:boolean ;
     edintcee:userRecommendationsDeliveryDate "2025-04-15"^^xsd:date ;
-    edintcee:userRecommendationsRecipient "Owner" .
+    edintcee:userRecommendationsRecipient edintceekos-rcp:Owner .
 
 # --- Energy Certificate ---
 
@@ -112,7 +115,7 @@ ex:cert_2025_VI001 a edintcee:EnergyCertificate ;
 # --- Energy Rating ---
 
 ex:rating_2025_VI001 a edintcee:EnergyRating ;
-    edintcee:ratingLetter              "B" ;
+    edintcee:ratingLetter              edintceekos-rl:B ;
     edintcee:ratingScaleVersion        edintceekos-rsv:EPBD3_RECALCULATED ;
     edintcee:primaryEnergyTotal        "42.8"^^xsd:decimal ;
     edintcee:primaryEnergyNonRenewable "18.5"^^xsd:decimal ;
@@ -125,7 +128,7 @@ ex:rating_2025_VI001 a edintcee:EnergyRating ;
     edintcee:coolingConsumption         "2.3"^^xsd:decimal ;
     edintcee:dhwConsumption             "3.8"^^xsd:decimal ;
     edintcee:lightingConsumption        "2.2"^^xsd:decimal ;
-    edintcee:dataBasis                  "mixed" ;
+    edintcee:dataBasis                 edintceekos-db:Mixed ;
     edintcee:measuredHeatingConsumption "5.0"^^xsd:decimal ;
     edintcee:measuredCoolingConsumption "2.1"^^xsd:decimal ;
     edintcee:measuredDHWConsumption     "3.5"^^xsd:decimal ;
@@ -136,19 +139,19 @@ ex:rating_2025_VI001 a edintcee:EnergyRating ;
 # --- Energy Label ---
 
 ex:label_2025_VI001 a edintcee:EnergyLabel ;
-    edintcee:labelRatingLetter "B" .
+    edintcee:labelRatingLetter edintceekos-rl:B .
 
 # --- Improvement Recommendation ---
 
 ex:rec_2025_VI001_1 a edintcee:ImprovementRecommendation ;
-    edintcee:recommendationType        "automation" ;
+    edintcee:recommendationType        edintceekos-rt:Automation ;
     edintcee:recommendationDescription "Instalar sistema de gestión energética doméstico (HEMS) con predicción meteorológica y optimización de autoconsumo FV + batería." ;
     edintcee:estimatedSavingPct        "5.0"^^xsd:decimal ;
     edintcee:estimatedSavingKwh        "850"^^xsd:decimal ;
     edintcee:paybackPeriod             "3.0"^^xsd:decimal ;
     edintcee:estimatedCost             "2500"^^xsd:decimal ;
     edintcee:priority                  1 ;
-    edintcee:improvedRatingLetter      "A" ;
+    edintcee:improvedRatingLetter      edintceekos-rl:A ;
     edintcee:comfortHealthBenefit       "Gestión automática de confort y maximización de autoconsumo renovable." .
 
 # --- Predecessor Certificate (before renovation) ---
@@ -166,7 +169,7 @@ ex:cert_2017_VI001 a edintcee:EnergyCertificate ;
     edintcee:observedBuildingUse edintceekos-bu:Residential .
 
 ex:rating_2017_VI001 a edintcee:EnergyRating ;
-    edintcee:ratingLetter              "E" ;
+    edintcee:ratingLetter              edintceekos-rl:E ;
     edintcee:ratingScaleVersion        edintceekos-rsv:RD390_2021 ;
     edintcee:primaryEnergyNonRenewable "125.4"^^xsd:decimal ;
     edintcee:co2Emissions              "32.8"^^xsd:decimal .
@@ -174,7 +177,7 @@ ex:rating_2017_VI001 a edintcee:EnergyRating ;
 ex:proc_CEP_v_old a edintcee:CalculationProcedure ;
     edintcee:procedureName "CEP" ;
     edintcee:procedureVersion "5.2" ;
-    edintcee:procedureType "general" .
+    edintcee:procedureType edintceekos-pt:General .
 
 ex:userrec_2017_VI001 a edintcee:UserRecommendations ;
     edintcee:userRecommendationsDelivered "true"^^xsd:boolean .
