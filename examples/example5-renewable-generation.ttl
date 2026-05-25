@@ -1,0 +1,180 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/> .
+@prefix edintceekos-bu: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/building-use/> .
+@prefix edintceekos-es: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/energy-source/> .
+@prefix edintceekos-cz: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/climatic-zone/> .
+@prefix edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/> .
+@prefix edintceekos-rsv: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/rating-scale-version/> .
+@prefix ex: <http://ejemplo.org/cee/> .
+
+# ---------------------------------------------------------------------------
+# EXAMPLE 5: Existing building with renewable generation (nZEB-like)
+# Single-family house in Vitoria-Gasteiz, zona climática D1, rating B
+# Features: aerothermal + PV + solar thermal + battery
+# Art. 2.d, Art. 10 RD 390/2021 — existing building certificate.
+# The building points to the certificate from outside this ontology:
+#   <http://ejemplo.org/edificios/chalet_vitoria>
+#       ex:hasEnergyCertificate ex:cert_2025_VI001 .
+# ---------------------------------------------------------------------------
+
+# --- Calculation Procedure ---
+
+ex:proc_CEP_v a edintcee:CalculationProcedure ;
+    edintcee:procedureName "CEP" ;
+    edintcee:procedureVersion "7.0" ;
+    edintcee:procedureType "general" .
+
+# --- Competent Technician ---
+
+ex:tech_asaez a edintcee:CompetentTechnician ;
+    edintcee:technicianName "Ana Sáez de Adana Herrero" ;
+    edintcee:technicianNIF "12345678G" ;
+    edintcee:technicianQualification "Arquitecta técnica" ;
+    edintcee:technicianRegistrationCCAA "País Vasco" ;
+    edintcee:technicianAccessPath "competenceStandard" ;
+    edintcee:technicianPublicAuthorization "true"^^xsd:boolean .
+
+# --- User Recommendations ---
+
+ex:userrec_2025_VI001 a edintcee:UserRecommendations ;
+    edintcee:userRecommendationsDelivered "true"^^xsd:boolean ;
+    edintcee:userRecommendationsDeliveryDate "2025-04-15"^^xsd:date ;
+    edintcee:userRecommendationsRecipient "Owner" .
+
+# --- Energy Certificate ---
+
+ex:cert_2025_VI001 a edintcee:EnergyCertificate ;
+    edintcee:hasRating              ex:rating_2025_VI001 ;
+    edintcee:issuedBy               ex:tech_asaez ;
+    edintcee:hasLabel               ex:label_2025_VI001 ;
+    edintcee:usesProcedure          ex:proc_CEP_v ;
+    edintcee:hasUserRecommendations ex:userrec_2025_VI001 ;
+    edintcee:certificateType        edintceekos-ct:ExistingBuilding ;
+    edintcee:predecessorCertificate ex:cert_2017_VI001 ;
+
+    # Certificate metadata
+    edintcee:certificateNumber      "VI-2025-000100" ;
+    edintcee:issueDate              "2025-04-15"^^xsd:date ;
+    edintcee:visitDate              "2025-04-10"^^xsd:date ;
+    edintcee:registrationDate       "2025-04-22"^^xsd:date ;
+    edintcee:validUntil             "2035-04-15"^^xsd:date ;
+    edintcee:visitDescription       "Visita in situ: verificación de instalación de aerotermia, paneles FV 8 kWp, colectores solares térmicos 4 m², batería de almacenamiento 10 kWh." ;
+    edintcee:applicableRegulation   "CTE DB-HE (2019), RITE (2021)" ;
+    edintcee:registrationCCAA       "País Vasco" ;
+
+    # Observed building data
+    edintcee:observedCadastralRef       "0105901VK8765S0001RX" ;
+    edintcee:observedAddress            "C/ Olarizu 15" ;
+    edintcee:observedMunicipality       "Vitoria-Gasteiz" ;
+    edintcee:observedProvince           "Álava" ;
+    edintcee:observedUsefulSurface      "220.0"^^xsd:decimal ;
+    edintcee:observedConstructionYear   "2000"^^xsd:gYear ;
+    edintcee:observedBuildingUse        edintceekos-bu:Residential ;
+    edintcee:observedClimaticZone       edintceekos-cz:D1 ;
+    edintcee:observedHeritageProtection "false"^^xsd:boolean ;
+    edintcee:observedIsBuildingPart     "false"^^xsd:boolean ;
+
+    # Envelope (renovated 2023)
+    edintcee:envelopeDescription        "SATE 8 cm lana de roca en fachada (2023). Cubierta inclinada aislamiento 12 cm proyectado. Carpintería PVC doble acristalamiento (4/16/4). Solera aislante sobre losa." ;
+    edintcee:globalHeatTransferCoeff    "0.42"^^xsd:decimal ;
+    edintcee:windowAreaRatio            "18.0"^^xsd:decimal ;
+
+    # Systems — all electric + renewables
+    edintcee:hasHeatingSystem           "true"^^xsd:boolean ;
+    edintcee:heatingSystemType          "Bomba de calor geotermia, suelo radiante" ;
+    edintcee:heatingEnergySource        edintceekos-es:Geothermal ;
+    edintcee:heatingEfficiency          "4.20"^^xsd:decimal ;
+    edintcee:hasCoolingSystem           "true"^^xsd:boolean ;
+    edintcee:coolingSystemType          "Bomba de calor geotermia (misma unidad), suelo radiante/refrescante" ;
+    edintcee:coolingEnergySource        edintceekos-es:Geothermal ;
+    edintcee:coolingEfficiency          "3.80"^^xsd:decimal ;
+    edintcee:hasDHWSystem               "true"^^xsd:boolean ;
+    edintcee:dhwSystemType              "Bomba de calor geotermia + apoyo solar térmico 4 m²" ;
+    edintcee:dhwEnergySource            edintceekos-es:Geothermal ;
+    edintcee:ventilationEnergySource    edintceekos-es:Electricity ;
+    edintcee:hasRenewableGeneration     "true"^^xsd:boolean ;
+    edintcee:renewableType              "Solar fotovoltaica 8 kWp + batería 10 kWh" ;
+    edintcee:renewableEnergySource      edintceekos-es:SolarPV ;
+    edintcee:renewableCapacity          "8.0"^^xsd:decimal ;
+    edintcee:hasAutomationSystem        "true"^^xsd:boolean ;
+    edintcee:hasMechanicalVentilation   "true"^^xsd:boolean ;
+    edintcee:hasHeatRecovery            "true"^^xsd:boolean ;
+    edintcee:lightingSystemType         "LED" ;
+    edintcee:lightingEfficiency          "0.90"^^xsd:decimal ;
+
+    # Consumption data
+    edintcee:consumptionDataAvailableToOwner     "true"^^xsd:boolean ;
+    edintcee:aggregatedDataAvailableForResearch   "true"^^xsd:boolean ;
+
+    # Improvement recommendations (minor — building already B)
+    edintcee:hasRecommendation           ex:rec_2025_VI001_1 .
+
+# --- Energy Rating ---
+
+ex:rating_2025_VI001 a edintcee:EnergyRating ;
+    edintcee:ratingLetter              "B" ;
+    edintcee:ratingScaleVersion        edintceekos-rsv:EPBD3_RECALCULATED ;
+    edintcee:primaryEnergyTotal        "42.8"^^xsd:decimal ;
+    edintcee:primaryEnergyNonRenewable "18.5"^^xsd:decimal ;
+    edintcee:primaryEnergyRenewable    "24.3"^^xsd:decimal ;
+    edintcee:co2Emissions              "4.5"^^xsd:decimal ;
+    edintcee:heatingDemand             "15.2"^^xsd:decimal ;
+    edintcee:coolingDemand             "6.5"^^xsd:decimal ;
+    edintcee:dhwDemand                 "10.8"^^xsd:decimal ;
+    edintcee:heatingConsumption         "5.1"^^xsd:decimal ;
+    edintcee:coolingConsumption         "2.3"^^xsd:decimal ;
+    edintcee:dhwConsumption             "3.8"^^xsd:decimal ;
+    edintcee:lightingConsumption        "2.2"^^xsd:decimal ;
+    edintcee:dataBasis                  "mixed" ;
+    edintcee:measuredHeatingConsumption "5.0"^^xsd:decimal ;
+    edintcee:measuredCoolingConsumption "2.1"^^xsd:decimal ;
+    edintcee:measuredDHWConsumption     "3.5"^^xsd:decimal ;
+    edintcee:measuredTotalConsumption   "12.8"^^xsd:decimal ;
+    edintcee:measurementPeriodStart    "2024-01-01"^^xsd:date ;
+    edintcee:measurementPeriodEnd       "2024-12-31"^^xsd:date .
+
+# --- Energy Label ---
+
+ex:label_2025_VI001 a edintcee:EnergyLabel ;
+    edintcee:labelRatingLetter "B" .
+
+# --- Improvement Recommendation ---
+
+ex:rec_2025_VI001_1 a edintcee:ImprovementRecommendation ;
+    edintcee:recommendationType        "automation" ;
+    edintcee:recommendationDescription "Instalar sistema de gestión energética doméstico (HEMS) con predicción meteorológica y optimización de autoconsumo FV + batería." ;
+    edintcee:estimatedSavingPct        "5.0"^^xsd:decimal ;
+    edintcee:estimatedSavingKwh        "850"^^xsd:decimal ;
+    edintcee:paybackPeriod             "3.0"^^xsd:decimal ;
+    edintcee:estimatedCost             "2500"^^xsd:decimal ;
+    edintcee:priority                  1 ;
+    edintcee:improvedRatingLetter      "A" ;
+    edintcee:comfortHealthBenefit       "Gestión automática de confort y maximización de autoconsumo renovable." .
+
+# --- Predecessor Certificate (before renovation) ---
+
+ex:cert_2017_VI001 a edintcee:EnergyCertificate ;
+    edintcee:hasRating        ex:rating_2017_VI001 ;
+    edintcee:issuedBy         ex:tech_asaez ;
+    edintcee:usesProcedure    ex:proc_CEP_v_old ;
+    edintcee:hasUserRecommendations ex:userrec_2017_VI001 ;
+    edintcee:certificateType  edintceekos-ct:ExistingBuilding ;
+    edintcee:certificateNumber "VI-2017-000050" ;
+    edintcee:issueDate        "2017-06-10"^^xsd:date ;
+    edintcee:validUntil       "2027-06-10"^^xsd:date ;
+    edintcee:observedCadastralRef "0105901VK8765S0001RX" ;
+    edintcee:observedBuildingUse edintceekos-bu:Residential .
+
+ex:rating_2017_VI001 a edintcee:EnergyRating ;
+    edintcee:ratingLetter              "E" ;
+    edintcee:ratingScaleVersion        edintceekos-rsv:RD390_2021 ;
+    edintcee:primaryEnergyNonRenewable "125.4"^^xsd:decimal ;
+    edintcee:co2Emissions              "32.8"^^xsd:decimal .
+
+ex:proc_CEP_v_old a edintcee:CalculationProcedure ;
+    edintcee:procedureName "CEP" ;
+    edintcee:procedureVersion "5.2" ;
+    edintcee:procedureType "general" .
+
+ex:userrec_2017_VI001 a edintcee:UserRecommendations ;
+    edintcee:userRecommendationsDelivered "true"^^xsd:boolean .

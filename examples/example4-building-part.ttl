@@ -1,0 +1,147 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/> .
+@prefix edintceekos-bu: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/building-use/> .
+@prefix edintceekos-es: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/energy-source/> .
+@prefix edintceekos-cz: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/climatic-zone/> .
+@prefix edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/> .
+@prefix edintceekos-rsv: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/rating-scale-version/> .
+@prefix ex: <http://ejemplo.org/cee/> .
+
+# ---------------------------------------------------------------------------
+# EXAMPLE 4: Part of a building — a commercial premises on ground floor
+# Local comercial en Barcelona, zona climática C2, rating F
+# Art. 2.d, Art. 10 RD 390/2021 — existing building part certification.
+# The building part points to the certificate from outside this ontology:
+#   <http://ejemplo.org/edificios/local_diagonal>
+#       ex:hasEnergyCertificate ex:cert_2025_B042 .
+# ---------------------------------------------------------------------------
+
+# --- Calculation Procedure ---
+
+ex:proc_CEP_s a edintcee:CalculationProcedure ;
+    edintcee:procedureName "CEP" ;
+    edintcee:procedureVersion "7.0" ;
+    edintcee:procedureType "simplified" .
+
+# --- Competent Technician ---
+
+ex:tech_cdominguez a edintcee:CompetentTechnician ;
+    edintcee:technicianName "Carlos Domínguez Soto" ;
+    edintcee:technicianNIF "45678901F" ;
+    edintcee:technicianQualification "Ingeniero industrial" ;
+    edintcee:technicianRegistrationCCAA "Cataluña" ;
+    edintcee:technicianAccessPath "universityTitle_c" ;
+    edintcee:technicianCourseModules "module1And2" ;
+    edintcee:technicianPublicAuthorization "true"^^xsd:boolean .
+
+# --- User Recommendations ---
+
+ex:userrec_2025_B042 a edintcee:UserRecommendations ;
+    edintcee:userRecommendationsDelivered "true"^^xsd:boolean ;
+    edintcee:userRecommendationsDeliveryDate "2025-01-22"^^xsd:date ;
+    edintcee:userRecommendationsRecipient "Tenant" .
+
+# --- Energy Certificate ---
+
+ex:cert_2025_B042 a edintcee:EnergyCertificate ;
+    edintcee:hasRating              ex:rating_2025_B042 ;
+    edintcee:issuedBy               ex:tech_cdominguez ;
+    edintcee:hasLabel               ex:label_2025_B042 ;
+    edintcee:usesProcedure          ex:proc_CEP_s ;
+    edintcee:hasUserRecommendations ex:userrec_2025_B042 ;
+    edintcee:certificateType        edintceekos-ct:ExistingBuilding ;
+
+    # Certificate metadata
+    edintcee:certificateNumber      "B-2025-042000" ;
+    edintcee:issueDate              "2025-01-22"^^xsd:date ;
+    edintcee:visitDate              "2025-01-18"^^xsd:date ;
+    edintcee:registrationDate       "2025-01-30"^^xsd:date ;
+    edintcee:validUntil             "2035-01-22"^^xsd:date ;
+    edintcee:visitDescription       "Visita al local: comprobación de fachada, carpintería, sistema de climatización por splits y alumbrado." ;
+    edintcee:applicableRegulation   "CTE DB-HE (2019)" ;
+    edintcee:registrationCCAA       "Cataluña" ;
+
+    # Observed building data — PART of a building
+    edintcee:observedCadastralRef       "0801901VK5678H0001PX" ;
+    edintcee:observedAddress            "Avda. Diagonal 420, local 3" ;
+    edintcee:observedMunicipality       "Barcelona" ;
+    edintcee:observedProvince           "Barcelona" ;
+    edintcee:observedUsefulSurface      "185.0"^^xsd:decimal ;
+    edintcee:observedConstructionYear   "1982"^^xsd:gYear ;
+    edintcee:observedBuildingUse        edintceekos-bu:Commercial ;
+    edintcee:observedClimaticZone       edintceekos-cz:C2 ;
+    edintcee:observedHeritageProtection "false"^^xsd:boolean ;
+    edintcee:observedIsBuildingPart     "true"^^xsd:boolean ;
+    edintcee:observedPartDescription    "Local comercial en planta baja de edificio plurifamiliar. Acceso independiente desde calle." ;
+
+    # Envelope
+    edintcee:envelopeDescription        "Fachada de ladrillo sin aislar con acabado continuo. Carpintería aluminio sin RPT, acristalamiento sencillo. Cerramiento interior medianería." ;
+    edintcee:globalHeatTransferCoeff    "3.45"^^xsd:decimal ;
+    edintcee:windowAreaRatio            "55.0"^^xsd:decimal ;
+
+    # Systems
+    edintcee:hasHeatingSystem           "true"^^xsd:boolean ;
+    edintcee:heatingSystemType          "Split mural aire-aire, 2 unidades" ;
+    edintcee:heatingEnergySource        edintceekos-es:Electricity ;
+    edintcee:heatingEfficiency          "2.80"^^xsd:decimal ;
+    edintcee:hasCoolingSystem           "true"^^xsd:boolean ;
+    edintcee:coolingSystemType          "Split mural aire-aire (mismas unidades)" ;
+    edintcee:coolingEnergySource        edintceekos-es:Electricity ;
+    edintcee:coolingEfficiency          "2.60"^^xsd:decimal ;
+    edintcee:hasDHWSystem               "false"^^xsd:boolean ;
+    edintcee:hasRenewableGeneration     "false"^^xsd:boolean ;
+    edintcee:hasAutomationSystem        "false"^^xsd:boolean ;
+    edintcee:hasMechanicalVentilation   "false"^^xsd:boolean ;
+    edintcee:hasHeatRecovery            "false"^^xsd:boolean ;
+    edintcee:lightingSystemType         "Fluorescente T8" ;
+    edintcee:lightingEfficiency          "0.55"^^xsd:decimal ;
+
+    # Improvement recommendations
+    edintcee:hasRecommendation           ex:rec_2025_B042_1 ;
+    edintcee:hasRecommendation           ex:rec_2025_B042_2 .
+
+# --- Energy Rating ---
+
+ex:rating_2025_B042 a edintcee:EnergyRating ;
+    edintcee:ratingLetter              "F" ;
+    edintcee:ratingScaleVersion        edintceekos-rsv:RD390_2021 ;
+    edintcee:primaryEnergyTotal        "485.0"^^xsd:decimal ;
+    edintcee:primaryEnergyNonRenewable "410.2"^^xsd:decimal ;
+    edintcee:primaryEnergyRenewable    "74.8"^^xsd:decimal ;
+    edintcee:co2Emissions              "95.3"^^xsd:decimal ;
+    edintcee:heatingDemand             "78.5"^^xsd:decimal ;
+    edintcee:coolingDemand             "62.0"^^xsd:decimal ;
+    edintcee:dhwDemand                 "0.0"^^xsd:decimal ;
+    edintcee:heatingConsumption        "82.3"^^xsd:decimal ;
+    edintcee:coolingConsumption        "68.1"^^xsd:decimal ;
+    edintcee:dhwConsumption            "0.0"^^xsd:decimal ;
+    edintcee:lightingConsumption       "24.8"^^xsd:decimal ;
+    edintcee:dataBasis                 "calculated" .
+
+# --- Energy Label ---
+
+ex:label_2025_B042 a edintcee:EnergyLabel ;
+    edintcee:labelRatingLetter "F" .
+
+# --- Improvement Recommendations ---
+
+ex:rec_2025_B042_1 a edintcee:ImprovementRecommendation ;
+    edintcee:recommendationType        "combined" ;
+    edintcee:recommendationDescription "Sustituir splits por sistema VRF de alta eficiencia y renovar alumbrado a LED." ;
+    edintcee:estimatedSavingPct        "42.0"^^xsd:decimal ;
+    edintcee:estimatedSavingKwh        "15200"^^xsd:decimal ;
+    edintcee:paybackPeriod             "5.0"^^xsd:decimal ;
+    edintcee:estimatedCost             "28000"^^xsd:decimal ;
+    edintcee:priority                  1 ;
+    edintcee:improvedRatingLetter      "D" ;
+    edintcee:comfortHealthBenefit       "Mejora del confort térmico y calidad de iluminación." .
+
+ex:rec_2025_B042_2 a edintcee:ImprovementRecommendation ;
+    edintcee:recommendationType        "envelope" ;
+    edintcee:recommendationDescription "Aislamiento interior de fachada con panel sándwich 4 cm y sustitución de carpintería por PVC con doble acristalamiento." ;
+    edintcee:estimatedSavingPct        "30.0"^^xsd:decimal ;
+    edintcee:estimatedSavingKwh        "10800"^^xsd:decimal ;
+    edintcee:paybackPeriod             "8.0"^^xsd:decimal ;
+    edintcee:estimatedCost             "35000"^^xsd:decimal ;
+    edintcee:priority                  2 ;
+    edintcee:improvedRatingLetter      "D" .
