@@ -21,6 +21,7 @@
 @prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
 @prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
 @prefix schema: <http://schema.org/> .
+@prefix esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#> .
 
 # =============================================================================
 # ONTOLOGY METADATA
@@ -170,6 +171,13 @@ schema:PostalAddress a owl:Class ;
     rdfs:comment "Dirección postal según schema.org."@es ;
     rdfs:comment "Postal address according to schema.org."@en ;
     rdfs:isDefinedBy <http://schema.org/> .
+
+esadm:Autonomia a owl:Class ;
+    rdfs:label "Autonomía"@es ;
+    rdfs:label "Autonomous community"@en ;
+    rdfs:comment "Comunidad Autónoma o Ciudad Autónoma del territorio español."@es ;
+    rdfs:comment "Autonomous Community or Autonomous City in the Spanish territory."@en ;
+    rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
 
 # --- Datatype enumerations ---
 
@@ -514,13 +522,13 @@ edintcee:applicableRegulation a owl:DatatypeProperty ;
     rdfs:comment "Normativa aplicada en la evaluación (Art. 8.2.c)."@es ;
     rdfs:comment "Regulation applied in the evaluation (Art. 8.2.c)."@en .
 
-edintcee:registrationCCAA a owl:DatatypeProperty ;
+edintcee:registrationAutonomousCommunity a owl:ObjectProperty ;
     rdfs:label "CCAA de registro"@es ;
     rdfs:label "registration autonomous community"@en ;
     rdfs:domain edintcee:EnergyCertificate ;
-    rdfs:range xsd:string ;
-    rdfs:comment "Comunidad autónoma donde se registra el certificado (Art. 6.6)."@es ;
-    rdfs:comment "Autonomous community where the certificate is registered (Art. 6.6)."@en .
+    rdfs:range esadm:Autonomia ;
+    rdfs:comment "Comunidad autónoma donde se registra el certificado, representada como esadm:Autonomia del vocabulario de territorio (Art. 6.6)."@es ;
+    rdfs:comment "Autonomous community where the certificate is registered, represented as esadm:Autonomia from the territory vocabulary (Art. 6.6)."@en .
 
 # --- Verification & Registration ---
 
@@ -1114,11 +1122,13 @@ edintcee:technicianQualification a owl:DatatypeProperty ;
     rdfs:comment "Titulación académica que habilita al técnico (Art. 4 bis)."@es ;
     rdfs:comment "Academic qualification enabling the technician (Art. 4 bis)."@en .
 
-edintcee:technicianRegistrationCCAA a owl:DatatypeProperty ;
+edintcee:technicianRegistrationAutonomousCommunity a owl:ObjectProperty ;
     rdfs:label "CCAA de registro del técnico"@es ;
     rdfs:label "technician registration autonomous community"@en ;
     rdfs:domain edintcee:CompetentTechnician ;
-    rdfs:range xsd:string .
+    rdfs:range esadm:Autonomia ;
+    rdfs:comment "Comunidad autónoma donde el técnico está registrado para certificar, representada como esadm:Autonomia del vocabulario de territorio."@es ;
+    rdfs:comment "Autonomous community where the technician is registered to certify, represented as esadm:Autonomia from the territory vocabulary."@en .
 
 edintcee:hasTechnicianAddress a owl:ObjectProperty ;
     rdfs:label "dirección del técnico"@es ;
