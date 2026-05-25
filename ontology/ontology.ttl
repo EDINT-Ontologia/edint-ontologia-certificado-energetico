@@ -22,6 +22,7 @@
 @prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
 @prefix schema: <http://schema.org/> .
 @prefix esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#> .
+@prefix catastro: <http://vocab.linkeddata.es/datosabiertos/def/catastro/> .
 
 # =============================================================================
 # ONTOLOGY METADATA
@@ -178,6 +179,13 @@ esadm:Autonomia a owl:Class ;
     rdfs:comment "Comunidad Autónoma o Ciudad Autónoma del territorio español."@es ;
     rdfs:comment "Autonomous Community or Autonomous City in the Spanish territory."@en ;
     rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
+
+catastro:CadastralProperty a owl:Class ;
+    rdfs:label "Inmueble catastral"@es ;
+    rdfs:label "Cadastral property"@en ;
+    rdfs:comment "Unidad catastral que identifica un inmueble (parcela, construcción o unidad funcional) en el catastro. Permite acceder a la referencia catastral, dirección, año de construcción, superficie y geometría."@es ;
+    rdfs:comment "Cadastral unit that identifies a property (parcel, construction or functional unit) in the cadastre. Allows access to the cadastral reference, address, construction year, surface area and geometry."@en ;
+    rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/catastro/> .
 
 # --- Datatype enumerations ---
 
@@ -616,13 +624,13 @@ edintcee:noImprovementJustification a owl:DatatypeProperty ;
 # DATATYPE PROPERTIES — Observed building data
 # =============================================================================
 
-edintcee:observedCadastralRef a owl:DatatypeProperty ;
-    rdfs:label "referencia catastral observada"@es ;
-    rdfs:label "observed cadastral reference"@en ;
+edintcee:refersToCadastralEntity a owl:ObjectProperty ;
+    rdfs:label "entidad catastral referida"@es ;
+    rdfs:label "refers to cadastral entity"@en ;
     rdfs:domain edintcee:EnergyCertificate ;
-    rdfs:range xsd:string ;
-    rdfs:comment "Referencia catastral del inmueble consignada en el certificado (Art. 8.2.a)."@es ;
-    rdfs:comment "Cadastral reference of the property as stated in the certificate (Art. 8.2.a)."@en .
+    rdfs:range catastro:CadastralProperty ;
+    rdfs:comment "Entidad catastral a la que se refiere el certificado. A través de catastro:CadastralProperty se puede acceder a la referencia catastral (catastro:referenceCatastral), la dirección (catastro:hasAddress), el año de construcción y otros datos del inmueble (Art. 8.2.a)."@es ;
+    rdfs:comment "Cadastral entity the certificate refers to. Through catastro:CadastralProperty, the cadastral reference (catastro:referenceCatastral), address (catastro:hasAddress), construction year and other property data can be accessed (Art. 8.2.a)."@en .
 
 edintcee:hasObservedAddress a owl:ObjectProperty ;
     rdfs:label "dirección del inmueble"@es ;
@@ -631,24 +639,6 @@ edintcee:hasObservedAddress a owl:ObjectProperty ;
     rdfs:range esdir:DireccionPostal ;
     rdfs:comment "Dirección postal del inmueble certificado. Se reutiliza esdir:DireccionPostal, que especializa schema:PostalAddress, vcard:Address y locn:Address, y permite representar vía, municipio, provincia y código postal con propiedades estándar (Art. 8.2.a)."@es ;
     rdfs:comment "Postal address of the certified property. Reuses esdir:DireccionPostal, which specialises schema:PostalAddress, vcard:Address and locn:Address, and allows representing street, municipality, province and postal code with standard properties (Art. 8.2.a)."@en .
-
-edintcee:observedUsefulSurface a owl:DatatypeProperty ;
-    rdfs:label "superficie útil observada (m²)"@es ;
-    rdfs:label "observed useful surface (m²)"@en ;
-    rdfs:domain edintcee:EnergyCertificate ;
-    rdfs:range xsd:decimal ;
-    rdfs:comment "Superficie útil considerada para la certificación (Art. 2.t)."@es ;
-    rdfs:comment "Useful surface area considered for certification (Art. 2.t)."@en .
-
-edintcee:observedConstructionYear a owl:DatatypeProperty ;
-    rdfs:label "año de construcción observado"@es ;
-    rdfs:label "observed construction year"@en ;
-    rdfs:domain edintcee:EnergyCertificate ;
-    rdfs:range xsd:gYear ;
-    rdfs:comment "Año de construcción declarado del edificio."@es ;
-    rdfs:comment "Declared construction year of the building."@en .
-
-
 
 edintcee:observedHeritageProtection a owl:DatatypeProperty ;
     rdfs:label "protección patrimonial observada"@es ;
