@@ -19,6 +19,8 @@
 @prefix edintceekos-ap: <http://vocab.linkeddata.es/datosabiertos/kos/edint/AccessPath/> .
 @prefix edintceekos-cm: <http://vocab.linkeddata.es/datosabiertos/kos/edint/CourseModule/> .
 @prefix edintkos: <http://vocab.linkeddata.es/datosabiertos/kos/edint/> .
+@prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
+@prefix schema: <http://schema.org/> .
 
 # =============================================================================
 # ONTOLOGY METADATA
@@ -152,6 +154,22 @@ edintcee:UserRecommendations a owl:Class ;
     rdfs:label "User recommendations"@en ;
     rdfs:comment "Documento con recomendaciones para el usuario/arrendatario del edificio sobre cómo utilizar el edificio y sus sistemas para lograr la máxima eficiencia energética (Art. 8.1.f)."@es ;
     rdfs:comment "Document with recommendations for the building user/tenant on how to use the building and its systems to achieve optimal energy efficiency (Art. 8.1.f)."@en .
+
+# --- Reused external classes ---
+
+esdir:DireccionPostal a owl:Class ;
+    rdfs:label "Dirección postal"@es ;
+    rdfs:label "Postal address"@en ;
+    rdfs:comment "Dirección postal en España. Especialización de schema:PostalAddress, vcard:Address y locn:Address. Permite representar una dirección con propiedades como schema:streetAddress, schema:addressLocality, schema:addressRegion y schema:postalCode."@es ;
+    rdfs:comment "Postal address in Spain. Specialisation of schema:PostalAddress, vcard:Address and locn:Address. Allows representing an address with properties like schema:streetAddress, schema:addressLocality, schema:addressRegion and schema:postalCode."@en ;
+    rdfs:isDefinedBy <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal> .
+
+schema:PostalAddress a owl:Class ;
+    rdfs:label "Dirección postal (schema)"@es ;
+    rdfs:label "Postal address (schema)"@en ;
+    rdfs:comment "Dirección postal según schema.org."@es ;
+    rdfs:comment "Postal address according to schema.org."@en ;
+    rdfs:isDefinedBy <http://schema.org/> .
 
 # --- Datatype enumerations ---
 
@@ -598,29 +616,13 @@ edintcee:observedCadastralRef a owl:DatatypeProperty ;
     rdfs:comment "Referencia catastral del inmueble consignada en el certificado (Art. 8.2.a)."@es ;
     rdfs:comment "Cadastral reference of the property as stated in the certificate (Art. 8.2.a)."@en .
 
-edintcee:observedAddress a owl:DatatypeProperty ;
-    rdfs:label "dirección observada"@es ;
+edintcee:hasObservedAddress a owl:ObjectProperty ;
+    rdfs:label "dirección del inmueble"@es ;
     rdfs:label "observed address"@en ;
     rdfs:domain edintcee:EnergyCertificate ;
-    rdfs:range xsd:string ;
-    rdfs:comment "Dirección completa del inmueble (Art. 8.2.a)."@es ;
-    rdfs:comment "Full address of the property (Art. 8.2.a)."@en .
-
-edintcee:observedMunicipality a owl:DatatypeProperty ;
-    rdfs:label "municipio observado"@es ;
-    rdfs:label "observed municipality"@en ;
-    rdfs:domain edintcee:EnergyCertificate ;
-    rdfs:range xsd:string ;
-    rdfs:comment "Municipio donde se ubica el edificio."@es ;
-    rdfs:comment "Municipality where the building is located."@en .
-
-edintcee:observedProvince a owl:DatatypeProperty ;
-    rdfs:label "provincia observada"@es ;
-    rdfs:label "observed province"@en ;
-    rdfs:domain edintcee:EnergyCertificate ;
-    rdfs:range xsd:string ;
-    rdfs:comment "Provincia donde se ubica el edificio."@es ;
-    rdfs:comment "Province where the building is located."@en .
+    rdfs:range esdir:DireccionPostal ;
+    rdfs:comment "Dirección postal del inmueble certificado. Se reutiliza esdir:DireccionPostal, que especializa schema:PostalAddress, vcard:Address y locn:Address, y permite representar vía, municipio, provincia y código postal con propiedades estándar (Art. 8.2.a)."@es ;
+    rdfs:comment "Postal address of the certified property. Reuses esdir:DireccionPostal, which specialises schema:PostalAddress, vcard:Address and locn:Address, and allows representing street, municipality, province and postal code with standard properties (Art. 8.2.a)."@en .
 
 edintcee:observedUsefulSurface a owl:DatatypeProperty ;
     rdfs:label "superficie útil observada (m²)"@es ;
@@ -1096,13 +1098,7 @@ edintcee:technicianName a owl:DatatypeProperty ;
     rdfs:comment "Nombre y apellidos del técnico competente (Anexo IV)."@es ;
     rdfs:comment "Full name of the competent technician (Annex IV)."@en .
 
-edintcee:technicianDomicile a owl:DatatypeProperty ;
-    rdfs:label "domicilio del técnico"@es ;
-    rdfs:label "technician domicile"@en ;
-    rdfs:domain edintcee:CompetentTechnician ;
-    rdfs:range xsd:string ;
-    rdfs:comment "Dirección completa del técnico (Anexo IV)."@es ;
-    rdfs:comment "Full address of the technician (Annex IV)."@en .
+
 
 edintcee:technicianNIF a owl:DatatypeProperty ;
     rdfs:label "NIF/NIE del técnico"@es ;
@@ -1124,31 +1120,13 @@ edintcee:technicianRegistrationCCAA a owl:DatatypeProperty ;
     rdfs:domain edintcee:CompetentTechnician ;
     rdfs:range xsd:string .
 
-edintcee:technicianAddress a owl:DatatypeProperty ;
-    rdfs:label "domicilio fiscal"@es ;
-    rdfs:label "fiscal address"@en ;
+edintcee:hasTechnicianAddress a owl:ObjectProperty ;
+    rdfs:label "dirección del técnico"@es ;
+    rdfs:label "technician address"@en ;
     rdfs:domain edintcee:CompetentTechnician ;
-    rdfs:range xsd:string ;
-    rdfs:comment "Dirección fiscal del técnico competente (Anexo IV)."@es ;
-    rdfs:comment "Fiscal address of the competent technician (Annex IV)."@en .
-
-edintcee:technicianMunicipality a owl:DatatypeProperty ;
-    rdfs:label "municipio"@es ;
-    rdfs:label "municipality"@en ;
-    rdfs:domain edintcee:CompetentTechnician ;
-    rdfs:range xsd:string .
-
-edintcee:technicianPostalCode a owl:DatatypeProperty ;
-    rdfs:label "código postal"@es ;
-    rdfs:label "postal code"@en ;
-    rdfs:domain edintcee:CompetentTechnician ;
-    rdfs:range xsd:string .
-
-edintcee:technicianProvince a owl:DatatypeProperty ;
-    rdfs:label "provincia"@es ;
-    rdfs:label "province"@en ;
-    rdfs:domain edintcee:CompetentTechnician ;
-    rdfs:range xsd:string .
+    rdfs:range esdir:DireccionPostal ;
+    rdfs:comment "Dirección postal del técnico competente. Se reutiliza esdir:DireccionPostal, que especializa schema:PostalAddress, vcard:Address y locn:Address, y permite representar vía, municipio, provincia y código postal con propiedades estándar (Anexo IV)."@es ;
+    rdfs:comment "Postal address of the competent technician. Reuses esdir:DireccionPostal, which specialises schema:PostalAddress, vcard:Address and locn:Address, and allows representing street, municipality, province and postal code with standard properties (Annex IV)."@en .
 
 edintcee:technicianEmail a owl:DatatypeProperty ;
     rdfs:label "correo electrónico"@es ;
