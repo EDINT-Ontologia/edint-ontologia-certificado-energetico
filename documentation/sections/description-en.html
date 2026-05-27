@@ -59,23 +59,30 @@ ex:cert_2024_M12345 a edintcee:EnergyCertificate ;
     edintcee:visitDate              "2024-05-15"^^xsd:date ;
     edintcee:registrationDate       "2024-05-28"^^xsd:date ;
     edintcee:validUntil             "2034-05-20"^^xsd:date ;
-    edintcee:observedCadastralRef       "2807901VK4717F0001WX" ;
-    edintcee:observedAddress            "Calle Mayor 10" ;
-    edintcee:observedMunicipality       "Madrid" ;
-    edintcee:observedProvince           "Madrid" ;
-    edintcee:observedUsefulSurface      "4820.0"^^xsd:decimal ;
-    edintcee:observedConstructionYear   "2005"^^xsd:gYear ;
+    edintcee:refersToCadastralEntity ex:catastro_mayor10 ;
+    edintcee:hasObservedAddress         ex:dir_mayor10 ;
     edintcee:observedBuildingUse        edintceekos-bu:Residential ;
     edintcee:observedClimaticZone       edintceekos-cz:D3 ;
     edintcee:hasRecommendation          ex:rec_2024_M12345_1 .
+
+# --- Cadastral property ---
+ex:catastro_mayor10 a catastro:CadastralProperty ;
+    catastro:referenceCatastral "2807901VK4717F0001WX" .
+
+# --- Postal address ---
+ex:dir_mayor10 a esdir:DireccionPostal ;
+    schema:streetAddress "Calle Mayor 10" ;
+    schema:addressLocality "Madrid" ;
+    schema:addressRegion "Madrid" ;
+    schema:addressCountry "ES" .
 
 # --- Energy rating ---
 ex:rating_2024_M12345 a edintcee:EnergyRating ;
     edintcee:ratingLetter              edintceekos-rl:D ;
     edintcee:ratingScaleVersion        edintceekos-rsv:RD390_2021 ;
-    edintcee:primaryEnergyTotal        "152.4"^^xsd:decimal ;
-    edintcee:primaryEnergyNonRenewable "112.8"^^xsd:decimal ;
-    edintcee:co2Emissions              "34.2"^^xsd:decimal ;
+    edintcee:primaryEnergyTotal        [ a qudt:QuantityValue ; qudt:numericValue 152.4 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:primaryEnergyNonRenewable [ a qudt:QuantityValue ; qudt:numericValue 112.8 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:co2Emissions              [ a qudt:QuantityValue ; qudt:numericValue 34.2 ; qudt:hasUnit qudtu:KiloGM ] ;
     edintcee:dataBasis                  edintceekos-db:Calculated .
 
 # --- Energy label ---
@@ -86,7 +93,7 @@ ex:label_2024_M12345 a edintcee:EnergyLabel ;
 ex:rec_2024_M12345_1 a edintcee:ImprovementRecommendation ;
     edintcee:recommendationType        edintceekos-rt:Installation ;
     edintcee:recommendationDescription "Replace individual boilers with centralized aerothermal heat pump system." ;
-    edintcee:estimatedSavingPct        "38.0"^^xsd:decimal ;
+    edintcee:estimatedSavingPct        [ a qudt:QuantityValue ; qudt:numericValue 38.0 ; qudt:hasUnit qudtu:PERCENT ] ;
     edintcee:improvedRatingLetter      edintceekos-rl:B ;
     edintcee:priority                  1 .
 </textarea></pre>
@@ -97,5 +104,5 @@ ex:rec_2024_M12345_1 a edintcee:ImprovementRecommendation ;
     });
 </script>
 <span class="markdown">
-The example above shows a portion of the RDF knowledge graph for an existing building energy certificate. The <strong>certificate</strong> (type <code>ExistingBuilding</code> per SKOS) is issued by a <strong>competent technician</strong> and contains an <strong>energy rating</strong> (letter D, scale version RD 390/2021, calculated basis) and an <strong>energy label</strong> (letter D). Building data includes residential use, climatic zone D3 and useful surface. Classifications (certificate type, building use, climatic zone, rating letter, procedure type, data basis, recommendation type, recipient) are represented via SKOS concepts from the schemes available in <code>kos/</code>. The <strong>improvement recommendation</strong> (installation type) estimates an improvement to letter B with 38% savings.
+The example above shows a portion of the RDF knowledge graph for an existing building energy certificate. The <strong>certificate</strong> (type <code>ExistingBuilding</code> per SKOS) is issued by a <strong>competent technician</strong> and contains an <strong>energy rating</strong> (letter D, scale version RD 390/2021, calculated basis) and an <strong>energy label</strong> (letter D). Building data is modelled by reusing external vocabularies: the postal address uses <code>esdir:DireccionPostal</code> (a specialisation of <code>schema:PostalAddress</code>), the cadastral reference uses <code>catastro:CadastralProperty</code>, and physical quantities (energy, emissions, savings) use <code>qudt:QuantityValue</code> (numeric value + explicit unit). Classifications (certificate type, building use, climatic zone, rating letter, procedure type, data basis, recommendation type, recipient) are represented via SKOS concepts from the schemes available in <code>kos/</code>. The <strong>improvement recommendation</strong> (installation type) estimates an improvement to letter B with 38% savings.
 </span>

@@ -12,12 +12,17 @@
 @prefix edintceekos-rsv: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingScaleVersion/> .
 @prefix edintceekos-ap: <http://vocab.linkeddata.es/datosabiertos/kos/edint/AccessPath/> .
 @prefix edintceekos-cm: <http://vocab.linkeddata.es/datosabiertos/kos/edint/CourseModule/> .
+@prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
+@prefix esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#> .
+@prefix catastro: <http://vocab.linkeddata.es/datosabiertos/def/catastro/> .
+@prefix schema: <http://schema.org/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix qudtu: <http://qudt.org/vocab/unit/> .
 @prefix ex: <http://ejemplo.org/cee/> .
 
 # ---------------------------------------------------------------------------
 # EXAMPLE 4: Part of a building — a commercial premises on ground floor
 # Local comercial en Barcelona, zona climática C2, rating F
-# Art. 2.d, Art. 10 RD 390/2021 — existing building part certification.
 # ---------------------------------------------------------------------------
 
 # --- Calculation Procedure ---
@@ -33,9 +38,9 @@ ex:tech_cdominguez a edintcee:CompetentTechnician ;
     edintcee:technicianName "Carlos Domínguez Soto" ;
     edintcee:technicianNIF "45678901F" ;
     edintcee:technicianQualification "Ingeniero industrial" ;
-    edintcee:technicianRegistrationCCAA "Cataluña" ;
-    edintcee:technicianAccessPath       edintceekos-ap:UniversityTitleC ;
-    edintcee:technicianCourseModules     edintceekos-cm:Module1And2 ;
+    edintcee:technicianRegistrationAutonomousCommunity <http://vocab.linkeddata.es/datosabiertos/recurso/sector-publico/territorio/ComunidadAutonoma/cataluna> ;
+    edintcee:technicianAccessPath           edintceekos-ap:UniversityTitleC ;
+    edintcee:technicianCourseModules         edintceekos-cm:Module1And2 ;
     edintcee:technicianPublicAuthorization "true"^^xsd:boolean .
 
 # --- User Recommendations ---
@@ -44,6 +49,19 @@ ex:userrec_2025_B042 a edintcee:UserRecommendations ;
     edintcee:userRecommendationsDelivered "true"^^xsd:boolean ;
     edintcee:userRecommendationsDeliveryDate "2025-01-22"^^xsd:date ;
     edintcee:userRecommendationsRecipient edintceekos-rcp:Tenant .
+
+# --- Cadastral Property ---
+
+ex:catastro_diagonal420 a catastro:CadastralProperty ;
+    catastro:referenceCatastral "0801901VK5678H0001PX" .
+
+# --- Address ---
+
+ex:dir_diagonal420 a esdir:DireccionPostal ;
+    schema:streetAddress "Avda. Diagonal 420, local 3" ;
+    schema:addressLocality "Barcelona" ;
+    schema:addressRegion "Barcelona" ;
+    schema:addressCountry "ES" .
 
 # --- Energy Certificate ---
 
@@ -56,70 +74,66 @@ ex:cert_2025_B042 a edintcee:EnergyCertificate ;
     edintcee:certificateType        edintceekos-ct:ExistingBuilding ;
 
     # Certificate metadata
-    edintcee:certificateNumber      "B-2025-042000" ;
-    edintcee:issueDate              "2025-01-22"^^xsd:date ;
-    edintcee:visitDate              "2025-01-18"^^xsd:date ;
-    edintcee:registrationDate       "2025-01-30"^^xsd:date ;
-    edintcee:validUntil             "2035-01-22"^^xsd:date ;
-    edintcee:visitDescription       "Visita al local: comprobación de fachada, carpintería, sistema de climatización por splits y alumbrado." ;
-    edintcee:applicableRegulation   "CTE DB-HE (2019)" ;
-    edintcee:registrationCCAA       "Cataluña" ;
+    edintcee:certificateNumber              "B-2025-042000" ;
+    edintcee:issueDate                      "2025-01-22"^^xsd:date ;
+    edintcee:visitDate                      "2025-01-18"^^xsd:date ;
+    edintcee:registrationDate               "2025-01-30"^^xsd:date ;
+    edintcee:validUntil                     "2035-01-22"^^xsd:date ;
+    edintcee:visitDescription               "Visita al local: comprobación de fachada, carpintería, sistema de climatización por splits y alumbrado." ;
+    edintcee:applicableRegulation            "CTE DB-HE (2019)" ;
+    edintcee:registrationAutonomousCommunity <http://vocab.linkeddata.es/datosabiertos/recurso/sector-publico/territorio/ComunidadAutonoma/cataluna> ;
 
     # Observed building data — PART of a building
-    edintcee:observedCadastralRef       "0801901VK5678H0001PX" ;
-    edintcee:observedAddress            "Avda. Diagonal 420, local 3" ;
-    edintcee:observedMunicipality       "Barcelona" ;
-    edintcee:observedProvince           "Barcelona" ;
-    edintcee:observedUsefulSurface      "185.0"^^xsd:decimal ;
-    edintcee:observedConstructionYear   "1982"^^xsd:gYear ;
-    edintcee:observedBuildingUse        edintceekos-bu:Commercial ;
-    edintcee:observedClimaticZone       edintceekos-cz:C2 ;
-    edintcee:observedHeritageProtection "false"^^xsd:boolean ;
-    edintcee:observedIsBuildingPart     "true"^^xsd:boolean ;
-    edintcee:observedPartDescription    "Local comercial en planta baja de edificio plurifamiliar. Acceso independiente desde calle." ;
+    edintcee:refersToCadastralEntity        ex:catastro_diagonal420 ;
+    edintcee:hasObservedAddress             ex:dir_diagonal420 ;
+    edintcee:observedBuildingUse            edintceekos-bu:Commercial ;
+    edintcee:observedClimaticZone           edintceekos-cz:C2 ;
+    edintcee:observedHeritageProtection     "false"^^xsd:boolean ;
+    edintcee:observedIsBuildingPart         "true"^^xsd:boolean ;
+    edintcee:observedPartDescription        "Local comercial en planta baja de edificio plurifamiliar. Acceso independiente desde calle." ;
 
     # Envelope
-    edintcee:envelopeDescription        "Fachada de ladrillo sin aislar con acabado continuo. Carpintería aluminio sin RPT, acristalamiento sencillo. Cerramiento interior medianería." ;
-    edintcee:globalHeatTransferCoeff    "3.45"^^xsd:decimal ;
-    edintcee:windowAreaRatio            "55.0"^^xsd:decimal ;
+    edintcee:envelopeDescription             "Fachada de ladrillo sin aislar con acabado continuo. Carpintería aluminio sin RPT, acristalamiento sencillo. Cerramiento interior medianería." ;
+    edintcee:globalHeatTransferCoeff        [ a qudt:QuantityValue ; qudt:numericValue 3.45 ; qudt:hasUnit qudtu:W-PER-M2-K ] ;
+    edintcee:windowAreaRatio                [ a qudt:QuantityValue ; qudt:numericValue 55.0 ; qudt:hasUnit qudtu:PERCENT ] ;
 
     # Systems
-    edintcee:hasHeatingSystem           "true"^^xsd:boolean ;
-    edintcee:heatingSystemType          "Split mural aire-aire, 2 unidades" ;
-    edintcee:heatingEnergySource        edintceekos-es:Electricity ;
-    edintcee:heatingEfficiency          "2.80"^^xsd:decimal ;
-    edintcee:hasCoolingSystem           "true"^^xsd:boolean ;
-    edintcee:coolingSystemType          "Split mural aire-aire (mismas unidades)" ;
-    edintcee:coolingEnergySource        edintceekos-es:Electricity ;
-    edintcee:coolingEfficiency          "2.60"^^xsd:decimal ;
-    edintcee:hasDHWSystem               "false"^^xsd:boolean ;
-    edintcee:hasRenewableGeneration     "false"^^xsd:boolean ;
-    edintcee:hasAutomationSystem        "false"^^xsd:boolean ;
-    edintcee:hasMechanicalVentilation   "false"^^xsd:boolean ;
-    edintcee:hasHeatRecovery            "false"^^xsd:boolean ;
-    edintcee:lightingSystemType         "Fluorescente T8" ;
-    edintcee:lightingEfficiency          "0.55"^^xsd:decimal ;
+    edintcee:hasHeatingSystem               "true"^^xsd:boolean ;
+    edintcee:heatingSystemType              "Split mural aire-aire, 2 unidades" ;
+    edintcee:heatingEnergySource            edintceekos-es:Electricity ;
+    edintcee:heatingEfficiency              [ a qudt:QuantityValue ; qudt:numericValue 2.80 ; qudt:hasUnit qudtu:PERCENT ] ;
+    edintcee:hasCoolingSystem               "true"^^xsd:boolean ;
+    edintcee:coolingSystemType              "Split mural aire-aire (mismas unidades)" ;
+    edintcee:coolingEnergySource            edintceekos-es:Electricity ;
+    edintcee:coolingEfficiency              [ a qudt:QuantityValue ; qudt:numericValue 2.60 ; qudt:hasUnit qudtu:PERCENT ] ;
+    edintcee:hasDHWSystem                   "false"^^xsd:boolean ;
+    edintcee:hasRenewableGeneration          "false"^^xsd:boolean ;
+    edintcee:hasAutomationSystem            "false"^^xsd:boolean ;
+    edintcee:hasMechanicalVentilation       "false"^^xsd:boolean ;
+    edintcee:hasHeatRecovery                "false"^^xsd:boolean ;
+    edintcee:lightingSystemType             "Fluorescente T8" ;
+    edintcee:lightingEfficiency              [ a qudt:QuantityValue ; qudt:numericValue 0.55 ; qudt:hasUnit qudtu:LM-PER-W ] ;
 
     # Improvement recommendations
-    edintcee:hasRecommendation           ex:rec_2025_B042_1 ;
-    edintcee:hasRecommendation           ex:rec_2025_B042_2 .
+    edintcee:hasRecommendation              ex:rec_2025_B042_1 ;
+    edintcee:hasRecommendation              ex:rec_2025_B042_2 .
 
 # --- Energy Rating ---
 
 ex:rating_2025_B042 a edintcee:EnergyRating ;
     edintcee:ratingLetter              edintceekos-rl:F ;
     edintcee:ratingScaleVersion        edintceekos-rsv:RD390_2021 ;
-    edintcee:primaryEnergyTotal        "485.0"^^xsd:decimal ;
-    edintcee:primaryEnergyNonRenewable "410.2"^^xsd:decimal ;
-    edintcee:primaryEnergyRenewable    "74.8"^^xsd:decimal ;
-    edintcee:co2Emissions              "95.3"^^xsd:decimal ;
-    edintcee:heatingDemand             "78.5"^^xsd:decimal ;
-    edintcee:coolingDemand             "62.0"^^xsd:decimal ;
-    edintcee:dhwDemand                 "0.0"^^xsd:decimal ;
-    edintcee:heatingConsumption        "82.3"^^xsd:decimal ;
-    edintcee:coolingConsumption        "68.1"^^xsd:decimal ;
-    edintcee:dhwConsumption            "0.0"^^xsd:decimal ;
-    edintcee:lightingConsumption       "24.8"^^xsd:decimal ;
+    edintcee:primaryEnergyTotal        [ a qudt:QuantityValue ; qudt:numericValue 485.0 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:primaryEnergyNonRenewable [ a qudt:QuantityValue ; qudt:numericValue 410.2 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:primaryEnergyRenewable    [ a qudt:QuantityValue ; qudt:numericValue 74.8 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:co2Emissions              [ a qudt:QuantityValue ; qudt:numericValue 95.3 ; qudt:hasUnit qudtu:KiloGM ] ;
+    edintcee:heatingDemand             [ a qudt:QuantityValue ; qudt:numericValue 78.5 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:coolingDemand             [ a qudt:QuantityValue ; qudt:numericValue 62.0 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:dhwDemand                 [ a qudt:QuantityValue ; qudt:numericValue 0.0 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:heatingConsumption        [ a qudt:QuantityValue ; qudt:numericValue 82.3 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:coolingConsumption        [ a qudt:QuantityValue ; qudt:numericValue 68.1 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:dhwConsumption            [ a qudt:QuantityValue ; qudt:numericValue 0.0 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:lightingConsumption       [ a qudt:QuantityValue ; qudt:numericValue 24.8 ; qudt:hasUnit qudtu:KiloW-HR ] ;
     edintcee:dataBasis                 edintceekos-db:Calculated .
 
 # --- Energy Label ---
@@ -132,20 +146,20 @@ ex:label_2025_B042 a edintcee:EnergyLabel ;
 ex:rec_2025_B042_1 a edintcee:ImprovementRecommendation ;
     edintcee:recommendationType        edintceekos-rt:Combined ;
     edintcee:recommendationDescription "Sustituir splits por sistema VRF de alta eficiencia y renovar alumbrado a LED." ;
-    edintcee:estimatedSavingPct        "42.0"^^xsd:decimal ;
-    edintcee:estimatedSavingKwh        "15200"^^xsd:decimal ;
-    edintcee:paybackPeriod             "5.0"^^xsd:decimal ;
-    edintcee:estimatedCost             "28000"^^xsd:decimal ;
-    edintcee:priority                  1 ;
-    edintcee:improvedRatingLetter      edintceekos-rl:D ;
-    edintcee:comfortHealthBenefit       "Mejora del confort térmico y calidad de iluminación." .
+    edintcee:estimatedSavingPct       [ a qudt:QuantityValue ; qudt:numericValue 42.0 ; qudt:hasUnit qudtu:PERCENT ] ;
+    edintcee:estimatedSavingKwh       [ a qudt:QuantityValue ; qudt:numericValue 15200 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:paybackPeriod            [ a qudt:QuantityValue ; qudt:numericValue 5.0 ; qudt:hasUnit qudtu:YEAR ] ;
+    edintcee:estimatedCost            [ a qudt:QuantityValue ; qudt:numericValue 28000 ; qudt:hasUnit qudtu:EUR ] ;
+    edintcee:priority                 1 ;
+    edintcee:improvedRatingLetter     edintceekos-rl:D ;
+    edintcee:comfortHealthBenefit     "Mejora del confort térmico y calidad de iluminación." .
 
 ex:rec_2025_B042_2 a edintcee:ImprovementRecommendation ;
     edintcee:recommendationType        edintceekos-rt:Envelope ;
     edintcee:recommendationDescription "Aislamiento interior de fachada con panel sándwich 4 cm y sustitución de carpintería por PVC con doble acristalamiento." ;
-    edintcee:estimatedSavingPct        "30.0"^^xsd:decimal ;
-    edintcee:estimatedSavingKwh        "10800"^^xsd:decimal ;
-    edintcee:paybackPeriod             "8.0"^^xsd:decimal ;
-    edintcee:estimatedCost             "35000"^^xsd:decimal ;
-    edintcee:priority                  2 ;
-    edintcee:improvedRatingLetter      edintceekos-rl:D .
+    edintcee:estimatedSavingPct       [ a qudt:QuantityValue ; qudt:numericValue 30.0 ; qudt:hasUnit qudtu:PERCENT ] ;
+    edintcee:estimatedSavingKwh       [ a qudt:QuantityValue ; qudt:numericValue 10800 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:paybackPeriod            [ a qudt:QuantityValue ; qudt:numericValue 8.0 ; qudt:hasUnit qudtu:YEAR ] ;
+    edintcee:estimatedCost            [ a qudt:QuantityValue ; qudt:numericValue 35000 ; qudt:hasUnit qudtu:EUR ] ;
+    edintcee:priority                 2 ;
+    edintcee:improvedRatingLetter     edintceekos-rl:D .
