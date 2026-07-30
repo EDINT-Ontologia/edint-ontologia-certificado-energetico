@@ -1,0 +1,1533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ventilationEnergySource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">fuente energética de ventilación</rdfs:label>
+    <rdfs:label xml:lang="en">ventilation energy source</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:nodeID="n7601530229a9478b9243e345f887c1ccb36"/>
+    <rdfs:comment xml:lang="es">Fuente de energía del sistema de ventilación según el vocabulario controlado de fuentes de energía.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Energy source of the ventilation system according to the energy-source controlled vocabulary.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/lightingEfficiency">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">eficiencia del sistema de iluminación</rdfs:label>
+    <rdfs:label xml:lang="en">lighting system efficiency</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Eficiencia del sistema de iluminación. Se expresa como qudt:QuantityValue, típicamente en lm/W.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Lighting system efficiency. Expressed as qudt:QuantityValue, typically in lm/W.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/primaryEnergyRenewable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">energía primaria renovable</rdfs:label>
+    <rdfs:label xml:lang="en">renewable primary energy</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Energía primaria renovable. Se expresa como qudt:QuantityValue, típicamente en kWh/m²·año.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Renewable primary energy. Expressed as qudt:QuantityValue, typically in kWh/m²·year.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/heatingConsumption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">consumo de calefacción</rdfs:label>
+    <rdfs:label xml:lang="en">heating consumption</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Consumo de calefacción. Se expresa como qudt:QuantityValue, típicamente en kWh/m²·año.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Heating consumption. Expressed as qudt:QuantityValue, typically in kWh/m²·year.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/hasUserRecommendations">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">tiene recomendaciones de uso</rdfs:label>
+    <rdfs:label xml:lang="en">has user recommendations</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/UserRecommendations"/>
+    <rdfs:comment xml:lang="es">Documento de recomendaciones de uso entregado al usuario/arrendatario del edificio (Art. 8.1.f).</rdfs:comment>
+    <rdfs:comment xml:lang="en">User recommendations document delivered to the building user/tenant (Art. 8.1.f).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/costEffectivenessReference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">referencia a análisis coste-eficacia</rdfs:label>
+    <rdfs:label xml:lang="en">cost-effectiveness analysis reference</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:comment xml:lang="es">Referencia al análisis coste-eficacia de las recomendaciones (Art. 8.2.f, Reglamento Delegado UE 244/2012).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Reference to the cost-effectiveness analysis of recommendations (Art. 8.2.f, Delegated Regulation EU 244/2012).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/hasAutomationSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">dispone de automatización</rdfs:label>
+    <rdfs:label xml:lang="en">has automation system</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/priority">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">prioridad</rdfs:label>
+    <rdfs:label xml:lang="en">priority</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ImprovementRecommendation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:comment xml:lang="es">Orden de la recomendación en la secuencia temporal de aplicación (Art. 8.2.f.4º).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Order of the recommendation in the temporal sequence of application (Art. 8.2.f.4º).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/financingInformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">información de financiación</rdfs:label>
+    <rdfs:label xml:lang="en">financing information</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="es">Información sobre incentivos financieros, ayudas o posibilidad de financiación para las mejoras recomendadas.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Information about financial incentives, grants or financing possibilities for recommended improvements.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/registryURL">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">URL del registro</rdfs:label>
+    <rdfs:label xml:lang="en">registry URL</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:comment xml:lang="es">URL del certificado en el registro autonómico.</rdfs:comment>
+    <rdfs:comment xml:lang="en">URL of the certificate in the autonomous registry.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/usesProcedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">usa procedimiento</rdfs:label>
+    <rdfs:label xml:lang="en">uses procedure</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CalculationProcedure"/>
+    <rdfs:comment xml:lang="es">Procedimiento de cálculo reconocido utilizado para obtener la calificación.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Recognised calculation procedure used to obtain the rating.</rdfs:comment>
+    <owl:inverseOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/procedureUsedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb47">
+    <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb45"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/measuredCoolingConsumption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">consumo medido de refrigeración</rdfs:label>
+    <rdfs:label xml:lang="en">measured cooling consumption</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Consumo medido de refrigeración. Se expresa como qudt:QuantityValue, típicamente en kWh/m²·año.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Measured cooling consumption. Expressed as qudt:QuantityValue, typically in kWh/m²·year.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/technicianEmail">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">correo electrónico</rdfs:label>
+    <rdfs:label xml:lang="en">email</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CompetentTechnician"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb37">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/EnergySource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/validUntil">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="es">válido hasta</rdfs:label>
+    <rdfs:label xml:lang="en">valid until</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:comment xml:lang="es">Fecha de caducidad del certificado, máximo 10 años desde la emisión (Art. 13).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Expiry date of the certificate, maximum 10 years from issue (Art. 13).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/measurementPeriodEnd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">fecha fin periodo de medición</rdfs:label>
+    <rdfs:label xml:lang="en">measurement period end</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/usesSameProcedureVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">usa misma versión del procedimiento</rdfs:label>
+    <rdfs:label xml:lang="en">uses same procedure version</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:comment xml:lang="es">En la comparación proyecto→obra terminada, se usa la misma versión del documento reconocido (Art. 9.4).</rdfs:comment>
+    <rdfs:comment xml:lang="en">When comparing project→completed work certificates, the same version of the recognized document is used (Art. 9.4).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb25">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/EnergySource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/measuredHeatingConsumption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">consumo medido de calefacción</rdfs:label>
+    <rdfs:label xml:lang="en">measured heating consumption</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Consumo medido de calefacción. Se expresa como qudt:QuantityValue, típicamente en kWh/m²·año.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Measured heating consumption. Expressed as qudt:QuantityValue, typically in kWh/m²·year.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb28">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb30"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/issuedCertificate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">certificado emitido</rdfs:label>
+    <rdfs:label xml:lang="en">issued certificate</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CompetentTechnician"/>
+    <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:comment xml:lang="es">Certificado emitido por este técnico.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Certificate issued by this technician.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/issueDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="es">fecha de emisión</rdfs:label>
+    <rdfs:label xml:lang="en">issue date</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:comment xml:lang="es">Fecha en la que el técnico competente suscribe el certificado.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Date on which the competent technician signs the certificate.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb51">
+    <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb49"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/issuedBy"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CompetentTechnician"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/applicableRegulation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">normativa aplicable</rdfs:label>
+    <rdfs:label xml:lang="en">applicable regulation</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="es">Normativa aplicada en la evaluación (Art. 8.2.c).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Regulation applied in the evaluation (Art. 8.2.c).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ratingScaleVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="es">versión de la escala de calificación</rdfs:label>
+    <rdfs:label xml:lang="en">rating scale version</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:nodeID="n7601530229a9478b9243e345f887c1ccb44"/>
+    <rdfs:comment xml:lang="es">Versión de la escala de calificación energética aplicada, según el vocabulario controlado de versiones de escala. Permite distinguir entre la escala original del RD 390/2021 y la escala recalculada conforme a la Directiva (UE) 2024/1275 (EPBD III).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Version of the energy rating scale applied, according to the rating-scale-version controlled vocabulary. Allows distinguishing between the original scale from RD 390/2021 and the recalculated scale per Directive (EU) 2024/1275 (EPBD III).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://qudt.org/schema/qudt/QuantityValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Valor de cantidad</rdfs:label>
+    <rdfs:label xml:lang="en">Quantity value</rdfs:label>
+    <rdfs:comment xml:lang="es">Valor numérico con unidad de medida explícita (qudt:numericValue + qudt:hasUnit). Permite representar magnitudes físicas como energía (kWh/m²·año), emisiones (kgCO2/m²·año), potencia (kW), superficie (m²), porcentaje, etc.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Numeric value with explicit unit of measure (qudt:numericValue + qudt:hasUnit). Allows representing physical quantities such as energy (kWh/m²·year), emissions (kgCO2/m²·year), power (kW), area (m²), percentage, etc.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/observedClimaticZone">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">zona climática observada</rdfs:label>
+    <rdfs:label xml:lang="en">observed climatic zone</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:nodeID="n7601530229a9478b9243e345f887c1ccb20"/>
+    <rdfs:comment xml:lang="es">Zona climática según el vocabulario controlado de zonas climáticas.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Climatic zone according to the climatic-zone controlled vocabulary.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyLabel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Etiqueta de eficiencia energética</rdfs:label>
+    <rdfs:label xml:lang="en">Energy label</rdfs:label>
+    <rdfs:comment xml:lang="es">Distintivo asociado a un certificado registrado que acredita públicamente la calificación energética obtenida (Art. 2.ñ, Art. 15).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Distinctive mark associated with a registered certificate that publicly attests to the energy rating obtained (Art. 2.ñ, Art. 15).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ImprovementRecommendation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Recomendación de mejora</rdfs:label>
+    <rdfs:label xml:lang="en">Improvement recommendation</rdfs:label>
+    <rdfs:comment xml:lang="es">Intervención técnicamente viable para la mejora de los niveles óptimos o rentables de la eficiencia energética, incluyendo estimación de costes y plazos de recuperación (Art. 8.2.f).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Technically viable intervention for improving optimal or cost-effective energy efficiency levels, including cost estimates and payback periods (Art. 8.2.f).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/comfortHealthBenefit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">beneficio en confort/salud</rdfs:label>
+    <rdfs:label xml:lang="en">comfort/health benefit</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ImprovementRecommendation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="es">Mejoras en confort, salud o bienestar derivadas de la implementación (Art. 8.2.f).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Comfort, health or well-being improvements derived from implementation (Art. 8.2.f).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/primaryEnergyNonRenewable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">energía primaria no renovable</rdfs:label>
+    <rdfs:label xml:lang="en">non-renewable primary energy</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Energía primaria no renovable. Se expresa como qudt:QuantityValue, típicamente en kWh/m²·año.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Non-renewable primary energy. Expressed as qudt:QuantityValue, typically in kWh/m²·year.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/hasRecommendation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">tiene recomendación</rdfs:label>
+    <rdfs:label xml:lang="en">has recommendation</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ImprovementRecommendation"/>
+    <rdfs:comment xml:lang="es">Recomendación de mejora incluida en el certificado.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Improvement recommendation included in the certificate.</rdfs:comment>
+    <owl:inverseOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/recommendationFor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/technicianAccessPath">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="es">vía de acceso</rdfs:label>
+    <rdfs:label xml:lang="en">access path</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CompetentTechnician"/>
+    <rdfs:range rdf:nodeID="n7601530229a9478b9243e345f887c1ccb64"/>
+    <rdfs:comment xml:lang="es">Vía de acceso a la actividad de técnico competente según el vocabulario controlado de vías de acceso (Art. 4 bis).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Access path to the competent technician activity according to the access-path controlled vocabulary (Art. 4 bis).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:versionIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/0.1.0"/>
+    <owl:versionInfo>0.1.0</owl:versionInfo>
+    <dcterms:title xml:lang="es">Ontología de Certificados de Eficiencia Energética de Edificios</dcterms:title>
+    <dcterms:title xml:lang="en">Energy Performance Certificate Ontology for Buildings</dcterms:title>
+    <dcterms:description xml:lang="es">Ontología que modela los certificados de eficiencia energética de edificios según el Real Decreto 390/2021. La clase raíz es EnergyCertificate; el edificio es una entidad externa que apunta al certificado mediante una propiedad definida en su propia ontología.</dcterms:description>
+    <dcterms:description xml:lang="en">An ontology modelling energy performance certificates for buildings according to Spanish Royal Decree 390/2021. The root class is EnergyCertificate; the building is an external entity that points to the certificate via a property defined in its own ontology.</dcterms:description>
+    <dcterms:abstract xml:lang="es">Ontología centrada en el certificado de eficiencia energética como unidad documental, incluyendo calificación energética, etiqueta, técnico competente, recomendaciones de mejora, procedimiento de cálculo y recomendaciones de uso para el usuario.</dcterms:abstract>
+    <dcterms:abstract xml:lang="en">Ontology focused on the energy performance certificate as a documentary unit, including energy rating, label, competent technician, improvement recommendations, calculation procedure and user recommendations.</dcterms:abstract>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-14</dcterms:issued>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-14</dcterms:created>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-14</dcterms:modified>
+    <dcterms:creator>FEMP</dcterms:creator>
+    <dcterms:creator>Oscar Corcho</dcterms:creator>
+    <dcterms:creator>Edna Ruckhaus</dcterms:creator>
+    <dcterms:creator>Daniel Doña</dcterms:creator>
+    <dcterms:creator>Lucía Sánchez</dcterms:creator>
+    <dcterms:creator>Maria del Socorro Bernardos</dcterms:creator>
+    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <dcterms:hasFormat rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ontology.ttl"/>
+    <vann:preferredNamespacePrefix>edintcee</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/</vann:preferredNamespaceUri>
+    <rdfs:comment xml:lang="es">Versión inicial (core) centrada en las clases principales: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure y UserRecommendations, con sus relaciones y propiedades.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Initial (core) version focusing on the main classes: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure and UserRecommendations, with their relationships and properties.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="https://www.boe.es/eli/es/rd/2021/06/01/390"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/measuredDHWConsumption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">consumo medido de ACS</rdfs:label>
+    <rdfs:label xml:lang="en">measured DHW consumption</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Consumo medido de agua caliente sanitaria. Se expresa como qudt:QuantityValue, típicamente en kWh/m²·año.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Measured domestic hot water consumption. Expressed as qudt:QuantityValue, typically in kWh/m²·year.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/aggregatedDataAvailableForResearch">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">datos agregados disponibles para investigación</rdfs:label>
+    <rdfs:label xml:lang="en">aggregated data available for research</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:comment xml:lang="es">Los datos agregados y anonimizados están disponibles para uso estadístico y de investigación (Art. 6.7).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Aggregated and anonymized data are available for statistical and research use (Art. 6.7).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/architecturalProtectionType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">tipo de protección arquitectónica</rdfs:label>
+    <rdfs:label xml:lang="en">architectural protection type</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="es">Tipo y nivel de catalogación arquitectónica (ej: 'Bien de Interés Cultural', 'Protegido por PGOU').</rdfs:comment>
+    <rdfs:comment xml:lang="en">Type and level of architectural catalogation/protection.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/normalOperatingConditions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">condiciones normales de funcionamiento</rdfs:label>
+    <rdfs:label xml:lang="en">normal operating conditions</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="es">Condiciones normales de funcionamiento del edificio utilizadas para la calificación (Art. 8.2.d).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Normal operating conditions of the building used for the energy rating (Art. 8.2.d).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/hasHeatRecovery">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">dispone de recuperador de calor</rdfs:label>
+    <rdfs:label xml:lang="en">has heat recovery</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/technicianPhone">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">teléfono</rdfs:label>
+    <rdfs:label xml:lang="en">phone</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CompetentTechnician"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/recommendationType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">tipo de recomendación</rdfs:label>
+    <rdfs:label xml:lang="en">recommendation type</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ImprovementRecommendation"/>
+    <rdfs:range rdf:nodeID="n7601530229a9478b9243e345f887c1ccb56"/>
+    <rdfs:comment xml:lang="es">Ámbito de la intervención: envelope, installation, automation, combined, según el vocabulario controlado de tipos de recomendación (Art. 8.2.f).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Scope of the intervention: envelope, installation, automation, combined, according to the recommendation-type controlled vocabulary (Art. 8.2.f).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/labelFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">etiqueta para</rdfs:label>
+    <rdfs:label xml:lang="en">label for</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyLabel"/>
+    <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:comment xml:lang="es">Certificado al que corresponde esta etiqueta.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Certificate this label belongs to.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/registrationDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">fecha de registro</rdfs:label>
+    <rdfs:label xml:lang="en">registration date</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:comment xml:lang="es">Fecha en la que el certificado se registra en el órgano competente de la CCAA (Art. 6.6).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Date on which the certificate is registered with the competent authority of the autonomous community (Art. 6.6).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Certificado de eficiencia energética</rdfs:label>
+    <rdfs:label xml:lang="en">Energy performance certificate</rdfs:label>
+    <rdfs:comment xml:lang="es">Documentación suscrita por un técnico competente que contiene la calificación de eficiencia energética de un edificio o parte del mismo, sus características energéticas y recomendaciones de mejora (Art. 2.e-g, RD 390/2021).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Documentation signed by a competent technician containing the energy performance rating of a building or part thereof, its energy characteristics and improvement recommendations (Art. 2.e-g, RD 390/2021).</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb1"/>
+    <rdfs:subClassOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb2"/>
+    <rdfs:subClassOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb3"/>
+    <rdfs:subClassOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb4"/>
+    <rdfs:subClassOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb5"/>
+    <rdfs:subClassOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb6"/>
+    <rdfs:subClassOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/improvedRatingLetter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">calificación estimada tras mejora</rdfs:label>
+    <rdfs:label xml:lang="en">improved rating letter</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ImprovementRecommendation"/>
+    <rdfs:range rdf:nodeID="n7601530229a9478b9243e345f887c1ccb60"/>
+    <rdfs:comment xml:lang="es">Letra de calificación energética estimada tras la implementación de la recomendación, según el vocabulario controlado de letras de calificación.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Estimated energy rating letter after implementation of the recommendation, according to the rating-letter controlled vocabulary.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb80">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb82"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb48">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb50"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ratingScaleVersion"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/estimatedSavingPct">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">ahorro estimado</rdfs:label>
+    <rdfs:label xml:lang="en">estimated saving</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ImprovementRecommendation"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Ahorro estimado porcentual. Se expresa como qudt:QuantityValue, típicamente en porcentaje.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Estimated percentage saving. Expressed as qudt:QuantityValue, typically in percent.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/linkedToBuildingBook">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">vinculado al Libro del Edificio</rdfs:label>
+    <rdfs:label xml:lang="en">linked to Building Book</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:comment xml:lang="es">Si el certificado está incorporado al Libro del Edificio (Art. 6.8).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Whether the certificate is included in the Building Book (Art. 6.8).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb78">
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:rest rdf:nodeID="n7601530229a9478b9243e345f887c1ccb79"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ratingOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">calificación de</rdfs:label>
+    <rdfs:label xml:lang="en">rating of</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:comment xml:lang="es">Certificado al que pertenece esta calificación.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Certificate this rating belongs to.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/heatingSystemType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">tipo de sistema de calefacción</rdfs:label>
+    <rdfs:label xml:lang="en">heating system type</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb11">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/co2Emissions"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/predecessorCertificate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">certificado anterior</rdfs:label>
+    <rdfs:label xml:lang="en">predecessor certificate</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:comment xml:lang="es">Certificado anterior que este certificado renueva o reemplaza.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Previous certificate that this certificate renews or replaces.</rdfs:comment>
+    <owl:inverseOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/successorCertificate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/dhwDemand">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">demanda de ACS</rdfs:label>
+    <rdfs:label xml:lang="en">DHW demand</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Demanda de agua caliente sanitaria. Se expresa como qudt:QuantityValue, típicamente en kWh/m²·año.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Domestic hot water demand. Expressed as qudt:QuantityValue, typically in kWh/m²·year.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/recommendationDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">descripción de la recomendación</rdfs:label>
+    <rdfs:label xml:lang="en">recommendation description</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ImprovementRecommendation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/measuredTotalConsumption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">consumo total medido</rdfs:label>
+    <rdfs:label xml:lang="en">total measured consumption</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Consumo total medido. Se expresa como qudt:QuantityValue, típicamente en kWh/m²·año.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Total measured consumption. Expressed as qudt:QuantityValue, typically in kWh/m²·year.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/catastro/CadastralProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Inmueble catastral</rdfs:label>
+    <rdfs:label xml:lang="en">Cadastral property</rdfs:label>
+    <rdfs:comment xml:lang="es">Unidad catastral que identifica un inmueble (parcela, construcción o unidad funcional) en el catastro. Permite acceder a la referencia catastral, dirección, año de construcción, superficie y geometría.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Cadastral unit that identifies a property (parcel, construction or functional unit) in the cadastre. Allows access to the cadastral reference, address, construction year, surface area and geometry.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/catastro/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/consumptionDataAvailableToOwner">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">datos de consumo disponibles para el propietario</rdfs:label>
+    <rdfs:label xml:lang="en">consumption data available to owner</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:comment xml:lang="es">Los datos de consumo están disponibles para el propietario del edificio (Art. 6.7).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Consumption data is available to the building owner (Art. 6.7).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/certificateNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">número de certificado</rdfs:label>
+    <rdfs:label xml:lang="en">certificate number</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="es">Número de registro del certificado en la comunidad autónoma (Art. 6.6).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Certificate registration number in the autonomous community (Art. 6.6).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb54">
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:rest rdf:nodeID="n7601530229a9478b9243e345f887c1ccb55"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb26">
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:rest rdf:nodeID="n7601530229a9478b9243e345f887c1ccb27"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/dhwSystemType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">tipo de sistema ACS</rdfs:label>
+    <rdfs:label xml:lang="en">DHW system type</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/validUntil"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb73">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingLetter"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb56">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb58"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/calculationDocumentsReference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">referencia a documentos de cálculo</rdfs:label>
+    <rdfs:label xml:lang="en">calculation documents reference</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:comment xml:lang="es">Referencia a documentos o ficheros digitales necesarios para la evaluación (Art. 8.1.d).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Reference to documents or digital files needed for the evaluation (Art. 8.1.d).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/dhwConsumption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">consumo de ACS</rdfs:label>
+    <rdfs:label xml:lang="en">DHW consumption</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Consumo de agua caliente sanitaria. Se expresa como qudt:QuantityValue, típicamente en kWh/m²·año.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Domestic hot water consumption. Expressed as qudt:QuantityValue, typically in kWh/m²·year.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/hasHeatingSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">dispone de calefacción</rdfs:label>
+    <rdfs:label xml:lang="en">has heating system</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/qrCodeReference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">referencia QR</rdfs:label>
+    <rdfs:label xml:lang="en">QR code reference</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="es">Referencia codificada en el código QR del certificado.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Reference encoded in the certificate QR code.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/certificateHash">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">hash del certificado</rdfs:label>
+    <rdfs:label xml:lang="en">certificate hash</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="es">Hash criptográfico del certificado para verificación de integridad.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Cryptographic hash of the certificate for integrity verification.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/renewableEnergySource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">fuente de energía renovable</rdfs:label>
+    <rdfs:label xml:lang="en">renewable energy source</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:nodeID="n7601530229a9478b9243e345f887c1ccb40"/>
+    <rdfs:comment xml:lang="es">Tipo de fuente de energía renovable según el vocabulario controlado de fuentes de energía.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Type of renewable energy source according to the energy-source controlled vocabulary.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/estimatedSavingKwh">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">ahorro estimado en energía</rdfs:label>
+    <rdfs:label xml:lang="en">estimated saving in energy</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ImprovementRecommendation"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Ahorro estimado en energía. Se expresa como qudt:QuantityValue, típicamente en kWh/año.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Estimated energy saving. Expressed as qudt:QuantityValue, typically in kWh/year.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/thermalBridgeLosses">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">pérdidas por puentes térmicos lineales</rdfs:label>
+    <rdfs:label xml:lang="en">linear thermal bridge losses</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Pérdidas por puentes térmicos lineales. Se expresa como qudt:QuantityValue, típicamente en W/K.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Linear thermal bridge losses. Expressed as qudt:QuantityValue, typically in W/K.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/procedureUsedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">procedimiento usado por</rdfs:label>
+    <rdfs:label xml:lang="en">procedure used by</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CalculationProcedure"/>
+    <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:comment xml:lang="es">Certificado que utiliza este procedimiento.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Certificate that uses this procedure.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/windowAreaRatio">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">ratio huecos/fachada</rdfs:label>
+    <rdfs:label xml:lang="en">window-to-wall ratio</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Porcentaje de huecos/acristalamiento sobre fachada. Se expresa como qudt:QuantityValue, típicamente en porcentaje.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Percentage of glazing/openings relative to facade area. Expressed as qudt:QuantityValue, typically in percent.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb15">
+    <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb13"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb13">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/CertificateType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb65">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/AccessPath"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/globalHeatTransferCoeff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">coeficiente global de transmitancia</rdfs:label>
+    <rdfs:label xml:lang="en">global heat transfer coefficient</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Coeficiente global de transmitancia térmica U de la envolvente. Se expresa como qudt:QuantityValue, típicamente en W/m²·K.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Global thermal transmittance coefficient U of the envelope. Expressed as qudt:QuantityValue, typically in W/m²·K.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/renewableCapacity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">potencia renovable instalada</rdfs:label>
+    <rdfs:label xml:lang="en">renewable installed capacity</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Potencia renovable instalada. Se expresa como qudt:QuantityValue, típicamente en kW.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Renewable installed capacity. Expressed as qudt:QuantityValue, typically in kW.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/co2Emissions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">emisiones de CO2</rdfs:label>
+    <rdfs:label xml:lang="en">CO2 emissions</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Emisiones de CO2. Se expresa como qudt:QuantityValue, típicamente en kgCO2/m²·año.</rdfs:comment>
+    <rdfs:comment xml:lang="en">CO2 emissions. Expressed as qudt:QuantityValue, typically in kgCO2/m²·year.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/envelopeArea">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">superficie de envolvente</rdfs:label>
+    <rdfs:label xml:lang="en">envelope area</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Superficie de la envolvente térmica en contacto con el exterior. Se expresa como qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), típicamente en m².</rdfs:comment>
+    <rdfs:comment xml:lang="en">Surface area of the thermal envelope in contact with the exterior. Expressed as qudt:QuantityValue (qudt:numericValue + qudt:hasUnit), typically in m².</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/dhwEnergySource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">fuente energética de ACS</rdfs:label>
+    <rdfs:label xml:lang="en">DHW energy source</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:nodeID="n7601530229a9478b9243e345f887c1ccb32"/>
+    <rdfs:comment xml:lang="es">Fuente de energía del sistema de agua caliente sanitaria según el vocabulario controlado de fuentes de energía.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Energy source of the domestic hot water system according to the energy-source controlled vocabulary.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb46">
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:rest rdf:nodeID="n7601530229a9478b9243e345f887c1ccb47"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/hasRating">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">tiene calificación</rdfs:label>
+    <rdfs:label xml:lang="en">has rating</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:comment xml:lang="es">Vincula un certificado a sus indicadores de calificación energética.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Links a certificate to its energy rating indicators.</rdfs:comment>
+    <owl:inverseOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ratingOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/coolingSystemType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">tipo de sistema de refrigeración</rdfs:label>
+    <rdfs:label xml:lang="en">cooling system type</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/hasCoolingSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">dispone de refrigeración</rdfs:label>
+    <rdfs:label xml:lang="en">has cooling system</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/refersToCadastralEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">entidad catastral referida</rdfs:label>
+    <rdfs:label xml:lang="en">refers to cadastral entity</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/catastro/CadastralProperty"/>
+    <rdfs:comment xml:lang="es">Entidad catastral a la que se refiere el certificado. A través de catastro:CadastralProperty se puede acceder a la referencia catastral (catastro:referenceCatastral), la dirección (catastro:hasAddress), el año de construcción y otros datos del inmueble (Art. 8.2.a).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Cadastral entity the certificate refers to. Through catastro:CadastralProperty, the cadastral reference (catastro:referenceCatastral), address (catastro:hasAddress), construction year and other property data can be accessed (Art. 8.2.a).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Autonomía</rdfs:label>
+    <rdfs:label xml:lang="en">Autonomous community</rdfs:label>
+    <rdfs:comment xml:lang="es">Comunidad Autónoma o Ciudad Autónoma del territorio español.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Autonomous Community or Autonomous City in the Spanish territory.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/technicianName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">nombre del técnico</rdfs:label>
+    <rdfs:label xml:lang="en">technician name</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CompetentTechnician"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="es">Nombre y apellidos del técnico competente (Anexo IV).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Full name of the competent technician (Annex IV).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/xmlReportReference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">referencia al informe XML</rdfs:label>
+    <rdfs:label xml:lang="en">XML report reference</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:comment xml:lang="es">Referencia al informe de evaluación energética en formato electrónico (XML) (Art. 8.1.c).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Reference to the energy evaluation report in electronic format (XML) (Art. 8.1.c).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/coolingDemand">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">demanda de refrigeración</rdfs:label>
+    <rdfs:label xml:lang="en">cooling demand</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Demanda de refrigeración. Se expresa como qudt:QuantityValue, típicamente en kWh/m²·año.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Cooling demand. Expressed as qudt:QuantityValue, typically in kWh/m²·year.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/comfortConditions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">condiciones de confort</rdfs:label>
+    <rdfs:label xml:lang="en">comfort conditions</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="es">Condiciones de confort consideradas en la evaluación energética (Art. 8.2.d).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Comfort conditions considered in the energy evaluation (Art. 8.2.d).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/hasLabel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">tiene etiqueta</rdfs:label>
+    <rdfs:label xml:lang="en">has label</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyLabel"/>
+    <rdfs:comment xml:lang="es">Etiqueta de eficiencia energética asociada al certificado registrado.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Energy label associated with the registered certificate.</rdfs:comment>
+    <owl:inverseOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/labelFor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/observedPartDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">descripción de la parte</rdfs:label>
+    <rdfs:label xml:lang="en">part description</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="es">Descripción de la parte del edificio certificada (vivienda, local, etc.).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Description of the certified part of the building (dwelling, premises, etc.).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb76">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb78"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb71">
+    <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb69"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb77">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/ProcedureType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/technicianRegistrationAutonomousCommunity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">CCAA de registro del técnico</rdfs:label>
+    <rdfs:label xml:lang="en">technician registration autonomous community</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CompetentTechnician"/>
+    <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia"/>
+    <rdfs:comment xml:lang="es">Comunidad autónoma donde el técnico está registrado para certificar, representada como esadm:Autonomia del vocabulario de territorio.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Autonomous community where the technician is registered to certify, represented as esadm:Autonomia from the territory vocabulary.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb45">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingScaleVersion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/recommendationFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">recomendación para</rdfs:label>
+    <rdfs:label xml:lang="en">recommendation for</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ImprovementRecommendation"/>
+    <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:comment xml:lang="es">Certificado al que pertenece esta recomendación.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Certificate this recommendation belongs to.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/UserRecommendations">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Recomendaciones de uso para el usuario</rdfs:label>
+    <rdfs:label xml:lang="en">User recommendations</rdfs:label>
+    <rdfs:comment xml:lang="es">Documento con recomendaciones para el usuario/arrendatario del edificio sobre cómo utilizar el edificio y sus sistemas para lograr la máxima eficiencia energética (Art. 8.1.f).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Document with recommendations for the building user/tenant on how to use the building and its systems to achieve optimal energy efficiency (Art. 8.1.f).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb42">
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:rest rdf:nodeID="n7601530229a9478b9243e345f887c1ccb43"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/primaryEnergyTotal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">energía primaria total</rdfs:label>
+    <rdfs:label xml:lang="en">total primary energy</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Energía primaria total. Se expresa como qudt:QuantityValue, típicamente en kWh/m²·año.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Total primary energy. Expressed as qudt:QuantityValue, typically in kWh/m²·year.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/procedureName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">nombre del procedimiento</rdfs:label>
+    <rdfs:label xml:lang="en">procedure name</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CalculationProcedure"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/envelopeDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">descripción de envolvente</rdfs:label>
+    <rdfs:label xml:lang="en">envelope description</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="es">Descripción de la envolvente térmica del edificio (Art. 8.2.d).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Description of the thermal envelope of the building (Art. 8.2.d).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/visitDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">fecha de visita</rdfs:label>
+    <rdfs:label xml:lang="en">visit date</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:comment xml:lang="es">Fecha de la visita in situ al edificio (Art. 6.5, Art. 8.2.g).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Date of the on-site visit to the building (Art. 6.5, Art. 8.2.g).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/dataBasis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="es">base de datos</rdfs:label>
+    <rdfs:label xml:lang="en">data basis</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:nodeID="n7601530229a9478b9243e345f887c1ccb52"/>
+    <rdfs:comment xml:lang="es">Indica si los indicadores se basan en datos medidos, calculados o mixtos, según el vocabulario controlado de tipos de base de datos (Art. 6.7).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Indicates whether indicators are based on measured, calculated or mixed data, according to the data-basis controlled vocabulary (Art. 6.7).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb57">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/RecommendationType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb14">
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:rest rdf:nodeID="n7601530229a9478b9243e345f887c1ccb15"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb50">
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:rest rdf:nodeID="n7601530229a9478b9243e345f887c1ccb51"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/successorCertificate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">certificado sucesor</rdfs:label>
+    <rdfs:label xml:lang="en">successor certificate</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:comment xml:lang="es">Certificado que reemplaza o renueva este certificado.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Certificate that renews or replaces this certificate.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/PostalAddress">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Dirección postal (schema)</rdfs:label>
+    <rdfs:label xml:lang="en">Postal address (schema)</rdfs:label>
+    <rdfs:comment xml:lang="es">Dirección postal según schema.org.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Postal address according to schema.org.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/procedureVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">versión del procedimiento</rdfs:label>
+    <rdfs:label xml:lang="en">procedure version</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CalculationProcedure"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/usesProcedure"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CalculationProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/coolingEnergySource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">fuente energética de refrigeración</rdfs:label>
+    <rdfs:label xml:lang="en">cooling energy source</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:nodeID="n7601530229a9478b9243e345f887c1ccb28"/>
+    <rdfs:comment xml:lang="es">Fuente de energía del sistema de refrigeración según el vocabulario controlado de fuentes de energía.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Energy source of the cooling system according to the energy-source controlled vocabulary.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/lightingSystemType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">tipo de sistema de iluminación</rdfs:label>
+    <rdfs:label xml:lang="en">lighting system type</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="es">Tipo de sistema de iluminación (LED, fluorescente, halógena, etc.).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Lighting system type (LED, fluorescent, halogen, etc.).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/observedBuildingUse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">uso del edificio observado</rdfs:label>
+    <rdfs:label xml:lang="en">observed building use</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:nodeID="n7601530229a9478b9243e345f887c1ccb16"/>
+    <rdfs:comment xml:lang="es">Uso del edificio según el vocabulario controlado de usos de edificio.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Building use according to the building-use controlled vocabulary.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb18">
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:rest rdf:nodeID="n7601530229a9478b9243e345f887c1ccb19"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb19">
+    <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb17"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/coolingConsumption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">consumo de refrigeración</rdfs:label>
+    <rdfs:label xml:lang="en">cooling consumption</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Consumo de refrigeración. Se expresa como qudt:QuantityValue, típicamente en kWh/m²·año.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Cooling consumption. Expressed as qudt:QuantityValue, typically in kWh/m²·year.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb67">
+    <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb65"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb32">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb34"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/heatingEnergySource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">fuente energética de calefacción</rdfs:label>
+    <rdfs:label xml:lang="en">heating energy source</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:nodeID="n7601530229a9478b9243e345f887c1ccb24"/>
+    <rdfs:comment xml:lang="es">Fuente de energía del sistema de calefacción según el vocabulario controlado de fuentes de energía.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Energy source of the heating system according to the energy-source controlled vocabulary.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb33">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/EnergySource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/hasMechanicalVentilation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">dispone de ventilación mecánica</rdfs:label>
+    <rdfs:label xml:lang="en">has mechanical ventilation</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb59">
+    <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb57"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb62">
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:rest rdf:nodeID="n7601530229a9478b9243e345f887c1ccb63"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/certificateType"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb81">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/RecipientType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/hasUserRecommendations"/>
+    <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+    <owl:onClass rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/UserRecommendations"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Calificación energética</rdfs:label>
+    <rdfs:label xml:lang="en">Energy rating</rdfs:label>
+    <rdfs:comment xml:lang="es">Expresión de la eficiencia energética de un edificio mediante indicadores numéricos de consumo y emisiones, resumida en una letra de la escala A-G (Art. 2.a).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Expression of the energy efficiency of a building through numerical consumption and emission indicators, summarised as a letter on the A-G scale (Art. 2.a).</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb8"/>
+    <rdfs:subClassOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb9"/>
+    <rdfs:subClassOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb10"/>
+    <rdfs:subClassOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/paybackPeriod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">plazo de recuperación</rdfs:label>
+    <rdfs:label xml:lang="en">payback period</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ImprovementRecommendation"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Plazo de recuperación de la inversión. Se expresa como qudt:QuantityValue, típicamente en años.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Payback period of the investment. Expressed as qudt:QuantityValue, typically in years.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/observedIsBuildingPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">es parte de edificio</rdfs:label>
+    <rdfs:label xml:lang="en">is building part</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:comment xml:lang="es">Indica si la certificación se refiere a una parte de un edificio.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Indicates whether the certification refers to a part of a building.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/measurementPeriodStart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">fecha inicio periodo de medición</rdfs:label>
+    <rdfs:label xml:lang="en">measurement period start</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb39">
+    <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb37"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb60">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb62"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb74">
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:rest rdf:nodeID="n7601530229a9478b9243e345f887c1ccb75"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/procedureType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">tipo de procedimiento</rdfs:label>
+    <rdfs:label xml:lang="en">procedure type</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CalculationProcedure"/>
+    <rdfs:range rdf:nodeID="n7601530229a9478b9243e345f887c1ccb76"/>
+    <rdfs:comment xml:lang="es">Tipo de procedimiento reconocido: general o simplified, según el vocabulario controlado de tipos de procedimiento.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Recognised procedure type: general or simplified, according to the procedure-type controlled vocabulary.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/technicianQualification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">titulación del técnico</rdfs:label>
+    <rdfs:label xml:lang="en">technician qualification</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CompetentTechnician"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="es">Titulación académica que habilita al técnico (Art. 4 bis).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Academic qualification enabling the technician (Art. 4 bis).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/userRecommendationsDeliveryDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">fecha de entrega de recomendaciones</rdfs:label>
+    <rdfs:label xml:lang="en">recommendations delivery date</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/UserRecommendations"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:comment xml:lang="es">Fecha en la que se entregaron las recomendaciones de uso.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Date on which the user recommendations were delivered.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/userRecommendationsDelivered">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">recomendaciones entregadas</rdfs:label>
+    <rdfs:label xml:lang="en">recommendations delivered</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/UserRecommendations"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:comment xml:lang="es">Si el documento de recomendaciones de uso fue entregado al arrendatario/propietario.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Whether the user recommendations document was delivered to the tenant/owner.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/technicianCourseModules">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="es">módulos del curso cursados</rdfs:label>
+    <rdfs:label xml:lang="en">course modules completed</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CompetentTechnician"/>
+    <rdfs:range rdf:nodeID="n7601530229a9478b9243e345f887c1ccb68"/>
+    <rdfs:comment xml:lang="es">Módulos del curso de conocimientos básicos, específicos y administrativos cursados, según el vocabulario controlado de módulos del curso (Art. 4 bis).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Modules of the basic, specific and administrative knowledge course completed, according to the course-module controlled vocabulary (Art. 4 bis).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb29">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/EnergySource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/hasObservedAddress">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">dirección del inmueble</rdfs:label>
+    <rdfs:label xml:lang="en">observed address</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
+    <rdfs:comment xml:lang="es">Dirección postal del inmueble certificado. Se reutiliza esdir:DireccionPostal, que especializa schema:PostalAddress, vcard:Address y locn:Address, y permite representar vía, municipio, provincia y código postal con propiedades estándar (Art. 8.2.a).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Postal address of the certified property. Reuses esdir:DireccionPostal, which specialises schema:PostalAddress, vcard:Address and locn:Address, and allows representing street, municipality, province and postal code with standard properties (Art. 8.2.a).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/heatingDemand">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">demanda de calefacción</rdfs:label>
+    <rdfs:label xml:lang="en">heating demand</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Demanda de calefacción. Se expresa como qudt:QuantityValue, típicamente en kWh/m²·año.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Heating demand. Expressed as qudt:QuantityValue, typically in kWh/m²·year.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/lightingConsumption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">consumo de iluminación</rdfs:label>
+    <rdfs:label xml:lang="en">lighting consumption</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Consumo de iluminación. Se expresa como qudt:QuantityValue, típicamente en kWh/m²·año.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Lighting consumption. Expressed as qudt:QuantityValue, typically in kWh/m²·year.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/technicianNIF">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">NIF/NIE del técnico</rdfs:label>
+    <rdfs:label xml:lang="en">technician NIF/NIE</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CompetentTechnician"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/renewableType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">tipo de renovable</rdfs:label>
+    <rdfs:label xml:lang="en">renewable type</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/coolingEfficiency">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">rendimiento estacional refrigeración</rdfs:label>
+    <rdfs:label xml:lang="en">seasonal cooling efficiency</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Rendimiento estacional del sistema de refrigeración. Se expresa como qudt:QuantityValue.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Seasonal efficiency of the cooling system. Expressed as qudt:QuantityValue.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb82">
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:rest rdf:nodeID="n7601530229a9478b9243e345f887c1ccb83"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb70">
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:rest rdf:nodeID="n7601530229a9478b9243e345f887c1ccb71"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/hasRenewableGeneration">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">dispone de generación renovable</rdfs:label>
+    <rdfs:label xml:lang="en">has renewable generation</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/labelRatingLetter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">letra de la etiqueta</rdfs:label>
+    <rdfs:label xml:lang="en">label rating letter</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyLabel"/>
+    <rdfs:range rdf:nodeID="n7601530229a9478b9243e345f887c1ccb72"/>
+    <rdfs:comment xml:lang="es">Letra de calificación mostrada en la etiqueta, según el vocabulario controlado de letras de calificación (Art. 15).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Rating letter shown on the label, according to the rating-letter controlled vocabulary (Art. 15).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/noImprovementJustification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">justificación de inexistencia de potencial de mejora</rdfs:label>
+    <rdfs:label xml:lang="en">no improvement potential justification</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="es">Justificación técnica de la inexistencia de potencial razonable para la mejora (Art. 8.2.f).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Technical justification for the absence of reasonable improvement potential (Art. 8.2.f).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/technicianPublicAuthorization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">autorización para hacer público</rdfs:label>
+    <rdfs:label xml:lang="en">public authorization</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CompetentTechnician"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:comment xml:lang="es">Autorización voluntaria o rechazo para hacer público el nombre, apellidos y datos de contacto (Art. 4 quáter.4, Anexo IV).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Voluntary authorization or refusal to make name, surname and contact data public (Art. 4 quáter.4, Annex IV).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CompetentTechnician">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Técnico competente</rdfs:label>
+    <rdfs:label xml:lang="en">Competent technician</rdfs:label>
+    <rdfs:comment xml:lang="es">Técnico habilitado para realizar la certificación de eficiencia energética de edificios (Art. 4 bis).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Technician qualified to carry out energy performance certification of buildings (Art. 4 bis).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/observedHeritageProtection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">protección patrimonial observada</rdfs:label>
+    <rdfs:label xml:lang="en">observed heritage protection</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:comment xml:lang="es">Si el edificio tiene protección patrimonial (Art. 3.2.a).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Whether the building has heritage protection (Art. 3.2.a).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ratingLetter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="es">letra de calificación</rdfs:label>
+    <rdfs:label xml:lang="en">rating letter</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+    <rdfs:range rdf:nodeID="n7601530229a9478b9243e345f887c1ccb48"/>
+    <rdfs:comment xml:lang="es">Letra de la calificación global de eficiencia energética en la escala A-G, según el vocabulario controlado de letras de calificación.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Global energy efficiency rating letter on the A-G scale, according to the rating-letter controlled vocabulary.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb64">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb66"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb12">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb14"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb69">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/CourseModule"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/visitDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">descripción de la visita</rdfs:label>
+    <rdfs:label xml:lang="en">visit description</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="es">Descripción de la visita in situ realizada (Art. 8.2.g).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Description of the on-site visit carried out (Art. 8.2.g).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb36">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb38"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb22">
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:rest rdf:nodeID="n7601530229a9478b9243e345f887c1ccb23"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/hasTechnicianAddress">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">dirección del técnico</rdfs:label>
+    <rdfs:label xml:lang="en">technician address</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CompetentTechnician"/>
+    <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal"/>
+    <rdfs:comment xml:lang="es">Dirección postal del técnico competente. Se reutiliza esdir:DireccionPostal, que especializa schema:PostalAddress, vcard:Address y locn:Address, y permite representar vía, municipio, provincia y código postal con propiedades estándar (Anexo IV).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Postal address of the competent technician. Reuses esdir:DireccionPostal, which specialises schema:PostalAddress, vcard:Address and locn:Address, and allows representing street, municipality, province and postal code with standard properties (Annex IV).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb55">
+    <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb53"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#DireccionPostal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Dirección postal</rdfs:label>
+    <rdfs:label xml:lang="en">Postal address</rdfs:label>
+    <rdfs:comment xml:lang="es">Dirección postal en España. Especialización de schema:PostalAddress, vcard:Address y locn:Address. Permite representar una dirección con propiedades como schema:streetAddress, schema:addressLocality, schema:addressRegion y schema:postalCode.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Postal address in Spain. Specialisation of schema:PostalAddress, vcard:Address and locn:Address. Allows representing an address with properties like schema:streetAddress, schema:addressLocality, schema:addressRegion and schema:postalCode.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/heatingEfficiency">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">rendimiento estacional calefacción</rdfs:label>
+    <rdfs:label xml:lang="en">seasonal heating efficiency</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Rendimiento estacional del sistema de calefacción. Se expresa como qudt:QuantityValue.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Seasonal efficiency of the heating system. Expressed as qudt:QuantityValue.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/issuedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">emitido por</rdfs:label>
+    <rdfs:label xml:lang="en">issued by</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CompetentTechnician"/>
+    <rdfs:comment xml:lang="es">Técnico competente que suscribe el certificado.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Competent technician who signs the certificate.</rdfs:comment>
+    <owl:inverseOf rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/issuedCertificate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/hasDHWSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">dispone de ACS</rdfs:label>
+    <rdfs:label xml:lang="en">has DHW system</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb17">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/BuildingUse"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb23">
+    <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb21"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb83">
+    <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb81"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb24">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb26"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb43">
+    <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb41"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/CalculationProcedure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="es">Procedimiento de cálculo</rdfs:label>
+    <rdfs:label xml:lang="en">Calculation procedure</rdfs:label>
+    <rdfs:comment xml:lang="es">Procedimiento reconocido (general o simplificado) inscrito en el Registro general de documentos reconocidos, utilizado para obtener la calificación de eficiencia energética (Art. 4.2.a, Art. 5).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Recognised procedure (general or simplified) registered in the general registry of recognised documents, used to obtain the energy performance rating (Art. 4.2.a, Art. 5).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb40">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb42"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb58">
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:rest rdf:nodeID="n7601530229a9478b9243e345f887c1ccb59"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb66">
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:rest rdf:nodeID="n7601530229a9478b9243e345f887c1ccb67"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/registrationAutonomousCommunity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">CCAA de registro</rdfs:label>
+    <rdfs:label xml:lang="en">registration autonomous community</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia"/>
+    <rdfs:comment xml:lang="es">Comunidad autónoma donde se registra el certificado, representada como esadm:Autonomia del vocabulario de territorio (Art. 6.6).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Autonomous community where the certificate is registered, represented as esadm:Autonomia from the territory vocabulary (Art. 6.6).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb61">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingLetter"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ratingLetter"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb72">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb74"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb63">
+    <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb61"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/estimatedCost">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">coste estimado</rdfs:label>
+    <rdfs:label xml:lang="en">estimated cost</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/ImprovementRecommendation"/>
+    <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    <rdfs:comment xml:lang="es">Coste estimado de la intervención. Se expresa como qudt:QuantityValue, típicamente en euros.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Estimated cost of the intervention. Expressed as qudt:QuantityValue, typically in euros.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/issueDate"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb38">
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:rest rdf:nodeID="n7601530229a9478b9243e345f887c1ccb39"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/certificateType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="es">tipo de certificado</rdfs:label>
+    <rdfs:label xml:lang="en">certificate type</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:nodeID="n7601530229a9478b9243e345f887c1ccb12"/>
+    <rdfs:comment xml:lang="es">Tipo de certificado de eficiencia energética según el vocabulario controlado de tipos de certificado: proyecto, obra terminada o edificio existente (Art. 2.b-g, Art. 9-10, Art. 15.2 RD 390/2021).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Type of energy performance certificate according to the certificate-type controlled vocabulary: project, completed work or existing building (Art. 2.b-g, Art. 9-10, Art. 15.2 RD 390/2021).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb21">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/ClimaticZone"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/userRecommendationsRecipient">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="es">destinatario de recomendaciones</rdfs:label>
+    <rdfs:label xml:lang="en">recommendations recipient</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/UserRecommendations"/>
+    <rdfs:range rdf:nodeID="n7601530229a9478b9243e345f887c1ccb80"/>
+    <rdfs:comment xml:lang="es">Destinatario de las recomendaciones: propietario, arrendatario o ambos, según el vocabulario controlado de tipos de destinatario.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Recipient of the recommendations: owner, tenant, or both, according to the recipient-type controlled vocabulary.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/hasRating"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyRating"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb75">
+    <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb73"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb53">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/DataBasis"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb79">
+    <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb77"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb41">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/EnergySource"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb20">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb22"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb49">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingLetter"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb35">
+    <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb33"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/primaryEnergyNonRenewable"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/representativeBuildingReference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="es">referencia del edificio representativo</rdfs:label>
+    <rdfs:label xml:lang="en">representative building reference</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/EnergyCertificate"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="es">Referencia del edificio representativo utilizado para la certificación (viviendas unifamiliares) (Art. 6.3).</rdfs:comment>
+    <rdfs:comment xml:lang="en">Reference to the representative building used for certification (single-family homes) (Art. 6.3).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb44">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb46"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb34">
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:rest rdf:nodeID="n7601530229a9478b9243e345f887c1ccb35"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb52">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb54"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb27">
+    <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb25"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb16">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb18"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb68">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="n7601530229a9478b9243e345f887c1ccb70"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb30">
+    <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:rest rdf:nodeID="n7601530229a9478b9243e345f887c1ccb31"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb31">
+    <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb29"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+</rdf:RDF>

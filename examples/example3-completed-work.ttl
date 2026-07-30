@@ -10,12 +10,17 @@
 @prefix edintceekos-db: <http://vocab.linkeddata.es/datosabiertos/kos/edint/DataBasis/> .
 @prefix edintceekos-rcp: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RecipientType/> .
 @prefix edintceekos-rsv: <http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingScaleVersion/> .
+@prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal#> .
+@prefix esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#> .
+@prefix catastro: <http://vocab.linkeddata.es/datosabiertos/def/catastro/> .
+@prefix schema: <http://schema.org/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix qudtu: <http://qudt.org/vocab/unit/> .
 @prefix ex: <http://ejemplo.org/cee/> .
 
 # ---------------------------------------------------------------------------
 # EXAMPLE 3: Completed work certificate linked to project predecessor
 # Same residential building in Sevilla as example2, after construction.
-# Art. 2.c, Art. 9 RD 390/2021 — second phase.
 # ---------------------------------------------------------------------------
 
 # --- Calculation Procedure (same version as project per Art. 9.4) ---
@@ -31,7 +36,7 @@ ex:tech_lnavarro a edintcee:CompetentTechnician ;
     edintcee:technicianName "Laura Navarro Ruiz" ;
     edintcee:technicianNIF "89012345E" ;
     edintcee:technicianQualification "Arquitecta" ;
-    edintcee:technicianRegistrationCCAA "Andalucía" ;
+    edintcee:technicianRegistrationAutonomousCommunity <http://vocab.linkeddata.es/datosabiertos/recurso/sector-publico/territorio/ComunidadAutonoma/andalucia> ;
     edintcee:technicianPublicAuthorization "true"^^xsd:boolean .
 
 # --- User Recommendations ---
@@ -40,6 +45,19 @@ ex:userrec_OT_2026_S001 a edintcee:UserRecommendations ;
     edintcee:userRecommendationsDelivered "true"^^xsd:boolean ;
     edintcee:userRecommendationsDeliveryDate "2026-02-28"^^xsd:date ;
     edintcee:userRecommendationsRecipient edintceekos-rcp:Owner .
+
+# --- Cadastral Property ---
+
+ex:catastro_const25 a catastro:CadastralProperty ;
+    catastro:referenceCatastral "4100901VK1234F0001WX" .
+
+# --- Address ---
+
+ex:dir_const25 a esdir:DireccionPostal ;
+    schema:streetAddress "Avda. de la Constitución 25" ;
+    schema:addressLocality "Sevilla" ;
+    schema:addressRegion "Sevilla" ;
+    schema:addressCountry "ES" .
 
 # --- Energy Certificate ---
 
@@ -54,71 +72,67 @@ ex:cert_OT_2026_S001 a edintcee:EnergyCertificate ;
     edintcee:usesSameProcedureVersion "true"^^xsd:boolean ;
 
     # Certificate metadata
-    edintcee:certificateNumber      "SE-2026-OT-000001" ;
-    edintcee:issueDate              "2026-02-28"^^xsd:date ;
-    edintcee:visitDate              "2026-02-20"^^xsd:date ;
-    edintcee:registrationDate       "2026-03-05"^^xsd:date ;
-    edintcee:validUntil             "2036-02-28"^^xsd:date ;
-    edintcee:visitDescription       "Visita in situ: comprobación de ejecución de cerramientos, instalación de aerotermia, solar térmica y fotovoltaica según proyecto." ;
-    edintcee:applicableRegulation   "CTE DB-HE (2019), RITE (2021)" ;
-    edintcee:registrationCCAA       "Andalucía" ;
+    edintcee:certificateNumber              "SE-2026-OT-000001" ;
+    edintcee:issueDate                      "2026-02-28"^^xsd:date ;
+    edintcee:visitDate                      "2026-02-20"^^xsd:date ;
+    edintcee:registrationDate               "2026-03-05"^^xsd:date ;
+    edintcee:validUntil                     "2036-02-28"^^xsd:date ;
+    edintcee:visitDescription               "Visita in situ: comprobación de ejecución de cerramientos, instalación de aerotermia, solar térmica y fotovoltaica según proyecto." ;
+    edintcee:applicableRegulation            "CTE DB-HE (2019), RITE (2021)" ;
+    edintcee:registrationAutonomousCommunity <http://vocab.linkeddata.es/datosabiertos/recurso/sector-publico/territorio/ComunidadAutonoma/andalucia> ;
 
     # Observed building data (as built)
-    edintcee:observedCadastralRef       "4100901VK1234F0001WX" ;
-    edintcee:observedAddress            "Avda. de la Constitución 25" ;
-    edintcee:observedMunicipality       "Sevilla" ;
-    edintcee:observedProvince           "Sevilla" ;
-    edintcee:observedUsefulSurface      "3150.0"^^xsd:decimal ;
-    edintcee:observedConstructionYear   "2025"^^xsd:gYear ;
-    edintcee:observedBuildingUse        edintceekos-bu:Residential ;
-    edintcee:observedClimaticZone       edintceekos-cz:B4 ;
-    edintcee:observedHeritageProtection "false"^^xsd:boolean ;
-    edintcee:observedIsBuildingPart     "false"^^xsd:boolean ;
+    edintcee:refersToCadastralEntity        ex:catastro_const25 ;
+    edintcee:hasObservedAddress             ex:dir_const25 ;
+    edintcee:observedBuildingUse            edintceekos-bu:Residential ;
+    edintcee:observedClimaticZone           edintceekos-cz:B4 ;
+    edintcee:observedHeritageProtection     "false"^^xsd:boolean ;
+    edintcee:observedIsBuildingPart         "false"^^xsd:boolean ;
 
     # Envelope (as built — slight variation from project)
-    edintcee:envelopeDescription        "Fachada ventilada ejecutada conforme a proyecto. Cubierta invertida con XPS 10 cm. Carpintería PVC con triple acristalamiento, ejecución conforme a EHE." ;
-    edintcee:globalHeatTransferCoeff    "0.37"^^xsd:decimal ;
-    edintcee:windowAreaRatio            "22.0"^^xsd:decimal ;
+    edintcee:envelopeDescription             "Fachada ventilada ejecutada conforme a proyecto. Cubierta invertida con XPS 10 cm. Carpintería PVC con triple acristalamiento, ejecución conforme a EHE." ;
+    edintcee:globalHeatTransferCoeff        [ a qudt:QuantityValue ; qudt:numericValue 0.37 ; qudt:hasUnit qudtu:W-PER-M2-K ] ;
+    edintcee:windowAreaRatio                [ a qudt:QuantityValue ; qudt:numericValue 22.0 ; qudt:hasUnit qudtu:PERCENT ] ;
 
     # Systems (as built)
-    edintcee:hasHeatingSystem           "true"^^xsd:boolean ;
-    edintcee:heatingSystemType          "Bomba de calor aerotermia, suelo radiante" ;
-    edintcee:heatingEnergySource        edintceekos-es:Aerothermal ;
-    edintcee:heatingEfficiency          "3.78"^^xsd:decimal ;
-    edintcee:hasCoolingSystem           "true"^^xsd:boolean ;
-    edintcee:coolingSystemType          "Bomba de calor aire-agua, fancoils" ;
-    edintcee:coolingEnergySource        edintceekos-es:Aerothermal ;
-    edintcee:coolingEfficiency          "3.15"^^xsd:decimal ;
-    edintcee:hasDHWSystem               "true"^^xsd:boolean ;
-    edintcee:dhwSystemType              "Aerotermia + solar térmico 8 m²" ;
-    edintcee:dhwEnergySource            edintceekos-es:Aerothermal ;
-    edintcee:hasRenewableGeneration     "true"^^xsd:boolean ;
-    edintcee:renewableType              "Solar fotovoltaica 5 kWp" ;
-    edintcee:renewableEnergySource      edintceekos-es:SolarPV ;
-    edintcee:renewableCapacity          "5.0"^^xsd:decimal ;
-    edintcee:hasAutomationSystem        "true"^^xsd:boolean ;
-    edintcee:hasMechanicalVentilation   "true"^^xsd:boolean ;
-    edintcee:hasHeatRecovery            "true"^^xsd:boolean ;
+    edintcee:hasHeatingSystem               "true"^^xsd:boolean ;
+    edintcee:heatingSystemType              "Bomba de calor aerotermia, suelo radiante" ;
+    edintcee:heatingEnergySource            edintceekos-es:Aerothermal ;
+    edintcee:heatingEfficiency              [ a qudt:QuantityValue ; qudt:numericValue 3.78 ; qudt:hasUnit qudtu:PERCENT ] ;
+    edintcee:hasCoolingSystem               "true"^^xsd:boolean ;
+    edintcee:coolingSystemType              "Bomba de calor aire-agua, fancoils" ;
+    edintcee:coolingEnergySource            edintceekos-es:Aerothermal ;
+    edintcee:coolingEfficiency              [ a qudt:QuantityValue ; qudt:numericValue 3.15 ; qudt:hasUnit qudtu:PERCENT ] ;
+    edintcee:hasDHWSystem                   "true"^^xsd:boolean ;
+    edintcee:dhwSystemType                  "Aerotermia + solar térmico 8 m²" ;
+    edintcee:dhwEnergySource                edintceekos-es:Aerothermal ;
+    edintcee:hasRenewableGeneration          "true"^^xsd:boolean ;
+    edintcee:renewableType                   "Solar fotovoltaica 5 kWp" ;
+    edintcee:renewableEnergySource          edintceekos-es:SolarPV ;
+    edintcee:renewableCapacity              [ a qudt:QuantityValue ; qudt:numericValue 5.0 ; qudt:hasUnit qudtu:KiloW ] ;
+    edintcee:hasAutomationSystem            "true"^^xsd:boolean ;
+    edintcee:hasMechanicalVentilation       "true"^^xsd:boolean ;
+    edintcee:hasHeatRecovery                "true"^^xsd:boolean ;
 
     # Improvement recommendations (minor, building already high performance)
-    edintcee:hasRecommendation           ex:rec_OT_2026_S001_1 .
+    edintcee:hasRecommendation              ex:rec_OT_2026_S001_1 .
 
 # --- Energy Rating ---
 
 ex:rating_OT_2026_S001 a edintcee:EnergyRating ;
     edintcee:ratingLetter              edintceekos-rl:A ;
     edintcee:ratingScaleVersion        edintceekos-rsv:RD390_2021 ;
-    edintcee:primaryEnergyTotal        "30.1"^^xsd:decimal ;
-    edintcee:primaryEnergyNonRenewable "13.5"^^xsd:decimal ;
-    edintcee:primaryEnergyRenewable    "16.6"^^xsd:decimal ;
-    edintcee:co2Emissions              "4.1"^^xsd:decimal ;
-    edintcee:heatingDemand             "8.4"^^xsd:decimal ;
-    edintcee:coolingDemand             "12.3"^^xsd:decimal ;
-    edintcee:dhwDemand                 "9.5"^^xsd:decimal ;
-    edintcee:heatingConsumption         "3.6"^^xsd:decimal ;
-    edintcee:coolingConsumption         "4.3"^^xsd:decimal ;
-    edintcee:dhwConsumption             "3.2"^^xsd:decimal ;
-    edintcee:lightingConsumption        "1.6"^^xsd:decimal ;
+    edintcee:primaryEnergyTotal        [ a qudt:QuantityValue ; qudt:numericValue 30.1 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:primaryEnergyNonRenewable [ a qudt:QuantityValue ; qudt:numericValue 13.5 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:primaryEnergyRenewable    [ a qudt:QuantityValue ; qudt:numericValue 16.6 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:co2Emissions              [ a qudt:QuantityValue ; qudt:numericValue 4.1 ; qudt:hasUnit qudtu:KiloGM ] ;
+    edintcee:heatingDemand             [ a qudt:QuantityValue ; qudt:numericValue 8.4 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:coolingDemand             [ a qudt:QuantityValue ; qudt:numericValue 12.3 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:dhwDemand                 [ a qudt:QuantityValue ; qudt:numericValue 9.5 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:heatingConsumption        [ a qudt:QuantityValue ; qudt:numericValue 3.6 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:coolingConsumption        [ a qudt:QuantityValue ; qudt:numericValue 4.3 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:dhwConsumption            [ a qudt:QuantityValue ; qudt:numericValue 3.2 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:lightingConsumption       [ a qudt:QuantityValue ; qudt:numericValue 1.6 ; qudt:hasUnit qudtu:KiloW-HR ] ;
     edintcee:dataBasis                 edintceekos-db:Calculated .
 
 # --- Energy Label ---
@@ -131,9 +145,9 @@ ex:label_OT_2026_S001 a edintcee:EnergyLabel ;
 ex:rec_OT_2026_S001_1 a edintcee:ImprovementRecommendation ;
     edintcee:recommendationType        edintceekos-rt:Automation ;
     edintcee:recommendationDescription "Ampliación del sistema de monitorización energética con contadores individuales por vivienda para optimización del consumo." ;
-    edintcee:estimatedSavingPct        "3.0"^^xsd:decimal ;
-    edintcee:estimatedSavingKwh        "4500"^^xsd:decimal ;
-    edintcee:paybackPeriod             "2.0"^^xsd:decimal ;
-    edintcee:estimatedCost             "8000"^^xsd:decimal ;
-    edintcee:priority                  1 ;
-    edintcee:improvedRatingLetter      edintceekos-rl:A .
+    edintcee:estimatedSavingPct       [ a qudt:QuantityValue ; qudt:numericValue 3.0 ; qudt:hasUnit qudtu:PERCENT ] ;
+    edintcee:estimatedSavingKwh       [ a qudt:QuantityValue ; qudt:numericValue 4500 ; qudt:hasUnit qudtu:KiloW-HR ] ;
+    edintcee:paybackPeriod            [ a qudt:QuantityValue ; qudt:numericValue 2.0 ; qudt:hasUnit qudtu:YEAR ] ;
+    edintcee:estimatedCost            [ a qudt:QuantityValue ; qudt:numericValue 8000 ; qudt:hasUnit qudtu:EUR ] ;
+    edintcee:priority                 1 ;
+    edintcee:improvedRatingLetter     edintceekos-rl:A .
