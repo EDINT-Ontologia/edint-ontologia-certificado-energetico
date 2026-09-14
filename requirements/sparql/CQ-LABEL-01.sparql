@@ -1,6 +1,6 @@
 # CQ-LABEL-01: ¿Qué etiqueta de eficiencia energética tiene asociada un certificado?
 
-PREFIX edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/>
+PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
 
 SELECT ?cert ?label ?labelLetter
 WHERE {

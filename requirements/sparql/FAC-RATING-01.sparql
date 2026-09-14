@@ -1,6 +1,6 @@
 # FAC-RATING-01: Una calificación tiene exactamente una letra de calificación (A-G)
 
-PREFIX edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/>
+PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
 
 SELECT ?rating (COUNT(?letter) AS ?letterCount)
 WHERE {

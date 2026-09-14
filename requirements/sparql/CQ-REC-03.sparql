@@ -1,6 +1,6 @@
 # CQ-REC-03: ¿Qué tipo de recomendación domina (envolvente, instalación, automatización, combinada)?
 
-PREFIX edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/>
+PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
 
 SELECT ?recType (COUNT(?rec) AS ?count)
 WHERE {

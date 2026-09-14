@@ -1,7 +1,7 @@
 # FAC-INV-01: Las propiedades inversas son consistentes con las directas
 # Verifica que hasRating↔ratingOf, issuedBy↔issuedCertificate, etc.
 
-PREFIX edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/>
+PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
 
 SELECT ?cert ?property ?value
 WHERE {
