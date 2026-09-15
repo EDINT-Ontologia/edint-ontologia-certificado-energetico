@@ -3,11 +3,11 @@
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
-@prefix edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/> .
+@prefix edintcee: <https://edint.es/def/certificado-energetico#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/> .
 @prefix edintceekos-rsv: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/rating-scale-version/> .
-@prefix edintcee-shapes: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/shapes/> .
+@prefix edintcee-shapes: <https://edint.es/def/certificado-energetico#shapes/> .
 
 # ============================================================================
 # SHACL Shapes — Energy Performance Certificate Ontology (edintcee)
@@ -114,7 +114,7 @@ edintcee-shapes:CompletedWorkPredecessorShape a sh:NodeShape ;
     sh:target [
         a sh:SPARQLTarget ;
         sh:select """
-            PREFIX edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/>
+            PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
             PREFIX edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/>
             SELECT ?this
             WHERE {
@@ -142,7 +142,7 @@ edintcee-shapes:CompletedWorkPredecessorTypeShape a sh:NodeShape ;
     sh:target [
         a sh:SPARQLTarget ;
         sh:select """
-            PREFIX edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/>
+            PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
             PREFIX edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/>
             SELECT ?this
             WHERE {
@@ -156,7 +156,7 @@ edintcee-shapes:CompletedWorkPredecessorTypeShape a sh:NodeShape ;
         sh:message "El certificado predecesor de un certificado de obra terminada debe ser de tipo proyecto (Art. 9.1 RD 390/2021)."@es ;
         sh:message "The predecessor certificate of a completed work certificate must be of project type (Art. 9.1 RD 390/2021)."@en ;
         sh:select """
-            PREFIX edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/>
+            PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
             PREFIX edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/>
             SELECT $this ?pred
             WHERE {
@@ -175,7 +175,7 @@ edintcee-shapes:RatingDowngradeJustificationShape a sh:NodeShape ;
     sh:target [
         a sh:SPARQLTarget ;
         sh:select """
-            PREFIX edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/>
+            PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
             PREFIX edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/>
             SELECT ?this
             WHERE {
@@ -189,7 +189,7 @@ edintcee-shapes:RatingDowngradeJustificationShape a sh:NodeShape ;
         sh:message "Si la calificación del certificado de obra terminada es peor que la del proyecto, debe incluirse justificación (Art. 9.5 RD 390/2021)."@es ;
         sh:message "If the completed work certificate rating is worse than the project one, a justification is required (Art. 9.5 RD 390/2021)."@en ;
         sh:select """
-            PREFIX edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/>
+            PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
             PREFIX qudt: <http://qudt.org/schema/qudt/>
             SELECT $this ?pred
             WHERE {
@@ -215,7 +215,7 @@ edintcee-shapes:ExistingBuildingNoProjectPredecessorShape a sh:NodeShape ;
     sh:target [
         a sh:SPARQLTarget ;
         sh:select """
-            PREFIX edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/>
+            PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
             PREFIX edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/>
             SELECT ?this
             WHERE {
@@ -229,7 +229,7 @@ edintcee-shapes:ExistingBuildingNoProjectPredecessorShape a sh:NodeShape ;
         sh:message "Un certificado de edificio existente no debe tener un predecesor de tipo proyecto (Art. 10 RD 390/2021)."@es ;
         sh:message "An existing building certificate must not have a project-type predecessor (Art. 10 RD 390/2021)."@en ;
         sh:select """
-            PREFIX edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/>
+            PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
             PREFIX edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/>
             SELECT $this ?pred
             WHERE {

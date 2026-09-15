@@ -1,6 +1,6 @@
 # FAC-CERT-06: Un certificado tiene al menos un documento de recomendaciones de uso
 
-PREFIX edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/>
+PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
 
 SELECT ?cert
 WHERE {

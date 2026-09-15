@@ -10,7 +10,7 @@ El propósito de esta ontología es modelar los certificados de eficiencia energ
 
 # Prefijo y espacio de nombres (Prefix and namespace)
 
-El prefijo de esta ontología es `edintcee`. Se publica en el espacio de nombres: http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/
+El prefijo de esta ontología es `edintcee`. Se publica en el espacio de nombres: https://edint.es/def/certificado-energetico#
 
 # Modelo conceptual (Ontology conceptualization)
 

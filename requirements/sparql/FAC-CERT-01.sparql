@@ -1,7 +1,7 @@
 # FAC-CERT-01: Un certificado tiene exactamente una calificación energética
 # Debe fallar si un certificado no tiene rating o tiene más de uno
 
-PREFIX edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/>
+PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
 
 SELECT ?cert (COUNT(?rating) AS ?ratingCount)
 WHERE {

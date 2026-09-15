@@ -1,6 +1,6 @@
 # CQ-TECH-02: ¿Cuántos certificados ha emitido un técnico determinado?
 
-PREFIX edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/>
+PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
 
 SELECT ?techName (COUNT(?cert) AS ?certCount)
 WHERE {

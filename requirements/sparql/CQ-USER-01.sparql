@@ -1,6 +1,6 @@
 # CQ-USER-01: ¿Se han entregado las recomendaciones de uso al usuario/arrendatario?
 
-PREFIX edintcee: <http://vocab.linkeddata.es/datosabiertos/def/sectorpublico/cee/>
+PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
 
 SELECT ?cert ?delivered ?recipient ?deliveryDate
 WHERE {
