@@ -5,7 +5,9 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:vann="http://purl.org/vocab/vann/"
->
+
+     xmlns:schema="http://schema.org/"
+     xmlns:bibo="http://purl.org/ontology/bibo/">
   <rdf:Description rdf:about="https://edint.es/def/certificado-energetico#ventilationEnergySource">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label xml:lang="es">fuente energética de ventilación</rdfs:label>
@@ -316,7 +318,10 @@
     <rdfs:comment xml:lang="es">Versión inicial (core) centrada en las clases principales: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure y UserRecommendations, con sus relaciones y propiedades.</rdfs:comment>
     <rdfs:comment xml:lang="en">Initial (core) version focusing on the main classes: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure and UserRecommendations, with their relationships and properties.</rdfs:comment>
     <rdfs:seeAlso rdf:resource="https://www.boe.es/eli/es/rd/2021/06/01/390"/>
-  </rdf:Description>
+      <dcterms:publisher rdf:resource="https://www.femp.es/"/>
+    <dcterms:bibliographicCitation xml:lang="es">Ontología de Certificados de Eficiencia Energética de Edificios. EDINT. Revision: v0.1.0.</dcterms:bibliographicCitation>
+    <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
+</rdf:Description>
   <rdf:Description rdf:about="https://edint.es/def/certificado-energetico#measuredDHWConsumption">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label xml:lang="es">consumo medido de ACS</rdfs:label>
