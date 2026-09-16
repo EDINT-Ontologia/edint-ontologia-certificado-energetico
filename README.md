@@ -1,4 +1,4 @@
-# Ontología de Certificados de Eficiencia Energética de Edificios
+# Ontología EDINT de Certificados de Eficiencia Energética de Edificios
 
 Esta ontología permite representar el dominio de los certificados de eficiencia energética de edificios, centrada en el certificado como unidad documental, su calificación energética, etiqueta, técnico competente, recomendaciones de mejora, procedimiento de cálculo y recomendaciones de uso para el usuario.
 
