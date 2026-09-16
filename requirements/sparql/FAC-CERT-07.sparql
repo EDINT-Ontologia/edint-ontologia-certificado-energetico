@@ -2,7 +2,7 @@
 # Art. 9 RD 390/2021
 
 PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
-PREFIX edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edint/CertificateType/>
+PREFIX edintceekos-ct: <https://edint.es/kos/EnergyCertificateType/>
 
 SELECT ?cert
 WHERE {

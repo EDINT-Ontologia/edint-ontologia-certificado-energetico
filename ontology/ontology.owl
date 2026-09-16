@@ -127,7 +127,7 @@
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb37">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/EnergySource"/>
+    <owl:hasValue rdf:resource="https://edint.es/kos/EnergySource"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://edint.es/def/certificado-energetico#validUntil">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -158,7 +158,7 @@
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb25">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/EnergySource"/>
+    <owl:hasValue rdf:resource="https://edint.es/kos/EnergySource"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://edint.es/def/certificado-energetico#measuredHeatingConsumption">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -558,7 +558,7 @@
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb73">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingLetter"/>
+    <owl:hasValue rdf:resource="https://edint.es/kos/RatingLetter"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb56">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -659,12 +659,12 @@
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb13">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/CertificateType"/>
+    <owl:hasValue rdf:resource="https://edint.es/kos/CertificateType"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb65">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/AccessPath"/>
+    <owl:hasValue rdf:resource="https://edint.es/kos/AccessPath"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://edint.es/def/certificado-energetico#globalHeatTransferCoeff">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -822,7 +822,7 @@
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb77">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/ProcedureType"/>
+    <owl:hasValue rdf:resource="https://edint.es/kos/ProcedureType"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://edint.es/def/certificado-energetico#technicianRegistrationAutonomousCommunity">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -836,7 +836,7 @@
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb45">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingScaleVersion"/>
+    <owl:hasValue rdf:resource="https://edint.es/kos/RatingScaleVersion"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://edint.es/def/certificado-energetico#recommendationFor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -905,7 +905,7 @@
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb57">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/RecommendationType"/>
+    <owl:hasValue rdf:resource="https://edint.es/kos/RecommendationType"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb14">
     <rdf:first rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -1009,7 +1009,7 @@
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb33">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/EnergySource"/>
+    <owl:hasValue rdf:resource="https://edint.es/kos/EnergySource"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://edint.es/def/certificado-energetico#hasMechanicalVentilation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -1035,7 +1035,7 @@
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb81">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/RecipientType"/>
+    <owl:hasValue rdf:resource="https://edint.es/kos/RecipientType"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb4">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
@@ -1140,7 +1140,7 @@
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb29">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/EnergySource"/>
+    <owl:hasValue rdf:resource="https://edint.es/kos/EnergySource"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://edint.es/def/certificado-energetico#hasObservedAddress">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -1271,7 +1271,7 @@
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb69">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/CourseModule"/>
+    <owl:hasValue rdf:resource="https://edint.es/kos/CourseModule"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://edint.es/def/certificado-energetico#visitDescription">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -1340,7 +1340,7 @@
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb17">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/BuildingUse"/>
+    <owl:hasValue rdf:resource="https://edint.es/kos/BuildingUse"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb23">
     <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb21"/>
@@ -1389,7 +1389,7 @@
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb61">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingLetter"/>
+    <owl:hasValue rdf:resource="https://edint.es/kos/RatingLetter"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb8">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
@@ -1436,7 +1436,7 @@
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb21">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/ClimaticZone"/>
+    <owl:hasValue rdf:resource="https://edint.es/kos/ClimaticZone"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://edint.es/def/certificado-energetico#userRecommendationsRecipient">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -1460,7 +1460,7 @@
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb53">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/DataBasis"/>
+    <owl:hasValue rdf:resource="https://edint.es/kos/DataBasis"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb79">
     <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb77"/>
@@ -1469,7 +1469,7 @@
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb41">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/EnergySource"/>
+    <owl:hasValue rdf:resource="https://edint.es/kos/EnergySource"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb20">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -1478,7 +1478,7 @@
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb49">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    <owl:hasValue rdf:resource="http://vocab.linkeddata.es/datosabiertos/kos/edint/RatingLetter"/>
+    <owl:hasValue rdf:resource="https://edint.es/kos/RatingLetter"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="n7601530229a9478b9243e345f887c1ccb35">
     <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb33"/>
