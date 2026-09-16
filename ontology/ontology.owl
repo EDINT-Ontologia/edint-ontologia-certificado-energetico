@@ -293,8 +293,8 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://edint.es/def/certificado-energetico#">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <owl:versionIRI rdf:resource="https://edint.es/def/certificado-energetico#0.1.0"/>
-    <owl:versionInfo>0.1.0</owl:versionInfo>
+    <owl:versionIRI rdf:resource="https://edint.es/def/certificado-energetico/0.1.1"/>
+    <owl:versionInfo>0.1.1</owl:versionInfo>
     <dcterms:title xml:lang="es">Ontología EDINT de Certificados de Eficiencia Energética de Edificios</dcterms:title>
     <dcterms:title xml:lang="en">EDINT Energy Performance Certificate Ontology for Buildings</dcterms:title>
     <dcterms:description xml:lang="es">Ontología que modela los certificados de eficiencia energética de edificios según el Real Decreto 390/2021. La clase raíz es EnergyCertificate; el edificio es una entidad externa que apunta al certificado mediante una propiedad definida en su propia ontología.</dcterms:description>
