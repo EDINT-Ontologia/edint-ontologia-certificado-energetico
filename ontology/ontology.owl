@@ -319,7 +319,7 @@
     <rdfs:comment xml:lang="en">Initial (core) version focusing on the main classes: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure and UserRecommendations, with their relationships and properties.</rdfs:comment>
     <rdfs:seeAlso rdf:resource="https://www.boe.es/eli/es/rd/2021/06/01/390"/>
       <dcterms:publisher rdf:resource="https://www.femp.es/"/>
-    <dcterms:bibliographicCitation xml:lang="es">Ontología de Certificados de Eficiencia Energética de Edificios. EDINT. Revision: v0.1.0.</dcterms:bibliographicCitation>
+    <dcterms:bibliographicCitation xml:lang="es">Ontología EDINT de Certificados de Eficiencia Energética de Edificios. EDINT. Revision: v0.1.0.</dcterms:bibliographicCitation>
     <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
 </rdf:Description>
   <rdf:Description rdf:about="https://edint.es/def/certificado-energetico#measuredDHWConsumption">
