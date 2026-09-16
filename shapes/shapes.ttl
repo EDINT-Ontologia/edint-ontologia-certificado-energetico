@@ -5,8 +5,8 @@
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
 @prefix edintcee: <https://edint.es/def/certificado-energetico#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
-@prefix edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/> .
-@prefix edintceekos-rsv: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/rating-scale-version/> .
+@prefix edintceekos-ct: <https://edint.es/kos/EnergyCertificateType/> .
+@prefix edintceekos-rsv: <https://edint.es/kos/RatingScaleVersion/> .
 @prefix edintcee-shapes: <https://edint.es/def/certificado-energetico#shapes/> .
 
 # ============================================================================
@@ -115,7 +115,7 @@ edintcee-shapes:CompletedWorkPredecessorShape a sh:NodeShape ;
         a sh:SPARQLTarget ;
         sh:select """
             PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
-            PREFIX edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/>
+            PREFIX edintceekos-ct: <https://edint.es/kos/EnergyCertificateType/>
             SELECT ?this
             WHERE {
                 ?this a edintcee:EnergyCertificate ;
@@ -143,7 +143,7 @@ edintcee-shapes:CompletedWorkPredecessorTypeShape a sh:NodeShape ;
         a sh:SPARQLTarget ;
         sh:select """
             PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
-            PREFIX edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/>
+            PREFIX edintceekos-ct: <https://edint.es/kos/EnergyCertificateType/>
             SELECT ?this
             WHERE {
                 ?this a edintcee:EnergyCertificate ;
@@ -157,7 +157,7 @@ edintcee-shapes:CompletedWorkPredecessorTypeShape a sh:NodeShape ;
         sh:message "The predecessor certificate of a completed work certificate must be of project type (Art. 9.1 RD 390/2021)."@en ;
         sh:select """
             PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
-            PREFIX edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/>
+            PREFIX edintceekos-ct: <https://edint.es/kos/EnergyCertificateType/>
             SELECT $this ?pred
             WHERE {
                 $this edintcee:predecessorCertificate ?pred .
@@ -176,7 +176,7 @@ edintcee-shapes:RatingDowngradeJustificationShape a sh:NodeShape ;
         a sh:SPARQLTarget ;
         sh:select """
             PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
-            PREFIX edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/>
+            PREFIX edintceekos-ct: <https://edint.es/kos/EnergyCertificateType/>
             SELECT ?this
             WHERE {
                 ?this a edintcee:EnergyCertificate ;
@@ -216,7 +216,7 @@ edintcee-shapes:ExistingBuildingNoProjectPredecessorShape a sh:NodeShape ;
         a sh:SPARQLTarget ;
         sh:select """
             PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
-            PREFIX edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/>
+            PREFIX edintceekos-ct: <https://edint.es/kos/EnergyCertificateType/>
             SELECT ?this
             WHERE {
                 ?this a edintcee:EnergyCertificate ;
@@ -230,7 +230,7 @@ edintcee-shapes:ExistingBuildingNoProjectPredecessorShape a sh:NodeShape ;
         sh:message "An existing building certificate must not have a project-type predecessor (Art. 10 RD 390/2021)."@en ;
         sh:select """
             PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
-            PREFIX edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edintcee/certificate-type/>
+            PREFIX edintceekos-ct: <https://edint.es/kos/EnergyCertificateType/>
             SELECT $this ?pred
             WHERE {
                 $this edintcee:predecessorCertificate ?pred .

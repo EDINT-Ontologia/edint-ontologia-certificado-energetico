@@ -2,7 +2,7 @@
 # Emparejamiento proyecto→obra terminada vía predecessorCertificate
 
 PREFIX edintcee: <https://edint.es/def/certificado-energetico#>
-PREFIX edintceekos-ct: <http://vocab.linkeddata.es/datosabiertos/kos/edint/CertificateType/>
+PREFIX edintceekos-ct: <https://edint.es/kos/EnergyCertificateType/>
 
 SELECT ?completedCert ?projectCert
 WHERE {
