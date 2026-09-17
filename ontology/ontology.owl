@@ -7,7 +7,8 @@
    xmlns:vann="http://purl.org/vocab/vann/"
 
      xmlns:schema="http://schema.org/"
-     xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:foaf="http://xmlns.com/foaf/0.1/">  <rdf:Description rdf:about="https://edint.es/def/certificado-energetico#ventilationEnergySource">
+     xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:widoco="https://w3id.org/widoco/vocab#">  <rdf:Description rdf:about="https://edint.es/def/certificado-energetico#ventilationEnergySource">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label xml:lang="es">fuente energética de ventilación</rdfs:label>
     <rdfs:label xml:lang="en">ventilation energy source</rdfs:label>
@@ -1557,4 +1558,11 @@
     <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb29"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
+    <!-- Nombres de fichero de las serializaciones generadas (vocabulario Widoco) -->
+    <owl:Ontology rdf:about="https://edint.es/def/certificado-energetico#ventilationEnergySource">
+        <widoco:rdfxmlSerialization>ontology.rdf</widoco:rdfxmlSerialization>
+        <widoco:turtleSerialization>ontology.ttl</widoco:turtleSerialization>
+        <widoco:ntSerialization>ontology.nt</widoco:ntSerialization>
+        <widoco:jsonldSerialization>ontology.jsonld</widoco:jsonldSerialization>
+    </owl:Ontology>
 </rdf:RDF>
