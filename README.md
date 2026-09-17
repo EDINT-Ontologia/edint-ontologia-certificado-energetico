@@ -1,5 +1,6 @@
 # Ontología de Certificados de Eficiencia Energética de Edificios
 
+[![Documentación](https://img.shields.io/badge/documentaci%C3%B3n-edint.es-blue)](https://edint.es/def/certificado-energetico)
 ![Prefijo](https://img.shields.io/badge/prefijo-edintcee-informational)
 [![Licencia](https://img.shields.io/badge/licencia-CC%20BY--SA%204.0-lightgrey)](LICENSE)
 
