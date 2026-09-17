@@ -295,6 +295,9 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <owl:versionIRI rdf:resource="https://edint.es/def/certificado-energetico/0.1.1"/>
     <owl:versionInfo>0.1.1</owl:versionInfo>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-14</dcterms:created>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</dcterms:modified>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-certificado-energetico/releases/tag/v0.1.0"/>
     <dcterms:title xml:lang="es">Ontología EDINT de Certificados de Eficiencia Energética de Edificios</dcterms:title>
     <dcterms:title xml:lang="en">EDINT Energy Performance Certificate Ontology for Buildings</dcterms:title>
@@ -302,9 +305,6 @@
     <dcterms:description xml:lang="en">An ontology modelling energy performance certificates for buildings according to Spanish Royal Decree 390/2021. The root class is EnergyCertificate; the building is an external entity that points to the certificate via a property defined in its own ontology.</dcterms:description>
     <dcterms:abstract xml:lang="es">Ontología centrada en el certificado de eficiencia energética como unidad documental, incluyendo calificación energética, etiqueta, técnico competente, recomendaciones de mejora, procedimiento de cálculo y recomendaciones de uso para el usuario.</dcterms:abstract>
     <dcterms:abstract xml:lang="en">Ontology focused on the energy performance certificate as a documentary unit, including energy rating, label, competent technician, improvement recommendations, calculation procedure and user recommendations.</dcterms:abstract>
-    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-14</dcterms:issued>
-    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-14</dcterms:created>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-14</dcterms:modified>
     <dcterms:creator rdf:parseType="Resource">
             <foaf:name>FEMP</foaf:name>
             <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
