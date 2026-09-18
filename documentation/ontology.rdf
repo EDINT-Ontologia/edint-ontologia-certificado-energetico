@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://edint.es/def/certificado-energetico#"
-     xml:base="https://edint.es/def/certificado-energetico"
+<rdf:RDF xmlns="https://edint.es/def/certificado-energetico#ventilationEnergySource#"
+     xml:base="https://edint.es/def/certificado-energetico#ventilationEnergySource"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -10,9 +10,8 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vocab="https://w3id.org/widoco/vocab#"
-     xmlns:schema="http://schema.org/">
-    <owl:Ontology rdf:about="https://edint.es/def/certificado-energetico#">
-        <owl:versionIRI rdf:resource="https://edint.es/def/certificado-energetico/0.1.1"/>
+     xmlns:schema="https://schema.org/">
+    <owl:Ontology rdf:about="https://edint.es/def/certificado-energetico#ventilationEnergySource">
         <terms:abstract xml:lang="en">Ontology focused on the energy performance certificate as a documentary unit, including energy rating, label, competent technician, improvement recommendations, calculation procedure and user recommendations.</terms:abstract>
         <terms:abstract xml:lang="es">Ontología centrada en el certificado de eficiencia energética como unidad documental, incluyendo calificación energética, etiqueta, técnico competente, recomendaciones de mejora, procedimiento de cálculo y recomendaciones de uso para el usuario.</terms:abstract>
         <terms:bibliographicCitation xml:lang="en">EDINT Energy Performance Certificate Ontology for Buildings. EDINT. Revision: v0.1.1.</terms:bibliographicCitation>
@@ -26,7 +25,6 @@
         <terms:creator rdf:nodeID="genid6"/>
         <terms:description xml:lang="en">An ontology modelling energy performance certificates for buildings according to Spanish Royal Decree 390/2021. The root class is EnergyCertificate; the building is an external entity that points to the certificate via a property defined in its own ontology.</terms:description>
         <terms:description xml:lang="es">Ontología que modela los certificados de eficiencia energética de edificios según el Real Decreto 390/2021. La clase raíz es EnergyCertificate; el edificio es una entidad externa que apunta al certificado mediante una propiedad definida en su propia ontología.</terms:description>
-        <terms:hasFormat rdf:resource="https://edint.es/def/certificado-energetico#ontology.ttl"/>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</terms:modified>
@@ -35,10 +33,7 @@
         <terms:title xml:lang="en">EDINT Energy Performance Certificate Ontology for Buildings</terms:title>
         <terms:title xml:lang="es">Ontología EDINT de Certificados de Eficiencia Energética de Edificios</terms:title>
         <vann:preferredNamespacePrefix>edintcee</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://edint.es/def/certificado-energetico#</vann:preferredNamespaceUri>
-        <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-certificado-energetico"/>
-        <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
-        <schema:funding>Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)</schema:funding>
+        <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/certificado-energetico#"/>
         <rdfs:comment xml:lang="en">Energy source of the ventilation system according to the energy-source controlled vocabulary.</rdfs:comment>
         <rdfs:comment xml:lang="es">Fuente de energía del sistema de ventilación según el vocabulario controlado de fuentes de energía.</rdfs:comment>
         <rdfs:comment xml:lang="en">Initial (core) version focusing on the main classes: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure and UserRecommendations, with their relationships and properties.</rdfs:comment>
@@ -49,6 +44,9 @@
         <rdfs:label xml:lang="en">ventilation energy source</rdfs:label>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-certificado-energetico/releases/tag/v0.1.0"/>
         <owl:versionInfo>0.1.1</owl:versionInfo>
+        <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-certificado-energetico"/>
+        <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
+        <schema:funding>Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)</schema:funding>
         <vocab:jsonldSerialization>ontology.jsonld</vocab:jsonldSerialization>
         <vocab:ntSerialization>ontology.nt</vocab:ntSerialization>
         <vocab:rdfxmlSerialization>ontology.rdf</vocab:rdfxmlSerialization>
@@ -62,33 +60,33 @@
         <vocab:vocabularyLabel rdf:nodeID="genid11"/>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
-        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
         <foaf:name>Maria del Socorro Bernardos</foaf:name>
+        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid2">
-        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
         <foaf:name>Lucía Sánchez</foaf:name>
+        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid3">
-        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
         <foaf:name>FEMP</foaf:name>
+        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid4">
-        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
         <foaf:name>Oscar Corcho</foaf:name>
+        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid5">
-        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
         <foaf:name>Edna Ruckhaus</foaf:name>
+        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid6">
-        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
         <foaf:name>Daniel Doña</foaf:name>
+        <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid7">
-        <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
         <foaf:homepage rdf:resource="https://www.femp.es/"/>
         <foaf:name>FEMP</foaf:name>
+        <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid8">
         <rdfs:label xml:lang="es">Dirección Postal (esdir)</rdfs:label>
@@ -160,13 +158,6 @@
     
 
 
-    <!-- http://purl.org/dc/terms/hasFormat -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasFormat"/>
-    
-
-
     <!-- http://purl.org/dc/terms/issued -->
 
 
@@ -223,34 +214,6 @@
     
 
 
-    <!-- http://schema.org/affiliation -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/affiliation"/>
-    
-
-
-    <!-- http://schema.org/codeRepository -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/codeRepository"/>
-    
-
-
-    <!-- http://schema.org/creativeWorkStatus -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/creativeWorkStatus"/>
-    
-
-
-    <!-- http://schema.org/funding -->
-
-
-    <owl:AnnotationProperty rdf:about="http://schema.org/funding"/>
-    
-
-
     <!-- http://xmlns.com/foaf/0.1/homepage -->
 
 
@@ -262,6 +225,34 @@
 
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- https://schema.org/affiliation -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/affiliation"/>
+    
+
+
+    <!-- https://schema.org/codeRepository -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/codeRepository"/>
+    
+
+
+    <!-- https://schema.org/creativeWorkStatus -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/creativeWorkStatus"/>
+    
+
+
+    <!-- https://schema.org/funding -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/funding"/>
     
 
 

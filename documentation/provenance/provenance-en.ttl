@@ -2,7 +2,7 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
-<https://edint.es/def/certificado-energetico/0.1.1> a prov:Entity;
+<..\index-en.html> a prov:Entity;
 	 dc:title "EDINT Energy Performance Certificate Ontology for Buildings";
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo :agent1;

@@ -1,10 +1,10 @@
 [ {
   "@id" : "_:genid1",
-  "http://schema.org/affiliation" : [ {
-    "@id" : "https://oeg.fi.upm.es/"
-  } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "Maria del Socorro Bernardos"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "https://oeg.fi.upm.es/"
   } ]
 }, {
   "@id" : "_:genid10",
@@ -70,11 +70,11 @@
   } ]
 }, {
   "@id" : "_:genid2",
-  "http://schema.org/affiliation" : [ {
-    "@id" : "https://oeg.fi.upm.es/"
-  } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "Lucía Sánchez"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "https://oeg.fi.upm.es/"
   } ]
 }, {
   "@id" : "_:genid20",
@@ -126,11 +126,11 @@
   } ]
 }, {
   "@id" : "_:genid3",
-  "http://schema.org/affiliation" : [ {
-    "@id" : "https://oeg.fi.upm.es/"
-  } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "FEMP"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "https://oeg.fi.upm.es/"
   } ]
 }, {
   "@id" : "_:genid30",
@@ -181,11 +181,11 @@
   } ]
 }, {
   "@id" : "_:genid4",
-  "http://schema.org/affiliation" : [ {
-    "@id" : "https://oeg.fi.upm.es/"
-  } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "Oscar Corcho"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "https://oeg.fi.upm.es/"
   } ]
 }, {
   "@id" : "_:genid40",
@@ -237,11 +237,11 @@
   } ]
 }, {
   "@id" : "_:genid5",
-  "http://schema.org/affiliation" : [ {
-    "@id" : "https://oeg.fi.upm.es/"
-  } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "Edna Ruckhaus"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "https://oeg.fi.upm.es/"
   } ]
 }, {
   "@id" : "_:genid50",
@@ -292,11 +292,11 @@
   } ]
 }, {
   "@id" : "_:genid6",
-  "http://schema.org/affiliation" : [ {
-    "@id" : "https://oeg.fi.upm.es/"
-  } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "Daniel Doña"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "https://oeg.fi.upm.es/"
   } ]
 }, {
   "@id" : "_:genid60",
@@ -348,14 +348,14 @@
   } ]
 }, {
   "@id" : "_:genid7",
-  "http://schema.org/affiliation" : [ {
-    "@value" : "Federación Española de Municipios y Provincias"
-  } ],
   "http://xmlns.com/foaf/0.1/homepage" : [ {
     "@id" : "https://www.femp.es/"
   } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "FEMP"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@value" : "Federación Española de Municipios y Provincias"
   } ]
 }, {
   "@id" : "_:genid70",
@@ -594,9 +594,6 @@
   "@id" : "http://purl.org/dc/terms/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/dc/terms/hasFormat",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
   "@id" : "http://purl.org/dc/terms/issued",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -660,18 +657,6 @@
     "@language" : "en",
     "@value" : "Postal address (schema)"
   } ]
-}, {
-  "@id" : "http://schema.org/affiliation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://schema.org/codeRepository",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://schema.org/creativeWorkStatus",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://schema.org/funding",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#Autonomia",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -746,152 +731,6 @@
   }, {
     "@language" : "es",
     "@value" : "Inmueble catastral"
-  } ]
-}, {
-  "@id" : "https://edint.es/def/certificado-energetico#",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://purl.org/dc/terms/abstract" : [ {
-    "@language" : "en",
-    "@value" : "Ontology focused on the energy performance certificate as a documentary unit, including energy rating, label, competent technician, improvement recommendations, calculation procedure and user recommendations."
-  }, {
-    "@language" : "es",
-    "@value" : "Ontología centrada en el certificado de eficiencia energética como unidad documental, incluyendo calificación energética, etiqueta, técnico competente, recomendaciones de mejora, procedimiento de cálculo y recomendaciones de uso para el usuario."
-  } ],
-  "http://purl.org/dc/terms/bibliographicCitation" : [ {
-    "@language" : "en",
-    "@value" : "EDINT Energy Performance Certificate Ontology for Buildings. EDINT. Revision: v0.1.1."
-  }, {
-    "@language" : "es",
-    "@value" : "Ontología EDINT de Certificados de Eficiencia Energética de Edificios. EDINT. Revisión: v0.1.1."
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-05-14"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@id" : "_:genid1"
-  }, {
-    "@id" : "_:genid2"
-  }, {
-    "@id" : "_:genid3"
-  }, {
-    "@id" : "_:genid4"
-  }, {
-    "@id" : "_:genid5"
-  }, {
-    "@id" : "_:genid6"
-  } ],
-  "http://purl.org/dc/terms/description" : [ {
-    "@language" : "en",
-    "@value" : "An ontology modelling energy performance certificates for buildings according to Spanish Royal Decree 390/2021. The root class is EnergyCertificate; the building is an external entity that points to the certificate via a property defined in its own ontology."
-  }, {
-    "@language" : "es",
-    "@value" : "Ontología que modela los certificados de eficiencia energética de edificios según el Real Decreto 390/2021. La clase raíz es EnergyCertificate; el edificio es una entidad externa que apunta al certificado mediante una propiedad definida en su propia ontología."
-  } ],
-  "http://purl.org/dc/terms/hasFormat" : [ {
-    "@id" : "https://edint.es/def/certificado-energetico#ontology.ttl"
-  } ],
-  "http://purl.org/dc/terms/issued" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-09-17"
-  } ],
-  "http://purl.org/dc/terms/license" : [ {
-    "@id" : "https://creativecommons.org/licenses/by/4.0/"
-  } ],
-  "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-09-17"
-  } ],
-  "http://purl.org/dc/terms/publisher" : [ {
-    "@id" : "_:genid7"
-  } ],
-  "http://purl.org/dc/terms/source" : [ {
-    "@id" : "https://www.boe.es/eli/es/rd/2021/06/01/390"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
-    "@language" : "en",
-    "@value" : "EDINT Energy Performance Certificate Ontology for Buildings"
-  }, {
-    "@language" : "es",
-    "@value" : "Ontología EDINT de Certificados de Eficiencia Energética de Edificios"
-  } ],
-  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
-    "@value" : "edintcee"
-  } ],
-  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@value" : "https://edint.es/def/certificado-energetico#"
-  } ],
-  "http://schema.org/codeRepository" : [ {
-    "@id" : "https://github.com/EDINT-Ontologia/edint-ontologia-certificado-energetico"
-  } ],
-  "http://schema.org/creativeWorkStatus" : [ {
-    "@language" : "en",
-    "@value" : "Ontology Specification"
-  } ],
-  "http://schema.org/funding" : [ {
-    "@value" : "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Energy source of the ventilation system according to the energy-source controlled vocabulary."
-  }, {
-    "@language" : "es",
-    "@value" : "Fuente de energía del sistema de ventilación según el vocabulario controlado de fuentes de energía."
-  }, {
-    "@language" : "en",
-    "@value" : "Initial (core) version focusing on the main classes: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure and UserRecommendations, with their relationships and properties."
-  }, {
-    "@language" : "es",
-    "@value" : "Versión inicial (core) centrada en las clases principales: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure y UserRecommendations, con sus relaciones y propiedades."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Certificados de Eficiencia Energética"
-  }, {
-    "@language" : "en",
-    "@value" : "Energy Performance Certificates"
-  }, {
-    "@language" : "es",
-    "@value" : "fuente energética de ventilación"
-  }, {
-    "@language" : "en",
-    "@value" : "ventilation energy source"
-  } ],
-  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
-    "@id" : "https://github.com/EDINT-Ontologia/edint-ontologia-certificado-energetico/releases/tag/v0.1.0"
-  } ],
-  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://edint.es/def/certificado-energetico/0.1.1"
-  } ],
-  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.1.1"
-  } ],
-  "https://w3id.org/widoco/vocab#jsonldSerialization" : [ {
-    "@value" : "ontology.jsonld"
-  } ],
-  "https://w3id.org/widoco/vocab#ntSerialization" : [ {
-    "@value" : "ontology.nt"
-  } ],
-  "https://w3id.org/widoco/vocab#rdfxmlSerialization" : [ {
-    "@value" : "ontology.rdf"
-  } ],
-  "https://w3id.org/widoco/vocab#turtleSerialization" : [ {
-    "@value" : "ontology.ttl"
-  } ],
-  "https://w3id.org/widoco/vocab#vocabularyLabel" : [ {
-    "@id" : "https://edint.es/def/certificado-energetico#_:genid2147483656"
-  }, {
-    "@id" : "https://edint.es/def/certificado-energetico#_:genid2147483657"
-  }, {
-    "@id" : "https://edint.es/def/certificado-energetico#_:genid2147483658"
-  }, {
-    "@id" : "_:genid8"
-  }, {
-    "@id" : "_:genid9"
-  }, {
-    "@id" : "_:genid10"
-  }, {
-    "@id" : "_:genid11"
   } ]
 }, {
   "@id" : "https://edint.es/def/certificado-energetico#CalculationProcedure",
@@ -3499,12 +3338,149 @@
   } ]
 }, {
   "@id" : "https://edint.es/def/certificado-energetico#ventilationEnergySource",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology", "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@language" : "en",
+    "@value" : "Ontology focused on the energy performance certificate as a documentary unit, including energy rating, label, competent technician, improvement recommendations, calculation procedure and user recommendations."
+  }, {
+    "@language" : "es",
+    "@value" : "Ontología centrada en el certificado de eficiencia energética como unidad documental, incluyendo calificación energética, etiqueta, técnico competente, recomendaciones de mejora, procedimiento de cálculo y recomendaciones de uso para el usuario."
+  } ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@language" : "en",
+    "@value" : "EDINT Energy Performance Certificate Ontology for Buildings. EDINT. Revision: v0.1.1."
+  }, {
+    "@language" : "es",
+    "@value" : "Ontología EDINT de Certificados de Eficiencia Energética de Edificios. EDINT. Revisión: v0.1.1."
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-05-14"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  }, {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid6"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "An ontology modelling energy performance certificates for buildings according to Spanish Royal Decree 390/2021. The root class is EnergyCertificate; the building is an external entity that points to the certificate via a property defined in its own ontology."
+  }, {
+    "@language" : "es",
+    "@value" : "Ontología que modela los certificados de eficiencia energética de edificios según el Real Decreto 390/2021. La clase raíz es EnergyCertificate; el edificio es una entidad externa que apunta al certificado mediante una propiedad definida en su propia ontología."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-09-17"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-09-17"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@id" : "_:genid7"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@id" : "https://www.boe.es/eli/es/rd/2021/06/01/390"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "EDINT Energy Performance Certificate Ontology for Buildings"
+  }, {
+    "@language" : "es",
+    "@value" : "Ontología EDINT de Certificados de Eficiencia Energética de Edificios"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "edintcee"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@id" : "https://edint.es/def/certificado-energetico#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Energy source of the ventilation system according to the energy-source controlled vocabulary."
+  }, {
+    "@language" : "es",
+    "@value" : "Fuente de energía del sistema de ventilación según el vocabulario controlado de fuentes de energía."
+  }, {
+    "@language" : "en",
+    "@value" : "Initial (core) version focusing on the main classes: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure and UserRecommendations, with their relationships and properties."
+  }, {
+    "@language" : "es",
+    "@value" : "Versión inicial (core) centrada en las clases principales: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure y UserRecommendations, con sus relaciones y propiedades."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://edint.es/def/certificado-energetico#EnergyCertificate"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Certificados de Eficiencia Energética"
+  }, {
+    "@language" : "en",
+    "@value" : "Energy Performance Certificates"
+  }, {
+    "@language" : "es",
+    "@value" : "fuente energética de ventilación"
+  }, {
+    "@language" : "en",
+    "@value" : "ventilation energy source"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid80"
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@id" : "https://github.com/EDINT-Ontologia/edint-ontologia-certificado-energetico/releases/tag/v0.1.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.1.1"
+  } ],
+  "https://schema.org/codeRepository" : [ {
+    "@id" : "https://github.com/EDINT-Ontologia/edint-ontologia-certificado-energetico"
+  } ],
+  "https://schema.org/creativeWorkStatus" : [ {
+    "@language" : "en",
+    "@value" : "Ontology Specification"
+  } ],
+  "https://schema.org/funding" : [ {
+    "@value" : "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)"
+  } ],
+  "https://w3id.org/widoco/vocab#jsonldSerialization" : [ {
+    "@value" : "ontology.jsonld"
+  } ],
+  "https://w3id.org/widoco/vocab#ntSerialization" : [ {
+    "@value" : "ontology.nt"
+  } ],
+  "https://w3id.org/widoco/vocab#rdfxmlSerialization" : [ {
+    "@value" : "ontology.rdf"
+  } ],
+  "https://w3id.org/widoco/vocab#turtleSerialization" : [ {
+    "@value" : "ontology.ttl"
+  } ],
+  "https://w3id.org/widoco/vocab#vocabularyLabel" : [ {
+    "@id" : "https://edint.es/def/certificado-energetico#ventilationEnergySource_:genid2147483656"
+  }, {
+    "@id" : "https://edint.es/def/certificado-energetico#ventilationEnergySource_:genid2147483657"
+  }, {
+    "@id" : "https://edint.es/def/certificado-energetico#ventilationEnergySource_:genid2147483658"
+  }, {
+    "@id" : "_:genid8"
+  }, {
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
+  }, {
+    "@id" : "_:genid11"
   } ]
 }, {
   "@id" : "https://edint.es/def/certificado-energetico#visitDate",
@@ -3634,6 +3610,18 @@
 }, {
   "@id" : "https://edint.es/kos/RecommendationType",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://schema.org/affiliation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://schema.org/codeRepository",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://schema.org/creativeWorkStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://schema.org/funding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://w3id.org/widoco/vocab#jsonldSerialization",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]

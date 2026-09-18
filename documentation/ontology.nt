@@ -1,76 +1,74 @@
-<https://edint.es/def/certificado-energetico#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://edint.es/def/certificado-energetico#> <http://www.w3.org/2002/07/owl#versionIRI> <https://edint.es/def/certificado-energetico/0.1.1> .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/abstract> "Ontology focused on the energy performance certificate as a documentary unit, including energy rating, label, competent technician, improvement recommendations, calculation procedure and user recommendations."@en .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/abstract> "Ontología centrada en el certificado de eficiencia energética como unidad documental, incluyendo calificación energética, etiqueta, técnico competente, recomendaciones de mejora, procedimiento de cálculo y recomendaciones de uso para el usuario."@es .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/bibliographicCitation> "EDINT Energy Performance Certificate Ontology for Buildings. EDINT. Revision: v0.1.1."@en .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/bibliographicCitation> "Ontología EDINT de Certificados de Eficiencia Energética de Edificios. EDINT. Revisión: v0.1.1."@es .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/created> "2026-05-14"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/creator> _:genid1 .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/abstract> "Ontology focused on the energy performance certificate as a documentary unit, including energy rating, label, competent technician, improvement recommendations, calculation procedure and user recommendations."@en .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/abstract> "Ontología centrada en el certificado de eficiencia energética como unidad documental, incluyendo calificación energética, etiqueta, técnico competente, recomendaciones de mejora, procedimiento de cálculo y recomendaciones de uso para el usuario."@es .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/bibliographicCitation> "EDINT Energy Performance Certificate Ontology for Buildings. EDINT. Revision: v0.1.1."@en .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/bibliographicCitation> "Ontología EDINT de Certificados de Eficiencia Energética de Edificios. EDINT. Revisión: v0.1.1."@es .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/created> "2026-05-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid1 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 _:genid1 <http://xmlns.com/foaf/0.1/name> "Maria del Socorro Bernardos" .
-_:genid1 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/creator> _:genid2 .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/creator> _:genid2 .
+_:genid2 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 _:genid2 <http://xmlns.com/foaf/0.1/name> "Lucía Sánchez" .
-_:genid2 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/creator> _:genid3 .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/creator> _:genid3 .
+_:genid3 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 _:genid3 <http://xmlns.com/foaf/0.1/name> "FEMP" .
-_:genid3 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/creator> _:genid4 .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/creator> _:genid4 .
+_:genid4 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 _:genid4 <http://xmlns.com/foaf/0.1/name> "Oscar Corcho" .
-_:genid4 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/creator> _:genid5 .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/creator> _:genid5 .
+_:genid5 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 _:genid5 <http://xmlns.com/foaf/0.1/name> "Edna Ruckhaus" .
-_:genid5 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/creator> _:genid6 .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/creator> _:genid6 .
+_:genid6 <https://schema.org/affiliation> <https://oeg.fi.upm.es/> .
 _:genid6 <http://xmlns.com/foaf/0.1/name> "Daniel Doña" .
-_:genid6 <http://schema.org/affiliation> <https://oeg.fi.upm.es/> .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/description> "An ontology modelling energy performance certificates for buildings according to Spanish Royal Decree 390/2021. The root class is EnergyCertificate; the building is an external entity that points to the certificate via a property defined in its own ontology."@en .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/description> "Ontología que modela los certificados de eficiencia energética de edificios según el Real Decreto 390/2021. La clase raíz es EnergyCertificate; el edificio es una entidad externa que apunta al certificado mediante una propiedad definida en su propia ontología."@es .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/hasFormat> <https://edint.es/def/certificado-energetico#ontology.ttl> .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/issued> "2026-09-17"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/modified> "2026-09-17"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/publisher> _:genid7 .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/description> "An ontology modelling energy performance certificates for buildings according to Spanish Royal Decree 390/2021. The root class is EnergyCertificate; the building is an external entity that points to the certificate via a property defined in its own ontology."@en .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/description> "Ontología que modela los certificados de eficiencia energética de edificios según el Real Decreto 390/2021. La clase raíz es EnergyCertificate; el edificio es una entidad externa que apunta al certificado mediante una propiedad definida en su propia ontología."@es .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/issued> "2026-09-17"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/modified> "2026-09-17"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/publisher> _:genid7 .
+_:genid7 <https://schema.org/affiliation> "Federación Española de Municipios y Provincias" .
 _:genid7 <http://xmlns.com/foaf/0.1/name> "FEMP" .
 _:genid7 <http://xmlns.com/foaf/0.1/homepage> <https://www.femp.es/> .
-_:genid7 <http://schema.org/affiliation> "Federación Española de Municipios y Provincias" .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/source> <https://www.boe.es/eli/es/rd/2021/06/01/390> .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/title> "EDINT Energy Performance Certificate Ontology for Buildings"@en .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/dc/terms/title> "Ontología EDINT de Certificados de Eficiencia Energética de Edificios"@es .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "edintcee" .
-<https://edint.es/def/certificado-energetico#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://edint.es/def/certificado-energetico#" .
-<https://edint.es/def/certificado-energetico#> <http://schema.org/codeRepository> <https://github.com/EDINT-Ontologia/edint-ontologia-certificado-energetico> .
-<https://edint.es/def/certificado-energetico#> <http://schema.org/creativeWorkStatus> "Ontology Specification"@en .
-<https://edint.es/def/certificado-energetico#> <http://schema.org/funding> "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)" .
-<https://edint.es/def/certificado-energetico#> <http://www.w3.org/2000/01/rdf-schema#comment> "Energy source of the ventilation system according to the energy-source controlled vocabulary."@en .
-<https://edint.es/def/certificado-energetico#> <http://www.w3.org/2000/01/rdf-schema#comment> "Fuente de energía del sistema de ventilación según el vocabulario controlado de fuentes de energía."@es .
-<https://edint.es/def/certificado-energetico#> <http://www.w3.org/2000/01/rdf-schema#comment> "Initial (core) version focusing on the main classes: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure and UserRecommendations, with their relationships and properties."@en .
-<https://edint.es/def/certificado-energetico#> <http://www.w3.org/2000/01/rdf-schema#comment> "Versión inicial (core) centrada en las clases principales: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure y UserRecommendations, con sus relaciones y propiedades."@es .
-<https://edint.es/def/certificado-energetico#> <http://www.w3.org/2000/01/rdf-schema#label> "Certificados de Eficiencia Energética"@es .
-<https://edint.es/def/certificado-energetico#> <http://www.w3.org/2000/01/rdf-schema#label> "Energy Performance Certificates"@en .
-<https://edint.es/def/certificado-energetico#> <http://www.w3.org/2000/01/rdf-schema#label> "fuente energética de ventilación"@es .
-<https://edint.es/def/certificado-energetico#> <http://www.w3.org/2000/01/rdf-schema#label> "ventilation energy source"@en .
-<https://edint.es/def/certificado-energetico#> <http://www.w3.org/2002/07/owl#priorVersion> <https://github.com/EDINT-Ontologia/edint-ontologia-certificado-energetico/releases/tag/v0.1.0> .
-<https://edint.es/def/certificado-energetico#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1" .
-<https://edint.es/def/certificado-energetico#> <https://w3id.org/widoco/vocab#jsonldSerialization> "ontology.jsonld" .
-<https://edint.es/def/certificado-energetico#> <https://w3id.org/widoco/vocab#ntSerialization> "ontology.nt" .
-<https://edint.es/def/certificado-energetico#> <https://w3id.org/widoco/vocab#rdfxmlSerialization> "ontology.rdf" .
-<https://edint.es/def/certificado-energetico#> <https://w3id.org/widoco/vocab#turtleSerialization> "ontology.ttl" .
-<https://edint.es/def/certificado-energetico#> <https://w3id.org/widoco/vocab#vocabularyLabel> <https://edint.es/def/certificado-energetico#_:genid2147483656> .
-<https://edint.es/def/certificado-energetico#> <https://w3id.org/widoco/vocab#vocabularyLabel> <https://edint.es/def/certificado-energetico#_:genid2147483657> .
-<https://edint.es/def/certificado-energetico#> <https://w3id.org/widoco/vocab#vocabularyLabel> <https://edint.es/def/certificado-energetico#_:genid2147483658> .
-<https://edint.es/def/certificado-energetico#> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid8 .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/source> <https://www.boe.es/eli/es/rd/2021/06/01/390> .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/title> "EDINT Energy Performance Certificate Ontology for Buildings"@en .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/dc/terms/title> "Ontología EDINT de Certificados de Eficiencia Energética de Edificios"@es .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/vocab/vann/preferredNamespacePrefix> "edintcee" .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://edint.es/def/certificado-energetico#> .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://www.w3.org/2000/01/rdf-schema#comment> "Energy source of the ventilation system according to the energy-source controlled vocabulary."@en .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://www.w3.org/2000/01/rdf-schema#comment> "Fuente de energía del sistema de ventilación según el vocabulario controlado de fuentes de energía."@es .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://www.w3.org/2000/01/rdf-schema#comment> "Initial (core) version focusing on the main classes: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure and UserRecommendations, with their relationships and properties."@en .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://www.w3.org/2000/01/rdf-schema#comment> "Versión inicial (core) centrada en las clases principales: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure y UserRecommendations, con sus relaciones y propiedades."@es .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://www.w3.org/2000/01/rdf-schema#label> "Certificados de Eficiencia Energética"@es .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://www.w3.org/2000/01/rdf-schema#label> "Energy Performance Certificates"@en .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://www.w3.org/2000/01/rdf-schema#label> "fuente energética de ventilación"@es .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://www.w3.org/2000/01/rdf-schema#label> "ventilation energy source"@en .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://www.w3.org/2002/07/owl#priorVersion> <https://github.com/EDINT-Ontologia/edint-ontologia-certificado-energetico/releases/tag/v0.1.0> .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1" .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <https://schema.org/codeRepository> <https://github.com/EDINT-Ontologia/edint-ontologia-certificado-energetico> .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <https://schema.org/creativeWorkStatus> "Ontology Specification"@en .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <https://schema.org/funding> "Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)" .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <https://w3id.org/widoco/vocab#jsonldSerialization> "ontology.jsonld" .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <https://w3id.org/widoco/vocab#ntSerialization> "ontology.nt" .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <https://w3id.org/widoco/vocab#rdfxmlSerialization> "ontology.rdf" .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <https://w3id.org/widoco/vocab#turtleSerialization> "ontology.ttl" .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <https://w3id.org/widoco/vocab#vocabularyLabel> <https://edint.es/def/certificado-energetico#ventilationEnergySource_:genid2147483656> .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <https://w3id.org/widoco/vocab#vocabularyLabel> <https://edint.es/def/certificado-energetico#ventilationEnergySource_:genid2147483657> .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <https://w3id.org/widoco/vocab#vocabularyLabel> <https://edint.es/def/certificado-energetico#ventilationEnergySource_:genid2147483658> .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid8 .
 _:genid8 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal> .
 _:genid8 <http://www.w3.org/2000/01/rdf-schema#label> "Postal Address (esdir)"@en .
 _:genid8 <http://www.w3.org/2000/01/rdf-schema#label> "Dirección Postal (esdir)"@es .
-<https://edint.es/def/certificado-energetico#> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid9 .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid9 .
 _:genid9 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio> .
 _:genid9 <http://www.w3.org/2000/01/rdf-schema#label> "Territory (esadm)"@en .
 _:genid9 <http://www.w3.org/2000/01/rdf-schema#label> "Territorio (esadm)"@es .
-<https://edint.es/def/certificado-energetico#> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid10 .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid10 .
 _:genid10 <https://w3id.org/widoco/vocab#vocabularyIRI> <http://qudt.org/schema/qudt> .
 _:genid10 <http://www.w3.org/2000/01/rdf-schema#label> "QUDT"@es .
 _:genid10 <http://www.w3.org/2000/01/rdf-schema#label> "QUDT"@en .
-<https://edint.es/def/certificado-energetico#> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid11 .
+<https://edint.es/def/certificado-energetico#ventilationEnergySource> <https://w3id.org/widoco/vocab#vocabularyLabel> _:genid11 .
 _:genid11 <https://w3id.org/widoco/vocab#vocabularyIRI> <https://edint.es/def/catastro> .
 _:genid11 <http://www.w3.org/2000/01/rdf-schema#label> "Spanish Cadastre (edintcat)"@en .
 _:genid11 <http://www.w3.org/2000/01/rdf-schema#label> "Catastro Español (edintcat)"@es .
@@ -98,9 +96,6 @@ _:genid11 <http://www.w3.org/2000/01/rdf-schema#label> "Catastro Español (edint
 # http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://purl.org/dc/terms/hasFormat
-<http://purl.org/dc/terms/hasFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # http://purl.org/dc/terms/issued
 <http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -125,23 +120,23 @@ _:genid11 <http://www.w3.org/2000/01/rdf-schema#label> "Catastro Español (edint
 # http://purl.org/vocab/vann/preferredNamespaceUri
 <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://schema.org/affiliation
-<http://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://schema.org/codeRepository
-<http://schema.org/codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://schema.org/creativeWorkStatus
-<http://schema.org/creativeWorkStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://schema.org/funding
-<http://schema.org/funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # http://xmlns.com/foaf/0.1/homepage
 <http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://xmlns.com/foaf/0.1/name
 <http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/affiliation
+<https://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/codeRepository
+<https://schema.org/codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/creativeWorkStatus
+<https://schema.org/creativeWorkStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/funding
+<https://schema.org/funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # https://w3id.org/widoco/vocab#jsonldSerialization
 <https://w3id.org/widoco/vocab#jsonldSerialization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
