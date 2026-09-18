@@ -301,6 +301,8 @@
     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</dcterms:modified>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-certificado-energetico/releases/tag/v0.1.0"/>
         <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-certificado-energetico"/>
+        <dcterms:source rdf:resource="https://www.boe.es/eli/es/rd/2021/06/01/390"/>
+        <schema:funding>Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)</schema:funding>
     <dcterms:title xml:lang="es">Ontología EDINT de Certificados de Eficiencia Energética de Edificios</dcterms:title>
     <dcterms:title xml:lang="en">EDINT Energy Performance Certificate Ontology for Buildings</dcterms:title>
     <dcterms:description xml:lang="es">Ontología que modela los certificados de eficiencia energética de edificios según el Real Decreto 390/2021. La clase raíz es EnergyCertificate; el edificio es una entidad externa que apunta al certificado mediante una propiedad definida en su propia ontología.</dcterms:description>
@@ -337,7 +339,6 @@
     <vann:preferredNamespaceUri>https://edint.es/def/certificado-energetico#</vann:preferredNamespaceUri>
     <rdfs:comment xml:lang="es">Versión inicial (core) centrada en las clases principales: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure y UserRecommendations, con sus relaciones y propiedades.</rdfs:comment>
     <rdfs:comment xml:lang="en">Initial (core) version focusing on the main classes: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure and UserRecommendations, with their relationships and properties.</rdfs:comment>
-    <rdfs:seeAlso rdf:resource="https://www.boe.es/eli/es/rd/2021/06/01/390"/>
       <dcterms:publisher rdf:parseType="Resource">
           <foaf:name>FEMP</foaf:name>
           <foaf:homepage rdf:resource="https://www.femp.es/"/>
