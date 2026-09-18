@@ -344,7 +344,7 @@
           <foaf:homepage rdf:resource="https://www.femp.es/"/>
           <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
       </dcterms:publisher>
-    <dcterms:bibliographicCitation xml:lang="es">Ontología EDINT de Certificados de Eficiencia Energética de Edificios. EDINT. Revision: v0.1.1.</dcterms:bibliographicCitation>
+    <dcterms:bibliographicCitation xml:lang="es">Ontología EDINT de Certificados de Eficiencia Energética de Edificios. EDINT. Revisión: v0.1.1.</dcterms:bibliographicCitation>
     <dcterms:bibliographicCitation xml:lang="en">EDINT Energy Performance Certificate Ontology for Buildings. EDINT. Revision: v0.1.1.</dcterms:bibliographicCitation>
     <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
 </rdf:Description>
