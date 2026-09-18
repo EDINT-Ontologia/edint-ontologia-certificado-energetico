@@ -5,8 +5,10 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:vann="http://purl.org/vocab/vann/"
->
-  <rdf:Description rdf:about="https://edint.es/def/certificado-energetico#ventilationEnergySource">
+
+     xmlns:schema="https://schema.org/"
+     xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:widoco="https://w3id.org/widoco/vocab#">  <rdf:Description rdf:about="https://edint.es/def/certificado-energetico#ventilationEnergySource">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label xml:lang="es">fuente energética de ventilación</rdfs:label>
     <rdfs:label xml:lang="en">ventilation energy source</rdfs:label>
@@ -290,33 +292,62 @@
     <rdfs:comment xml:lang="es">Vía de acceso a la actividad de técnico competente según el vocabulario controlado de vías de acceso (Art. 4 bis).</rdfs:comment>
     <rdfs:comment xml:lang="en">Access path to the competent technician activity according to the access-path controlled vocabulary (Art. 4 bis).</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="https://edint.es/def/certificado-energetico#">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <owl:versionIRI rdf:resource="https://edint.es/def/certificado-energetico#0.1.0"/>
-    <owl:versionInfo>0.1.0</owl:versionInfo>
-    <dcterms:title xml:lang="es">Ontología de Certificados de Eficiencia Energética de Edificios</dcterms:title>
-    <dcterms:title xml:lang="en">Energy Performance Certificate Ontology for Buildings</dcterms:title>
+  <owl:Ontology rdf:about="https://edint.es/def/certificado-energetico#">
+    <owl:versionIRI rdf:resource="https://edint.es/def/certificado-energetico/0.1.1"/>
+    <owl:versionInfo>0.1.1</owl:versionInfo>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-14</dcterms:created>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</dcterms:modified>
+        <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-certificado-energetico/releases/tag/v0.1.0"/>
+        <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-certificado-energetico"/>
+        <dcterms:source rdf:resource="https://www.boe.es/eli/es/rd/2021/06/01/390"/>
+        <schema:funding>Espacio de Datos para las Infraestructuras Urbanas Inteligentes (EDINT)</schema:funding>
+    <dcterms:title xml:lang="es">Ontología EDINT de Certificados de Eficiencia Energética de Edificios</dcterms:title>
+    <dcterms:title xml:lang="en">EDINT Energy Performance Certificate Ontology for Buildings</dcterms:title>
+    <rdfs:label xml:lang="es">Certificados de Eficiencia Energética</rdfs:label>
+    <rdfs:label xml:lang="en">Energy Performance Certificates</rdfs:label>
     <dcterms:description xml:lang="es">Ontología que modela los certificados de eficiencia energética de edificios según el Real Decreto 390/2021. La clase raíz es EnergyCertificate; el edificio es una entidad externa que apunta al certificado mediante una propiedad definida en su propia ontología.</dcterms:description>
     <dcterms:description xml:lang="en">An ontology modelling energy performance certificates for buildings according to Spanish Royal Decree 390/2021. The root class is EnergyCertificate; the building is an external entity that points to the certificate via a property defined in its own ontology.</dcterms:description>
     <dcterms:abstract xml:lang="es">Ontología centrada en el certificado de eficiencia energética como unidad documental, incluyendo calificación energética, etiqueta, técnico competente, recomendaciones de mejora, procedimiento de cálculo y recomendaciones de uso para el usuario.</dcterms:abstract>
     <dcterms:abstract xml:lang="en">Ontology focused on the energy performance certificate as a documentary unit, including energy rating, label, competent technician, improvement recommendations, calculation procedure and user recommendations.</dcterms:abstract>
-    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-14</dcterms:issued>
-    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-14</dcterms:created>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-14</dcterms:modified>
-    <dcterms:creator>FEMP</dcterms:creator>
-    <dcterms:creator>Oscar Corcho</dcterms:creator>
-    <dcterms:creator>Edna Ruckhaus</dcterms:creator>
-    <dcterms:creator>Daniel Doña</dcterms:creator>
-    <dcterms:creator>Lucía Sánchez</dcterms:creator>
-    <dcterms:creator>Maria del Socorro Bernardos</dcterms:creator>
+    <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>FEMP</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
+    <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>Oscar Corcho</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
+    <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>Edna Ruckhaus</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
+    <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>Daniel Doña</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
+    <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>Lucía Sánchez</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
+    <dcterms:creator rdf:parseType="Resource">
+            <foaf:name>Maria del Socorro Bernardos</foaf:name>
+            <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
+        </dcterms:creator>
     <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-    <dcterms:hasFormat rdf:resource="https://edint.es/def/certificado-energetico#ontology.ttl"/>
     <vann:preferredNamespacePrefix>edintcee</vann:preferredNamespacePrefix>
-    <vann:preferredNamespaceUri>https://edint.es/def/certificado-energetico#</vann:preferredNamespaceUri>
+    <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/certificado-energetico#"/>
     <rdfs:comment xml:lang="es">Versión inicial (core) centrada en las clases principales: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure y UserRecommendations, con sus relaciones y propiedades.</rdfs:comment>
     <rdfs:comment xml:lang="en">Initial (core) version focusing on the main classes: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure and UserRecommendations, with their relationships and properties.</rdfs:comment>
-    <rdfs:seeAlso rdf:resource="https://www.boe.es/eli/es/rd/2021/06/01/390"/>
-  </rdf:Description>
+      <dcterms:publisher rdf:parseType="Resource">
+          <foaf:name>FEMP</foaf:name>
+          <foaf:homepage rdf:resource="https://www.femp.es/"/>
+          <schema:affiliation>Federación Española de Municipios y Provincias</schema:affiliation>
+      </dcterms:publisher>
+    <dcterms:bibliographicCitation xml:lang="es">Ontología EDINT de Certificados de Eficiencia Energética de Edificios. EDINT. Revisión: v0.1.1.</dcterms:bibliographicCitation>
+    <dcterms:bibliographicCitation xml:lang="en">EDINT Energy Performance Certificate Ontology for Buildings. EDINT. Revision: v0.1.1.</dcterms:bibliographicCitation>
+    <schema:creativeWorkStatus xml:lang="en">Ontology Specification</schema:creativeWorkStatus>
+</owl:Ontology>
   <rdf:Description rdf:about="https://edint.es/def/certificado-energetico#measuredDHWConsumption">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label xml:lang="es">consumo medido de ACS</rdfs:label>
@@ -1530,4 +1561,39 @@
     <rdf:first rdf:nodeID="n7601530229a9478b9243e345f887c1ccb29"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
+    <!-- Nombres de fichero de las serializaciones generadas (vocabulario Widoco) -->
+    <owl:Ontology rdf:about="https://edint.es/def/certificado-energetico#ventilationEnergySource">
+        <widoco:rdfxmlSerialization>ontology.rdf</widoco:rdfxmlSerialization>
+        <widoco:turtleSerialization>ontology.ttl</widoco:turtleSerialization>
+        <widoco:ntSerialization>ontology.nt</widoco:ntSerialization>
+        <widoco:jsonldSerialization>ontology.jsonld</widoco:jsonldSerialization>
+            <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://qudt.org/schema/qudt"/>
+                <rdfs:label xml:lang="es">QUDT</rdfs:label>
+                <rdfs:label xml:lang="en">QUDT</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio"/>
+                <rdfs:label xml:lang="es">Territorio (esadm)</rdfs:label>
+                <rdfs:label xml:lang="en">Territory (esadm)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/direccion-postal"/>
+                <rdfs:label xml:lang="es">Dirección Postal (esdir)</rdfs:label>
+                <rdfs:label xml:lang="en">Postal Address (esdir)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+        <widoco:vocabularyLabel>
+            <rdf:Description>
+                <widoco:vocabularyIRI rdf:resource="https://edint.es/def/catastro"/>
+                <rdfs:label xml:lang="es">Catastro Español (edintcat)</rdfs:label>
+                <rdfs:label xml:lang="en">Spanish Cadastre (edintcat)</rdfs:label>
+            </rdf:Description>
+        </widoco:vocabularyLabel>
+</owl:Ontology>
 </rdf:RDF>
