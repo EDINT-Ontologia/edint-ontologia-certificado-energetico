@@ -1,4 +1,8 @@
-# Ontología de Certificados de Eficiencia Energética de Edificios
+# Ontología EDINT de Certificados de Eficiencia Energética de Edificios
+
+[![Documentación](https://img.shields.io/badge/documentaci%C3%B3n-edint.es-blue)](https://edint.es/def/certificado-energetico)
+![Prefijo](https://img.shields.io/badge/prefijo-edintcee-informational)
+[![Licencia](https://img.shields.io/badge/licencia-CC%20BY--SA%204.0-lightgrey)](LICENSE)
 
 Esta ontología permite representar el dominio de los certificados de eficiencia energética de edificios, centrada en el certificado como unidad documental, su calificación energética, etiqueta, técnico competente, recomendaciones de mejora, procedimiento de cálculo y recomendaciones de uso para el usuario.
 
@@ -10,7 +14,7 @@ El propósito de esta ontología es modelar los certificados de eficiencia energ
 
 # Prefijo y espacio de nombres (Prefix and namespace)
 
-El prefijo de esta ontología es `edintcee`. Se publica en el espacio de nombres: https://edint.es/def/certificado-energetico#
+El prefijo de esta ontología es `edintcee` y se publica bajo el espacio de nombres https://edint.es/def/certificado-energetico#
 
 # Modelo conceptual (Ontology conceptualization)
 
