@@ -335,7 +335,6 @@
             <schema:affiliation rdf:resource="https://oeg.fi.upm.es/"/>
         </dcterms:creator>
     <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-    <dcterms:hasFormat rdf:resource="https://edint.es/def/certificado-energetico#ontology.ttl"/>
     <vann:preferredNamespacePrefix>edintcee</vann:preferredNamespacePrefix>
     <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/certificado-energetico#"/>
     <rdfs:comment xml:lang="es">Versión inicial (core) centrada en las clases principales: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure y UserRecommendations, con sus relaciones y propiedades.</rdfs:comment>
