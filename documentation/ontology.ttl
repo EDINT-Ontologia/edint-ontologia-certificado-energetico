@@ -21,7 +21,7 @@
                                                                        <http://purl.org/dc/terms/description> "An ontology modelling energy performance certificates for buildings according to Spanish Royal Decree 390/2021. The root class is EnergyCertificate; the building is an external entity that points to the certificate via a property defined in its own ontology."@en ,
                                                                                                               "Ontología que modela los certificados de eficiencia energética de edificios según el Real Decreto 390/2021. La clase raíz es EnergyCertificate; el edificio es una entidad externa que apunta al certificado mediante una propiedad definida en su propia ontología."@es ;
                                                                        <http://purl.org/dc/terms/issued> "2026-09-17"^^xsd:date ;
-                                                                       <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                                                       <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> ;
                                                                        <http://purl.org/dc/terms/modified> "2026-09-17"^^xsd:date ;
                                                                        <http://purl.org/dc/terms/publisher> _:genid7 ;
                                                                        <http://purl.org/dc/terms/source> <https://www.boe.es/eli/es/rd/2021/06/01/390> ;
