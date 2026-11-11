@@ -15,9 +15,9 @@
 	 prov:wasRevisionOf <https://github.com/EDINT-Ontologia/edint-ontologia-certificado-energetico/releases/tag/v0.1.0>;
 	 prov:wasGeneratedAt "2026-05-14";
 .
-:agent0 a prov:Agent; foaf:name "Maria del Socorro Bernardos".
-:agent1 a prov:Agent; foaf:name "Lucía Sánchez".
-:agent2 a prov:Agent; foaf:name "FEMP".
-:agent3 a prov:Agent; foaf:name "Oscar Corcho".
-:agent4 a prov:Agent; foaf:name "Edna Ruckhaus".
-:agent5 a prov:Agent; foaf:name "Daniel Doña".
+:agent0 a prov:Agent; foaf:name "FEMP".
+:agent1 a prov:Agent; foaf:name "Oscar Corcho".
+:agent2 a prov:Agent; foaf:name "Edna Ruckhaus".
+:agent3 a prov:Agent; foaf:name "Daniel Doña".
+:agent4 a prov:Agent; foaf:name "Lucía Sánchez".
+:agent5 a prov:Agent; foaf:name "Maria del Socorro Bernardos".
