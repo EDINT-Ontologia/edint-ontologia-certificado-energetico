@@ -292,7 +292,7 @@
     <rdfs:comment xml:lang="es">Vía de acceso a la actividad de técnico competente según el vocabulario controlado de vías de acceso (Art. 4 bis).</rdfs:comment>
     <rdfs:comment xml:lang="en">Access path to the competent technician activity according to the access-path controlled vocabulary (Art. 4 bis).</rdfs:comment>
   </rdf:Description>
-  <owl:Ontology rdf:about="https://edint.es/def/certificado-energetico#">
+  <owl:Ontology rdf:about="https://edint.es/def/certificado-energetico">
     <owl:versionIRI rdf:resource="https://edint.es/def/certificado-energetico/0.1.1"/>
     <owl:versionInfo>0.1.1</owl:versionInfo>
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-14</dcterms:created>
@@ -336,7 +336,7 @@
         </dcterms:creator>
     <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
     <vann:preferredNamespacePrefix>edintcee</vann:preferredNamespacePrefix>
-    <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/certificado-energetico#"/>
+    <vann:preferredNamespaceUri>https://edint.es/def/certificado-energetico#</vann:preferredNamespaceUri>
     <rdfs:comment xml:lang="es">Versión inicial (core) centrada en las clases principales: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure y UserRecommendations, con sus relaciones y propiedades.</rdfs:comment>
     <rdfs:comment xml:lang="en">Initial (core) version focusing on the main classes: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure and UserRecommendations, with their relationships and properties.</rdfs:comment>
       <dcterms:publisher rdf:parseType="Resource">
@@ -1562,7 +1562,7 @@
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
     <!-- Nombres de fichero de las serializaciones generadas (vocabulario Widoco) -->
-    <owl:Ontology rdf:about="https://edint.es/def/certificado-energetico#">
+    <rdf:Description rdf:about="https://edint.es/def/certificado-energetico">
         <widoco:rdfxmlSerialization>ontology.rdf</widoco:rdfxmlSerialization>
         <widoco:turtleSerialization>ontology.ttl</widoco:turtleSerialization>
         <widoco:ntSerialization>ontology.nt</widoco:ntSerialization>
@@ -1595,5 +1595,5 @@
                 <rdfs:label xml:lang="en">Spanish Cadastre (edintcat)</rdfs:label>
             </rdf:Description>
         </widoco:vocabularyLabel>
-</owl:Ontology>
+</rdf:Description>
 </rdf:RDF>
