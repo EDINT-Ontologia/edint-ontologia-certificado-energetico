@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://edint.es/def/certificado-energetico#ventilationEnergySource#"
-     xml:base="https://edint.es/def/certificado-energetico#ventilationEnergySource"
+<rdf:RDF xmlns="https://edint.es/def/certificado-energetico#"
+     xml:base="https://edint.es/def/certificado-energetico"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -11,7 +11,8 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vocab="https://w3id.org/widoco/vocab#"
      xmlns:schema="https://schema.org/">
-    <owl:Ontology rdf:about="https://edint.es/def/certificado-energetico#ventilationEnergySource">
+    <owl:Ontology rdf:about="https://edint.es/def/certificado-energetico#">
+        <owl:versionIRI rdf:resource="https://edint.es/def/certificado-energetico/0.1.1"/>
         <terms:abstract xml:lang="en">Ontology focused on the energy performance certificate as a documentary unit, including energy rating, label, competent technician, improvement recommendations, calculation procedure and user recommendations.</terms:abstract>
         <terms:abstract xml:lang="es">Ontología centrada en el certificado de eficiencia energética como unidad documental, incluyendo calificación energética, etiqueta, técnico competente, recomendaciones de mejora, procedimiento de cálculo y recomendaciones de uso para el usuario.</terms:abstract>
         <terms:bibliographicCitation xml:lang="en">EDINT Energy Performance Certificate Ontology for Buildings. EDINT. Revision: v0.1.1.</terms:bibliographicCitation>
@@ -26,7 +27,7 @@
         <terms:description xml:lang="en">An ontology modelling energy performance certificates for buildings according to Spanish Royal Decree 390/2021. The root class is EnergyCertificate; the building is an external entity that points to the certificate via a property defined in its own ontology.</terms:description>
         <terms:description xml:lang="es">Ontología que modela los certificados de eficiencia energética de edificios según el Real Decreto 390/2021. La clase raíz es EnergyCertificate; el edificio es una entidad externa que apunta al certificado mediante una propiedad definida en su propia ontología.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</terms:issued>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-17</terms:modified>
         <terms:publisher rdf:nodeID="genid7"/>
         <terms:source rdf:resource="https://www.boe.es/eli/es/rd/2021/06/01/390"/>
@@ -34,14 +35,10 @@
         <terms:title xml:lang="es">Ontología EDINT de Certificados de Eficiencia Energética de Edificios</terms:title>
         <vann:preferredNamespacePrefix>edintcee</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://edint.es/def/certificado-energetico#"/>
-        <rdfs:comment xml:lang="en">Energy source of the ventilation system according to the energy-source controlled vocabulary.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Fuente de energía del sistema de ventilación según el vocabulario controlado de fuentes de energía.</rdfs:comment>
         <rdfs:comment xml:lang="en">Initial (core) version focusing on the main classes: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure and UserRecommendations, with their relationships and properties.</rdfs:comment>
         <rdfs:comment xml:lang="es">Versión inicial (core) centrada en las clases principales: EnergyCertificate, EnergyRating, EnergyLabel, CompetentTechnician, ImprovementRecommendation, CalculationProcedure y UserRecommendations, con sus relaciones y propiedades.</rdfs:comment>
         <rdfs:label xml:lang="es">Certificados de Eficiencia Energética</rdfs:label>
         <rdfs:label xml:lang="en">Energy Performance Certificates</rdfs:label>
-        <rdfs:label xml:lang="es">fuente energética de ventilación</rdfs:label>
-        <rdfs:label xml:lang="en">ventilation energy source</rdfs:label>
         <owl:priorVersion rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-certificado-energetico/releases/tag/v0.1.0"/>
         <owl:versionInfo>0.1.1</owl:versionInfo>
         <schema:codeRepository rdf:resource="https://github.com/EDINT-Ontologia/edint-ontologia-certificado-energetico"/>
@@ -51,9 +48,6 @@
         <vocab:ntSerialization>ontology.nt</vocab:ntSerialization>
         <vocab:rdfxmlSerialization>ontology.rdf</vocab:rdfxmlSerialization>
         <vocab:turtleSerialization>ontology.ttl</vocab:turtleSerialization>
-        <vocab:vocabularyLabel rdf:resource="_:genid2147483656"/>
-        <vocab:vocabularyLabel rdf:resource="_:genid2147483657"/>
-        <vocab:vocabularyLabel rdf:resource="_:genid2147483658"/>
         <vocab:vocabularyLabel rdf:nodeID="genid8"/>
         <vocab:vocabularyLabel rdf:nodeID="genid9"/>
         <vocab:vocabularyLabel rdf:nodeID="genid10"/>
@@ -1388,6 +1382,10 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:comment xml:lang="en">Energy source of the ventilation system according to the energy-source controlled vocabulary.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Fuente de energía del sistema de ventilación según el vocabulario controlado de fuentes de energía.</rdfs:comment>
+        <rdfs:label xml:lang="es">fuente energética de ventilación</rdfs:label>
+        <rdfs:label xml:lang="en">ventilation energy source</rdfs:label>
     </owl:ObjectProperty>
     
 
