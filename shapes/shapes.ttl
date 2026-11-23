@@ -6,6 +6,8 @@
 @prefix edintcee: <https://edint.es/def/certificado-energetico#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix edintceekos-ct: <https://edint.es/kos/EnergyCertificateType/> .
+@prefix edintceekos-rl: <https://edint.es/kos/RatingLetter/> .
+@prefix edintceekos-pt: <https://edint.es/kos/ProcedureType/> .
 @prefix edintceekos-rsv: <https://edint.es/kos/RatingScaleVersion/> .
 @prefix edintcee-shapes: <https://edint.es/def/certificado-energetico#shapes/> .
 
@@ -252,11 +254,19 @@ edintcee-shapes:EnergyRatingShape a sh:NodeShape ;
         sh:path edintcee:ratingLetter ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:nodeKind sh:Literal ;
-        sh:pattern "^[A-G]$" ;
-        sh:flags "i" ;
-        sh:message "La calificación debe ser una letra de A a G."@es ;
-        sh:message "The rating must be a letter from A to G."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:class skos:Concept ;
+        sh:in (
+            edintceekos-rl:A
+            edintceekos-rl:B
+            edintceekos-rl:C
+            edintceekos-rl:D
+            edintceekos-rl:E
+            edintceekos-rl:F
+            edintceekos-rl:G
+        ) ;
+        sh:message "La calificación debe ser un concepto SKOS del esquema RatingLetter (A-G)."@es ;
+        sh:message "The rating must be a SKOS Concept from the RatingLetter scheme (A-G)."@en ;
     ] ;
 
     sh:property [
@@ -382,8 +392,12 @@ edintcee-shapes:CalculationProcedureShape a sh:NodeShape ;
         sh:path edintcee:procedureType ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:nodeKind sh:Literal ;
-        sh:in ( "general" "simplified" ) ;
-        sh:message "El tipo de procedimiento debe ser 'general' o 'simplified' (Art. 4.2.a RD 390/2021)."@es ;
-        sh:message "The procedure type must be 'general' or 'simplified' (Art. 4.2.a RD 390/2021)."@en ;
+        sh:nodeKind sh:IRI ;
+        sh:class skos:Concept ;
+        sh:in (
+            edintceekos-pt:General
+            edintceekos-pt:Simplified
+        ) ;
+        sh:message "El tipo de procedimiento debe ser un concepto SKOS del esquema ProcedureType (General/Simplified)."@es ;
+        sh:message "The procedure type must be a SKOS Concept from the ProcedureType scheme (General/Simplified)."@en ;
     ] .
