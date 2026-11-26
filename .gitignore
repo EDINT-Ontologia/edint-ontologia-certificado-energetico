@@ -3,5 +3,8 @@ widoco.conf
 widoco.sh
 widoco-manual-edit.txt
 
+# macOS
+.DS_Store
+
 # Python
 .venv/
